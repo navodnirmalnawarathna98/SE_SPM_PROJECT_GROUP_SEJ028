@@ -25,24 +25,28 @@ const AdminDashboard = () => {
                     <span class="link-name">Dahsboard</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">Content</span>
+                    <i class="uil uil-medical-drip"></i>
+                    <span class="link-name">Add Blood Samples</span>
                 </a></li>
                 <li><a href="#">
                     <i class="uil uil-chart"></i>
-                    <span class="link-name">Analytics</span>
+                    <span class="link-name">Donors Appointments</span>
                 </a></li>
                 <li><a href="#">
                     <i class="uil uil-thumbs-up"></i>
-                    <span class="link-name">Like</span>
+                    <span class="link-name">Seekers Requests</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-comments"></i>
-                    <span class="link-name">Comment</span>
+                    <i class="uil uil-building"></i>
+                    <span class="link-name">Registered Institution</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-share"></i>
-                    <span class="link-name">Share</span>
+                    <i class="uil uil-user-plus"></i>
+                    <span class="link-name">Donors List</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-user-minus"></i>
+                    <span class="link-name">Seekers List</span>
                 </a></li>
             </ul>
             
