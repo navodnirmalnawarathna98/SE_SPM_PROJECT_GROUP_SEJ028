@@ -25,24 +25,28 @@ const AdminDashboard = () => {
                     <span class="link-name">Dahsboard</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">Content</span>
+                    <i class="uil uil-medical-drip"></i>
+                    <span class="link-name">Add Blood Samples</span>
                 </a></li>
                 <li><a href="#">
                     <i class="uil uil-chart"></i>
-                    <span class="link-name">Analytics</span>
+                    <span class="link-name">Donors Appointments</span>
                 </a></li>
                 <li><a href="#">
                     <i class="uil uil-thumbs-up"></i>
-                    <span class="link-name">Like</span>
+                    <span class="link-name">Seekers Requests</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-comments"></i>
-                    <span class="link-name">Comment</span>
+                    <i class="uil uil-building"></i>
+                    <span class="link-name">Registered Institution</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-share"></i>
-                    <span class="link-name">Share</span>
+                    <i class="uil uil-user-plus"></i>
+                    <span class="link-name">Donors List</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-user-minus"></i>
+                    <span class="link-name">Seekers List</span>
                 </a></li>
             </ul>
             
@@ -140,59 +144,79 @@ const AdminDashboard = () => {
             <div class="activity">
                 <div class="title">
                     <i class="uil uil-clock-three"></i>
-                    <span class="text">Recent Activity</span>
+                    <span class="text">Blood Request</span>
                 </div>
 
                 <div class="activity-data">
                     <div class="data names">
-                        <span class="data-title">Name</span>
-                        <span class="data-list">Prem Shahi</span>
-                        <span class="data-list">Deepa Chand</span>
-                        <span class="data-list">Manisha Chand</span>
-                        <span class="data-list">Pratima Shahi</span>
-                        <span class="data-list">Man Shahi</span>
-                        <span class="data-list">Ganesh Chand</span>
-                        <span class="data-list">Bikash Chand</span>
+                        <span class="data-title">Institution Name</span>
+                        <span class="data-list">Nawaloka</span>
+                        <span class="data-list">Golden Key</span>
+                        <span class="data-list">Asiri</span>
+                        <span class="data-list">Jayawardhanapura</span>
+                        <span class="data-list">Lanka Hospital</span>
+                        <span class="data-list">Nine Wells</span>
                     </div>
                     <div class="data email">
                         <span class="data-title">Email</span>
-                        <span class="data-list">premshahi@gmail.com</span>
-                        <span class="data-list">deepachand@gmail.com</span>
-                        <span class="data-list">prakashhai@gmail.com</span>
-                        <span class="data-list">manishachand@gmail.com</span>
-                        <span class="data-list">pratimashhai@gmail.com</span>
-                        <span class="data-list">manshahi@gmail.com</span>
-                        <span class="data-list">ganeshchand@gmail.com</span>
+                        <span class="data-list">nava@gmail.com</span>
+                        <span class="data-list">golden@gmail.com</span>
+                        <span class="data-list">asiri@gmail.com</span>
+                        <span class="data-list">jaya@gmail.com</span>
+                        <span class="data-list">lanka@gmail.com</span>
+                        <span class="data-list">nine@gmail.com</span>
                     </div>
                     <div class="data joined">
-                        <span class="data-title">Joined</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-15</span>
+                        <span class="data-title">Contact No</span>
+                        <span class="data-list">0751125986</span>
+                        <span class="data-list">0775896544</span>
+                        <span class="data-list">0765842565</span>
+                        <span class="data-list">0775896522</span>
+                        <span class="data-list">0751145698</span>
+                        <span class="data-list">0754496321</span>
                     </div>
                     <div class="data type">
-                        <span class="data-title">Type</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
+                        <span class="data-title">Blood Type</span>
+                        <span class="data-list">A+</span>
+                        <span class="data-list">AB-</span>
+                        <span class="data-list">O+</span>
+                        <span class="data-list">B-</span>
+                        <span class="data-list">AB+</span>
+                        <span class="data-list">O-</span>
                     </div>
                     <div class="data status">
-                        <span class="data-title">Status</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
+                        <span class="data-title">Blood Amount</span>
+                        <span class="data-list">59</span>
+                        <span class="data-list">41</span>
+                        <span class="data-list">36</span>
+                        <span class="data-list">25</span>
+                        <span class="data-list">47</span>
+                        <span class="data-list">96</span>
+                    </div>
+                    <div class="data type">
+                        <span class="data-title">Due Date</span>
+                        <span class="data-list">2022-06-12</span>
+                        <span class="data-list">2022-05-14</span>
+                        <span class="data-list">2022-06-12</span>
+                        <span class="data-list">2022-07-16</span>
+                        <span class="data-list">2022-08-15</span>
+                        <span class="data-list">2022-10-22</span>
+                    </div>
+                    <div class="data type">
+                        <span class="data-list"><button className='button-accept'>Accept</button></span>
+                        <span class="data-list"><button className='button-accept'>Accept</button></span>
+                        <span class="data-list"><button className='button-accept'>Accept</button></span>
+                        <span class="data-list"><button className='button-accept'>Accept</button></span>
+                        <span class="data-list"><button className='button-accept'>Accept</button></span>
+                        <span class="data-list"><button className='button-accept'>Accept</button></span>
+                    </div>
+                    <div class="data type">
+                        <span class="data-list"><button className='button-reject'>Reject</button></span>
+                        <span class="data-list"><button className='button-reject'>Reject</button></span>
+                        <span class="data-list"><button className='button-reject'>Reject</button></span>
+                        <span class="data-list"><button className='button-reject'>Reject</button></span>
+                        <span class="data-list"><button className='button-reject'>Reject</button></span>
+                        <span class="data-list"><button className='button-reject'>Reject</button></span>
                     </div>
                 </div>
             </div>

@@ -75,7 +75,7 @@ nav{
     left: 0;
     height: 100%;
     width: 250px;
-    padding: 10px 14px;
+    padding: 10px 2px;
     background-color: var(--panel-color);
     border-right: 1px solid var(--border-color);
     transition: var(--tran-05);
@@ -109,8 +109,9 @@ nav.close .logo_name{
     pointer-events: none;
 }
 nav .menu-items{
-    margin-top: 40px;
+    margin-top: 30px;
     height: calc(100% - 90px);
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -353,6 +354,9 @@ nav.close ~ .dashboard .top{
 .boxes .box.box8{
     background-color: var(--box8-color);
 }
+
+/* Table CSS Style */
+
 .dash-content .activity .activity-data{
     display: flex;
     justify-content: space-between;
@@ -379,6 +383,72 @@ nav.close ~ .dashboard .top{
     white-space: nowrap;
     color: var(--text-color);
 }
+
+/* Button Reject CSS Style */
+
+.button-reject {
+    padding: 5px 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-reject:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .button-reject:active {
+    transform: scale(0.95);
+  }
+
+
+
+  /* Button Accept CSS Style */
+
+.button-accept {
+    padding: 5px 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #00FF00;
+    background-image: linear-gradient(45deg, #00D100 0%, #00FF00  51%, #00D100  100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-accept:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .button-accept:active {
+    transform: scale(0.95);
+  }
+
+
+
+
 
 @media (max-width: 1000px) {
     nav{
