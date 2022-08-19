@@ -7,7 +7,7 @@ const app = express(); // Initialize the Express application
 
 require("dotenv").config(); // Loads environment variables from a .env file into process.env
 
-const PORT =process.env.PORT || 8080; 
+const PORT =process.env.PORT || 8070; 
 
 app.use(cors());
 app.use(bodyParser.json());
