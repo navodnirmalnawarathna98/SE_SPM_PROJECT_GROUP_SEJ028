@@ -1,0 +1,126 @@
+
+.side-menu1 {
+    position: fixed;
+    background: #f05462;
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu1 .brand-name1 {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-menu1 li {
+    font-size: 24px;
+    padding: 10px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu1 li:hover {
+    background: white;
+    color: #f05462;
+}
+
+.container1 {
+    position: absolute;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+.container1 .header1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container1 .header1 .nav1 {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.container1 .header1 .nav1 .search {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.container1 .header1 .nav1 .search input[type=text] {
+    border: none;
+    background: #f1f1f1;
+    padding: 10px;
+    width: 50%;
+}
+
+.container1 .header1.nav1 .search button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container1 .header1 .nav1 .search button img {
+    width: 30px;
+    height: 30px;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .side-menu1 li {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .side-menu1 li span {
+        display: none;
+    }
+    .side-menu1 {
+        align-items: center;
+    }
+    .side-menu1 li img {
+        width: 40px;
+        height: 40px;
+    }
+    .side-menu1 li:hover {
+        background: #f05462;
+        padding: 8px 38px;
+        border: 2px solid white;
+    }
+}
+
+@media screen and (max-width:536px) {
+    .brand-name1 h1 {
+        font-size: 16px;
+    }
+    .container1 .content1 .cards {
+        justify-content: center;
+    }
+    .side-menu1 li img {
+        width: 30px;
+        height: 30px;
+    }
+    .container1 .content1 .content-2 .recent-payments table th:nth-child(2),
+    .container1 .content1 .content-2 .recent-payments table td:nth-child(2) {
+        display: none;
+    }
+}
