@@ -7,7 +7,7 @@ import HomePage from "./Pages/Home-Page/HomePage";
 
 import Doner from "./Pages/Doner/Doner";
 
-import Institution from "./Pages/Institution/Institution";
+import Institution from "./Pages/Institution/InsRegForm";
 
 import Seeker from "./Pages/Seeker/Seeker";
 
