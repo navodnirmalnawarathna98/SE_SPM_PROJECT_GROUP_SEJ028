@@ -26,6 +26,8 @@ function App() {
 
         <Route path='/institution' element={<Institution/>}/>
 
+        <Route path='/sidenavbar' element={<SideNavbar/>}/>
+
       </Routes>
     </Router>
   );
