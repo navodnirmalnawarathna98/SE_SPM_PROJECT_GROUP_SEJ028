@@ -10,7 +10,8 @@ import Doner from "./Pages/Doner/Doner";
 import Institution from "./Pages/Institution/InsRegForm";
 
 import Seeker from "./Pages/Seeker/Seeker";
-import SideNavbar from "./Pages/Institution/sidenavbar"
+import BloodRequest from "./Pages/Institution/bloodrequest";
+import BloodRequestTable from "./Pages/Institution/bloodreqtable";
 
 function App() {
   return (
@@ -26,9 +27,8 @@ function App() {
         <Route path='/seeker' element={<Seeker/>}/>
 
         <Route path='/institution' element={<Institution/>}/>
-        
-        <Route path='/sidenavbar' element={<SideNavbar/>}/>
-
+        <Route path='/bloodreq' element={<BloodRequest/>}/>
+        <Route path='/reqtable' element={<BloodRequestTable/>}
       </Routes>
     </Router>
   );

@@ -86,8 +86,8 @@ const InsRegForm = () => {
              </div>
  
                <div class="modal-footer">
-                 <a href="#" class="btn4">Submit</a>
-                 <a href="index.html" class="btn4">Cancel</a>
+                 <a href="/" class="btn4">Submit</a>
+                 <a href="/" class="btn4">Cancel</a>
              </div>
            </div>
         </div>
