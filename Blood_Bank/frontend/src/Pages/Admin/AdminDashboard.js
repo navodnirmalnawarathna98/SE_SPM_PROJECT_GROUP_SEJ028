@@ -92,32 +92,11 @@ const AdminDashboard = () => {
                 </tbody>
 
               </table>
-              {/* <table>
-                  <tr>
-                      <th>Institution Name</th>
-                      <th>Email</th>
-                      <th>Contact No</th>
-                      <th>Blood Type</th>
-                      <th>Blood Amount</th>
-                      <th>Due Date</th>
-                      <th></th>
-                      <th></th>
-                  </tr>
-
-                  <tr>
-                      <td>Nawaloka</td>
-                      <td>nava@gmail.com</td>
-                      <td>0751125986</td>
-                      <td>A+</td>
-                      <td>59</td>
-                      <td>2022-06-12</td>
-                      <td><span class="data-list"><button className='button-accept'>Accept</button></span></td>
-                      <td><span class="data-list"><button className='button-reject'>Reject</button></span></td>
-                  </tr>
-              </table> */}
             </div>
 
           </div>
+
+          {/* close blood request table */}
 
         </div>
 
