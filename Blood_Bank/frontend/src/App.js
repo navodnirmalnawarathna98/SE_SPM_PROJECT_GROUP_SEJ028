@@ -10,6 +10,7 @@ import Doner from "./Pages/Doner/Doner";
 import Institution from "./Pages/Institution/InsRegForm";
 
 import Seeker from "./Pages/Seeker/Seeker";
+import SideNavbar from "./Pages/Institution/sidenavbar"
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path='/seeker' element={<Seeker/>}/>
 
         <Route path='/institution' element={<Institution/>}/>
-
+        
         <Route path='/sidenavbar' element={<SideNavbar/>}/>
 
       </Routes>
