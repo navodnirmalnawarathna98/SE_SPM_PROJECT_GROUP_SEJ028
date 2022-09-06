@@ -307,6 +307,7 @@ nav.close ~ .dashboard .top{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
 .dash-content .boxes .box{
     display: flex;
@@ -317,6 +318,7 @@ nav.close ~ .dashboard .top{
     padding: 15px 20px;
     background-color: var(--box1-color);
     transition: var(--tran-05);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .boxes .box i{
     font-size: 35px;
