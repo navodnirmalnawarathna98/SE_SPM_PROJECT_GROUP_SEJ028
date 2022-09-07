@@ -2,6 +2,11 @@ import{BrowserRouter as Router,Routes,Route} from "react-router-dom";
 
 import AdminDashboard from "./Pages/Admin/AdminDashboard";
 import AddBloodSamples from "./Pages/Admin/AddBloodSamples";
+import DonorAppointments from "./Pages/Admin/DonorAppointments";
+import SeekerRequests from "./Pages/Admin/SeekerRequests";
+import RegisteredInstitutions from "./Pages/Admin/RegisteredInstitutions";
+import DonorList from "./Pages/Admin/DonorList";
+import SeekerList from "./Pages/Admin/SeekerList";
 
 import HomePage from "./Pages/Home-Page/HomePage";
 
@@ -20,6 +25,11 @@ function App() {
 
         <Route path='/admindashboard' element={<AdminDashboard/>}/>
         <Route path='/addbloodsamples' element={<AddBloodSamples/>}/>
+        <Route path='/donorappointments' element={<DonorAppointments/>}/>
+        <Route path='/seekerrequests' element={<SeekerRequests/>}/>
+        <Route path='/registeredinstitutions' element={<RegisteredInstitutions/>}/>
+        <Route path='/donorlist' element={<DonorList/>}/>
+        <Route path='/seekerlist' element={<SeekerList/>}/>
 
         <Route path='/doner' element={<Doner/>}/>
 

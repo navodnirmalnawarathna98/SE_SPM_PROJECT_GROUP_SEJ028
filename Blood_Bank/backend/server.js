@@ -48,6 +48,10 @@ connection.once ("open", ()=>{
 // const employeeRouter = require(`./routes/empRouter`);
 // app.use("/employee",employeeRouter);
 
+// add blood sample route
+const addBloodSamplesRouter = require('./routes/addBloodSamplesRouter');
+app.use('/addbloodsamples', addBloodSamplesRouter);
+
 
 
 app.listen(PORT,()=>{
