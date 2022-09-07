@@ -5,12 +5,12 @@ const BloodVolumes = () => {
     
         <div class="overview">
             
-            <div class="title">
+            <div class="ad-title">
                 <i class="uil uil-tachometer-fast-alt"></i>
                 <span class="text">Dashboard</span>
             </div>
 
-            <div class="boxes">
+            <div class="ad-boxes">
                 <div class="box box1">
                     <span class="number">A+</span>
                     <i class="fa-solid fa-droplet"></i>
@@ -35,7 +35,7 @@ const BloodVolumes = () => {
 
             <br/>
 
-            <div class="boxes">
+            <div class="ad-boxes">
                 <div class="box box5">
                     <span class="number">A-</span>
                     <i class="fa-solid fa-droplet"></i>

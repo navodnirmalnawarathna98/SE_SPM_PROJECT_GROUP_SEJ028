@@ -7,7 +7,7 @@ import Search from './Components/Search'
 import BloodVolumes from './Components/BloodVolumes'
 
 
-const AdminDashboard = () => {
+const SeekerList = () => {
   return (
     <div className='admindashboard'>
         
@@ -27,7 +27,7 @@ const AdminDashboard = () => {
 
             <div className="ad-title">
               <i class="uil uil-clock-three"></i>
-              <span class="text">Blood Request</span>
+              <span class="text">Seeker List</span>
             </div>
 
             <div className="activity-data">
@@ -107,4 +107,4 @@ const AdminDashboard = () => {
   )
 }
 
-export default AdminDashboard
+export default SeekerList
