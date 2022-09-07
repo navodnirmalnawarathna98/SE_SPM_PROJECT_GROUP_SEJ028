@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body{
+    /*background: #fec107;*/
+    padding: 0 10px;
+  }
+
+  .errorcolor{
+    color: red;
+  }
+
+  .wrapper22{
+    max-width: 500px;
+    width: 100%;
+    background: #F5D9DD;
+    margin: 20px auto;
+    margin-left: 425px;
+    box-shadow: 4px 4px 16px 4px rgb(0 0 0 / 13%);
+    padding: 30px;
+  }
+
+  .wrapper22 .title22{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #361212;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .wrapper22 .form22{
+    width: 100%;
+  }
+
+  
+.wrapper22 .form22 .inputfield{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .wrapper22 .form22 .inputfield label{
+     width: 200px;
+     color: #757575;
+     margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .wrapper22 .form22 .inputfield .input,
+.wrapper22 .form22 .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper22 .form22 .inputfield .textarea{
+    width: 100%;
+    height: 125px;
+    resize: none;
+  }
+
+  .wrapper22 .form22 .inputfield .custom_select{
+    position: relative;
+    width: 100%;
+    height: 37px;
+  }
+
+  .wrapper22 .form22 .inputfield .custom_select:before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: #d5dbd9 transparent transparent transparent;
+    pointer-events: none;
+  }
+
+  .wrapper22 .form22 .inputfield .custom_select select{
+    -webkit-appearance: none;
+    -moz-appearance:   none;
+    appearance:        none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+  }
+
+  
+.wrapper22 .form22 .inputfield .input:focus,
+.wrapper22 .form22 .inputfield .textarea:focus,
+.wrapper22 .form22 .inputfield .custom_select select:focus{
+  border: 1px solid #000000;
+}
+
+.wrapper22 .form22 .inputfield p{
+    font-size: 14px;
+    color: #757575;
+ }
+
+
+ @media (max-width:420px) {
+    .wrapper22 .form22 .inputfield{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .wrapper22 .form22 .inputfield label{
+      margin-bottom: 5px;
+    }
+    .wrapper22 .form22 .inputfield.terms{
+      flex-direction: row;
+    }
+  }
+
+  .btn33{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 0.7rem;
+    border-radius: .5rem;
+    border:.2rem solid black;
+    color:black;
+    cursor: pointer;
+    background: none;
+}
+
+.btn33:hover{
+    background: rgb(186, 35, 35);
+    color:#fff;
+}
