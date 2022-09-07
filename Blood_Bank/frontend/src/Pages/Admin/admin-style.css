@@ -35,18 +35,7 @@ body{
     min-height: 100vh;
     background-color: var(--primary-color);
 }
-body.dark{
-    --primary-color: #3A3B3C;
-    --panel-color: #242526;
-    --text-color: #CCC;
-    --black-light-color: #CCC;
-    --border-color: #4D4C4C;
-    --toggle-color: #FFF;
-    --box1-color: #3A3B3C;
-    --box2-color: #3A3B3C;
-    --box3-color: #3A3B3C;
-    --title-icon-color: #CCC;
-}
+
 /* === Custom Scroll Bar CSS === */
 ::-webkit-scrollbar {
     width: 8px;
@@ -75,7 +64,7 @@ nav{
     left: 0;
     height: 100%;
     width: 250px;
-    padding: 10px 2px;
+    padding: 10px 8px;
     background-color: var(--panel-color);
     border-right: 1px solid var(--border-color);
     transition: var(--tran-05);
@@ -83,32 +72,37 @@ nav{
 nav.close{
     width: 73px;
 }
-nav .logo-name{
+
+/* start logo image and logo name*/
+nav .ad-logo-name{
     display: flex;
     align-items: center;
 }
-nav .logo-image{
+nav .ad-logo-image{
     display: flex;
     justify-content: center;
     min-width: 45px;
 }
-nav .logo-image img{
+nav .ad-logo-image img{
     width: 40px;
     object-fit: cover;
 }
 
-nav .logo-name .logo_name{
+nav .ad-logo-name .ad-logo_name{
     font-size: 22px;
     font-weight: 600;
     color: var(--text-color);
     margin-left: 14px;
     transition: var(--tran-05);
 }
-nav.close .logo_name{
+nav.close .ad-logo-name{
     opacity: 0;
     pointer-events: none;
 }
-nav .menu-items{
+/* end logo image and logo name*/
+
+/* start menu items */
+nav .ad-menu-items{
     margin-top: 30px;
     height: calc(100% - 90px);
     width: 250px;
@@ -116,17 +110,17 @@ nav .menu-items{
     flex-direction: column;
     justify-content: space-between;
 }
-.menu-items li{
+.ad-menu-items li{
     list-style: none;
 }
-.menu-items li a{
+.ad-menu-items li a{
     display: flex;
     align-items: center;
     height: 50px;
     text-decoration: none;
     position: relative;
 }
-.nav-links li a:hover:before{
+.ad-nav-links li a:hover:before{
     content: "";
     position: absolute;
     left: -7px;
@@ -138,7 +132,7 @@ nav .menu-items{
 body.dark li a:hover:before{
     background-color: var(--text-color);
 }
-.menu-items li a i{
+.ad-menu-items li a i{
     font-size: 24px;
     min-width: 45px;
     height: 100%;
@@ -147,34 +141,34 @@ body.dark li a:hover:before{
     justify-content: center;
     color: var(--black-light-color);
 }
-.menu-items li a .link-name{
+.ad-menu-items li a .ad-link-name{
     font-size: 18px;
     font-weight: 400;
     color: var(--black-light-color);    
     transition: var(--tran-05);
 }
-nav.close li a .link-name{
+nav.close li a .ad-link-name{
     opacity: 0;
     pointer-events: none;
 }
-.nav-links li a:hover i,
-.nav-links li a:hover .link-name{
+.ad-nav-links li a:hover i,
+.ad-nav-links li a:hover .ad-link-name{
     color: var(--primary-color);
 }
-body.dark .nav-links li a:hover i,
-body.dark .nav-links li a:hover .link-name{
+body.dark .ad-nav-links li a:hover i,
+body.dark .ad-nav-links li a:hover .ad-link-name{
     color: var(--text-color);
 }
-.menu-items .logout-mode{
+.ad-menu-items .ad-logout-mode{
     padding-top: 10px;
     border-top: 1px solid var(--border-color);
 }
-.menu-items .mode{
+.ad-menu-items .ad-mode{
     display: flex;
     align-items: center;
     white-space: nowrap;
 }
-.menu-items .mode-toggle{
+.ad-menu-items .ad-mode-toggle{
     position: absolute;
     right: 14px;
     height: 50px;
@@ -184,7 +178,7 @@ body.dark .nav-links li a:hover .link-name{
     justify-content: center;
     cursor: pointer;
 }
-.mode-toggle .switch{
+.ad-mode-toggle .switch{
     position: relative;
     display: inline-block;
     height: 22px;
@@ -207,21 +201,24 @@ body.dark .nav-links li a:hover .link-name{
 body.dark .switch:before{
     left: 20px;
 }
+/* end menu items */
 
-.dashboard{
+.ad-dashboard{
     position: relative;
     left: 250px;
     background-color: var(--panel-color);
     min-height: 100vh;
-    width: calc(100% - 250px);
+    width: calc(100% - 235px);
     padding: 10px 14px;
     transition: var(--tran-05);
 }
-nav.close ~ .dashboard{
+nav.close ~ .ad-dashboard{
     left: 73px;
     width: calc(100% - 73px);
 }
-.dashboard .top{
+
+/* start search and profile */
+.ad-dashboard .ad-top{
     position: fixed;
     top: 0;
     left: 250px;
@@ -234,23 +231,23 @@ nav.close ~ .dashboard{
     transition: var(--tran-05);
     z-index: 10;
 }
-nav.close ~ .dashboard .top{
+nav.close ~ .ad-dashboard .ad-top{
     left: 73px;
     width: calc(100% - 73px);
 }
-.dashboard .top .sidebar-toggle{
+.ad-dashboard .ad-top .sidebar-toggle{
     font-size: 26px;
     color: var(--text-color);
     cursor: pointer;
 }
-.dashboard .top .search-box{
+.ad-dashboard .ad-top .ad-search-box{
     position: relative;
     height: 45px;
     max-width: 600px;
     width: 100%;
     margin: 0 30px;
 }
-.top .search-box input{
+.ad-top .ad-search-box input{
     position: absolute;
     border: 1px solid var(--border-color);
     background-color: var(--panel-color);
@@ -263,7 +260,7 @@ nav.close ~ .dashboard .top{
     font-weight: 400;
     outline: none;
 }
-.top .search-box i{
+.ad-top .ad-search-box i{
     position: absolute;
     left: 15px;
     font-size: 22px;
@@ -272,19 +269,50 @@ nav.close ~ .dashboard .top{
     transform: translateY(-50%);
     color: var(--black-light-color);
 }
-.top img{
+
+.ad-search-box-button {
+  background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  text-decoration: none;
+  width: 100px;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.ad-search-box-button:hover {
+  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+@media (min-width: 768px) {
+  .ad-search-box-button {
+    padding: 1rem 2rem;
+  }
+}
+.ad-top img{
     width: 40px;
     border-radius: 50%;
 }
-.dashboard .dash-content{
+
+/* end search and profile */
+
+.ad-dashboard .ad-dash-content{
     padding-top: 10px;
 }
-.dash-content .title{
+.ad-dash-content .ad-title{
     display: flex;
     align-items: center;
     margin: 60px 0 30px 0;
 }
-.dash-content .title i{
+.ad-dash-content .ad-title i{
     position: relative;
     height: 35px;
     width: 35px;
@@ -296,20 +324,20 @@ nav.close ~ .dashboard .top{
     justify-content: center;
     font-size: 24px;
 }
-.dash-content .title .text{
+.ad-dash-content .ad-title .text{
     font-size: 24px;
     font-weight: 500;
     color: var(--text-color);
     margin-left: 10px;
 }
-.dash-content .boxes{
+.ad-dash-content .ad-boxes{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     
 }
-.dash-content .boxes .box{
+.ad-dash-content .ad-boxes .box{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -320,66 +348,59 @@ nav.close ~ .dashboard .top{
     transition: var(--tran-05);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.boxes .box i{
+.ad-boxes .box i{
     font-size: 35px;
     color: var(--text-color);
 }
-.boxes .box .text{
+.ad-boxes .box .text{
     white-space: nowrap;
     font-size: 18px;
     font-weight: 500;
     color: white;
 }
-.boxes .box .number{
+.ad-boxes .box .number{
     font-size: 40px;
     font-weight: 500;
     color: var(--text-color);
 }
-.boxes .box.box2{
+.ad-boxes .box.box2{
     background-color: var(--box2-color);
 }
-.boxes .box.box3{
+.ad-boxes .box.box3{
     background-color: var(--box3-color);
 }
-.boxes .box.box4{
+.ad-boxes .box.box4{
     background-color: var(--box4-color);
 }
-.boxes .box.box5{
+.ad-boxes .box.box5{
     background-color: var(--box5-color);
 }
-.boxes .box.box6{
+.ad-boxes .box.box6{
     background-color: var(--box6-color);
 }
-.boxes .box.box7{
+.ad-boxes .box.box7{
     background-color: var(--box7-color);
 }
-.boxes .box.box8{
+.ad-boxes .box.box8{
     background-color: var(--box8-color);
 }
 
 /* Table CSS Style */
 
-.dash-content .activity .activity-data{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.activity-data {
+    overflow-y: auto;
+    max-height: 300px;
 }
-.activity .activity-data{
-    display: flex;
-}
-.activity-data .data{
-    display: flex;
-    flex-direction: column;
-    margin: 0 15px;
-}
-.activity-data .data-title{
-    font-size: 20px;
+
+.activity-data thead {
+    font-size: 17px;
     font-weight: 500;
     color: var(--text-color);
 }
-.activity-data .data .data-list{
-    font-size: 18px;
+
+
+.activity-data tbody {
+    font-size: 15px;
     font-weight: 400;
     margin-top: 20px;
     white-space: nowrap;
@@ -388,7 +409,7 @@ nav.close ~ .dashboard .top{
 
 /* Button Reject CSS Style */
 
-.button-reject {
+.activity-data .button-reject {
     padding: 5px 10px;
     text-align: center;
     transition: 0.5s;
@@ -406,13 +427,13 @@ nav.close ~ .dashboard .top{
     touch-action: manipulation;
   }
   
-  .button-reject:hover {
+  .activity-data .button-reject:hover {
     background-position: right center;
     color: #fff;
     text-decoration: none;
   }
   
-  .button-reject:active {
+  .activity-data .button-reject:active {
     transform: scale(0.95);
   }
 
@@ -420,7 +441,7 @@ nav.close ~ .dashboard .top{
 
   /* Button Accept CSS Style */
 
-.button-accept {
+  .activity-data .button-accept {
     padding: 5px 10px;
     text-align: center;
     transition: 0.5s;
@@ -438,13 +459,13 @@ nav.close ~ .dashboard .top{
     touch-action: manipulation;
   }
   
-  .button-accept:hover {
+  .activity-data .button-accept:hover {
     background-position: right center;
     color: #fff;
     text-decoration: none;
   }
   
-  .button-accept:active {
+  .activity-data .button-accept:active {
     transform: scale(0.95);
   }
 
