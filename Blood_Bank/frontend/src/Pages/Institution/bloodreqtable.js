@@ -50,8 +50,9 @@ const onDelete =(id)=>{
         </div>
         <ul>
             <li> <span>Dashboard</span> </li>
-            <li><span>My Blood Request</span> </li>
-            <li><span>Reject Blood Request</span> </li>
+            <li><span>Blood Request</span> </li>
+            <li><a ></a><span>Blood Request</span> </li>
+            <li><a href='/' ><span>Sign Out</span> </a></li>
             
         </ul>
     </div>
