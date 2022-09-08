@@ -46,6 +46,17 @@ router.route("/").get((req,res)=>{
 })
 
 
+//delete blood request
+router.route("/deleteReq/:id").delete(async(req,res)=>{
+    let reqId = req.params.id;
+    await insbloodreq.findByIdAndDelete(reqId).then(()=>{
+        res.status(200).send({status:"Request deleted"})
+    }).catch((err)=>{
+        res.status(500).send({status:"Error with delete Request",error:err.message});
+    })
+ })
+
+
 
 
 module.exports = router;
