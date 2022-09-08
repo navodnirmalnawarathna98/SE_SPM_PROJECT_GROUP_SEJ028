@@ -49,7 +49,16 @@ connection.once ("open", ()=>{
 // app.use("/employee",employeeRouter);
 
 
+// Institution 
+const institutionRouter = require(`./routes/institutionRouter`);
+app.use("/addRequest",institutionRouter);
+
+
+
+
+
 
 app.listen(PORT,()=>{
     console.log(`Server is running on port number : ${PORT}`); // Dipaly in console if server is running
 })
+
