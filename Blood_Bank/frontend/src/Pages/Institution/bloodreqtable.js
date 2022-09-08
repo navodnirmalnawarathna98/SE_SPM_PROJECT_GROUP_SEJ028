@@ -25,7 +25,20 @@ useEffect(()=>{
 }, [])
 
 
-
+// DELETE FUNCTION
+const onDelete =(id)=>{
+    axios.delete(`http://localhost:8070/addRequest/deleteReq/${id}`).then((res)=>{
+        //getWManagers();
+        axios.get("http://localhost:8070/addRequest/").then((res) =>{
+        alert("Delete Successfully");
+            console.log(res.data);
+            setBloodReqs(res.data);
+        }).catch((err) => {
+            alert(err.message);
+        })
+        window.location.href = "/reqtable";
+    })
+}
 
 
 
@@ -71,8 +84,8 @@ useEffect(()=>{
                             <th>Due Date</th>
                             <th>Description</th>
                             <th>EDIT</th>
-                            <th>REPORT</th>
                             <th>DELETE</th>
+                            <th>REPORT</th>
                         </tr>
                     </thead>  
                     <tbody>
@@ -86,7 +99,7 @@ useEffect(()=>{
                             <td>{BloodReqs.due_date}</td>
                             <td>{BloodReqs.description}</td>
                             <td><a href="#" class="btn22">Edit</a></td>
-                            <td><a href="#" class="btn44">Delete</a></td>
+                            <td><a href="#" onClick={()=>{onDelete(BloodReqs._id)}} class="btn44">Delete</a></td>
                             <td><a href="#" class="btn66">Report</a></td>
                         </tr>
                         ))
