@@ -1,9 +1,34 @@
-import React from 'react'
+import React,{ useEffect, useState } from 'react'
 import img22 from "../../images/sidenavbar-img/search.png"
+import axios from 'axios';
 
 import "./bloodreqtable.css"
 
-const bloodreqtable = () => {
+const Bloodreqtable = () => {
+
+ //Data retriving function
+ const[BloodReqs, setBloodReqs] = useState([]);
+
+//  //GET  Details FROM DB
+//  const [query,setQuery] = useState("");   
+
+useEffect(()=>{
+    function getBloodReq(){
+        axios.get(`http://localhost:8070/addRequest/`).then((res) =>{
+            console.log(res.data);
+            setBloodReqs(res.data)
+        }).catch((err)=>{
+            alert(err.message);
+        })
+    }
+   getBloodReq();
+}, [])
+
+
+
+
+
+
   return (
     <div>
       <div class="side-menu">
@@ -36,114 +61,39 @@ const bloodreqtable = () => {
                         <a href="/bloodreq" class="btn11">Create Blood Request</a>
                     </div>
                     <table>
+                    <thead>
                         <tr>
                             <th>Name</th>
-                            <th>School</th>
-                            <th>Amount</th>
-                            <th>Option</th>
+                            <th>Email</th>
+                            <th>Contact Number</th>
+                            <th>Blood Group</th>
+                            <th>Blood Amount</th>
+                            <th>Due Date</th>
+                            <th>Description</th>
                             <th>EDIT</th>
-                            <th>PRINT</th>
+                            <th>REPORT</th>
                             <th>DELETE</th>
                         </tr>
+                    </thead>  
+                    <tbody>
+                        {BloodReqs.length >0?(BloodReqs.map((BloodReqs)=>(
                         <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td>eee</td>
+                            <td>{BloodReqs.name}</td>
+                            <td>{BloodReqs.email}</td>
+                            <td>{BloodReqs.contact_no}</td>
+                            <td>{BloodReqs.blood_group}</td>
+                            <td>{BloodReqs.blood_amount}</td>
+                            <td>{BloodReqs.due_date}</td>
+                            <td>{BloodReqs.description}</td>
                             <td><a href="#" class="btn22">Edit</a></td>
-                            <td><a href="#" class="btn66">Report</a></td>
                             <td><a href="#" class="btn44">Delete</a></td>
-                        </tr>
-
-
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td>eee</td>
-                            <td><a href="#" class="btn22">Edit</a></td>
                             <td><a href="#" class="btn66">Report</a></td>
-                            <td><a href="#" class="btn44">Delete</a></td>
                         </tr>
-
-
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td>eee</td>
-                            <td><a href="#" class="btn22">Edit</a></td>
-                            <td><a href="#" class="btn66">Report</a></td>
-                            <td><a href="#" class="btn44">Delete</a></td>
-                        </tr>
-
-
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td>eee</td>
-                            <td><a href="#" class="btn22">Edit</a></td>
-                            <td><a href="#" class="btn66">Report</a></td>
-                            <td><a href="#" class="btn44">Delete</a></td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td>eee</td>
-                            <td><a href="#" class="btn22">Edit</a></td>
-                            <td><a href="#" class="btn66">Report</a></td>
-                            <td><a href="#" class="btn44">Delete</a></td>
-                        </tr>
-
-
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td>eee</td>
-                            <td><a href="#" class="btn22">Edit</a></td>
-                            <td><a href="#" class="btn66">Report</a></td>
-                            <td><a href="#" class="btn44">Delete</a></td>
-                        </tr>
-
-
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td>eee</td>
-                            <td><a href="#" class="btn22">Edit</a></td>
-                            <td><a href="#" class="btn66">Report</a></td>
-                            <td><a href="#" class="btn44">Delete</a></td>
-                        </tr>
-
-
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td>eee</td>
-                            <td><a href="#" class="btn22">Edit</a></td>
-                            <td><a href="#" class="btn66">Report</a></td>
-                            <td><a href="#" class="btn44">Delete</a></td>
-                        </tr>
-
-
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td>eee</td>
-                            <td><a href="#" class="btn22">Edit</a></td>
-                            <td><a href="#" class="btn66">Report</a></td>
-                            <td><a href="#" class="btn44">Delete</a></td>
-                        </tr>
-                        
+                        ))
+                           ):(
+                            <h3>No details found</h3>
+                           )}
+                     </tbody>  
                     </table>
                 </div>
                 
@@ -157,4 +107,4 @@ const bloodreqtable = () => {
      )
     }
     
-export default bloodreqtable
+export default Bloodreqtable
