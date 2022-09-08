@@ -59,7 +59,7 @@ const Bloodrequest = () => {
                 </div>
                 <div class="inputfield">
                     <label>Contact No</label>
-                    <input type="number" name="contact_no" class="input" placeholder='enter institution contact nu' onChange={(e)=>{setContact_no(e.target.value);}} required
+                    <input type="number" name="contact_no" class="input" placeholder='enter institution contact number' onChange={(e)=>{setContact_no(e.target.value);}} required
                 
                     />
                 </div>
@@ -75,7 +75,7 @@ const Bloodrequest = () => {
                 </div> 
                 <div class="inputfield">
                     <label>Blood Amount</label>
-                    <input type="number" name="blood_amount" class="input" 
+                    <input type="number" name="blood_amount" class="input" placeholder='enter blood amount (ml)'
                     onChange={(e)=>{setBloodamount(e.target.value);}} required
                     />
                 </div>
