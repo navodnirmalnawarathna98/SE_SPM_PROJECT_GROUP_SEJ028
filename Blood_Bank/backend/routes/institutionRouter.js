@@ -36,7 +36,14 @@ router.route("/addbloodreq").post((req,res)=>{//get data from frontend via reque
     })
 })
 
-
+//view blood request
+router.route("/").get((req,res)=>{
+    insbloodreq.find().then((bloodreq)=>{
+        res.json(bloodreq)
+    }).catch((err)=>{
+        console.log(err)
+    })
+})
 
 
 
