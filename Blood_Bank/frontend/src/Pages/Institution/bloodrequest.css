@@ -146,3 +146,11 @@
     background: rgb(186, 35, 35);
     color:#fff;
 }
+
+.invalid-input{
+  display: block;
+  color: red;
+  margin-top: 2px;
+  margin-left: 1px;
+  font-size: 10px;
+}
