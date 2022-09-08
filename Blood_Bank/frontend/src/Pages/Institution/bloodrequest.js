@@ -5,6 +5,9 @@ import "./bloodrequest.css";
 
 const Bloodrequest = () => {
 
+    // //error
+    // const[error,setError] = useState(false);
+
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [contact_no, setContact_no] = useState("");
@@ -15,6 +18,14 @@ const Bloodrequest = () => {
 
 
     function sendData(e){
+
+        //error validation
+        // if(!name || !email || !contact_no || !blood_group || !blood_amount || !due_date || !description){
+
+        //     setError(true);
+        //     return false;
+        // }
+
         //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
         e.preventDefault(); 
         const newBloodRequest={    
@@ -48,18 +59,20 @@ const Bloodrequest = () => {
             <div class="form22">
                 <div class="inputfield">
                     <label>Institution Name</label>
-                    <input type="text" name="name" class="input" placeholder='enter institution name' onChange={(e)=>{setName(e.target.value);}} required
+                    <input type="text" name="name" class="input" placeholder='enter institution name' onChange={(e)=>{setName(e.target.value);}} 
                     />
+                    {/* {error && !name && <span class="invalid-input">Enter valid name</span>} */}
+                    
                 </div>
                 <div class="inputfield">
                     <label>Email</label>
-                    <input type="email" name="email" class="input" placeholder='enter institution email' onChange={(e)=>{setEmail(e.target.value);}} required
+                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" class="input" placeholder='enter institution email' onChange={(e)=>{setEmail(e.target.value);}} 
                 
                     />
                 </div>
                 <div class="inputfield">
                     <label>Contact No</label>
-                    <input type="number" name="contact_no" class="input" placeholder='enter institution contact number' onChange={(e)=>{setContact_no(e.target.value);}} required
+                    <input type="number" name="contact_no" pattern = "[0-9]" class="input" placeholder='enter institution contact number' onChange={(e)=>{setContact_no(e.target.value);}} 
                 
                     />
                 </div>
@@ -75,21 +88,21 @@ const Bloodrequest = () => {
                 </div> 
                 <div class="inputfield">
                     <label>Blood Amount</label>
-                    <input type="number" name="blood_amount" class="input" placeholder='enter blood amount (ml)'
-                    onChange={(e)=>{setBloodamount(e.target.value);}} required
+                    <input type="number" name="blood_amount" pattern = "[2000-6000]" class="input" placeholder='enter blood amount (ml)'
+                    onChange={(e)=>{setBloodamount(e.target.value);}} 
                     />
                 </div>
                 <div class="inputfield">
                     <label>Due Date</label>
                     <input type="date" name="due_date" class="input" 
-                   onChange={(e)=>{setDuedate(e.target.value);}} required
+                   onChange={(e)=>{setDuedate(e.target.value);}} 
                     />
                 </div>
 
                 <div class="inputfield">
                 <label>Description</label>
                 <textarea type="text" name="description" class="input"
-                 onChange={(e)=>{setDescription(e.target.value);}} required
+                 onChange={(e)=>{setDescription(e.target.value);}} 
                 ></textarea>
                 </div>
 
