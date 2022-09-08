@@ -59,6 +59,7 @@
 .wrapper22 .form22 .inputfield .textarea{
   width: 100%;
   outline: none;
+  text-transform: lowercase;
   border: 1px solid #d5dbd9;
   font-size: 15px;
   padding: 8px 10px;
@@ -131,11 +132,12 @@
   .btn33{
     margin-top: 1rem;
     display: inline-block;
-    padding:.8rem 3rem;
-    font-size: 0.7rem;
-    border-radius: .5rem;
-    border:.2rem solid black;
-    color:black;
+    padding: 0.8rem 3rem;
+    font-size: 11px;
+    border-radius: 0.5rem;
+    margin-right: 117px;
+    border: 0.2rem solid black;
+    color: black;
     cursor: pointer;
     background: none;
 }
