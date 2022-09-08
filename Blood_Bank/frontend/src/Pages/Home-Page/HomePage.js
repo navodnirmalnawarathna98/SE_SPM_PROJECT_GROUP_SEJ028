@@ -110,8 +110,9 @@ const HomePage = () => {
             <h3>Institutions</h3>
             <img src={img7} alt=""/>
             <p>upto 45% off</p>
-            <a href="/institution"  class="btn">Institution (Nova)</a> <br />
-            <a href="InstRegister.html" class="btn">Register </a>
+            <a href="/reqtable"  class="btn">Institution (Nova)</a> <br />
+            <a href="/institution" class="btn">Register </a>
+          
           </div>
         </div>
       </section>
