@@ -47,7 +47,7 @@ const HomePage = () => {
         <class class="content">
           <h3>fresh and <span>organic</span> products for your</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam libero nostrum veniam facere tempore nisi.</p>
-          <a href="#" class="btn">shop now</a>
+          <a href="#" class="btn">main Info</a>
         </class>
       </section>
       {/* <!-- home section ends --> */}
@@ -92,7 +92,8 @@ const HomePage = () => {
             <h3>Donor</h3>
             <img src={img4} alt=""/>
             <p>upto 45% off</p>
-            <a href="/doner" class="btn">Doner (Mohan)</a> <br />
+            <a href="/donorprofile" class="btn">Doner (Mohan)</a> <br />
+            <a href="/donorregister" class="btn">Register</a> <br />
           </div>
           <div class="box">
             <h3>Seeker</h3>

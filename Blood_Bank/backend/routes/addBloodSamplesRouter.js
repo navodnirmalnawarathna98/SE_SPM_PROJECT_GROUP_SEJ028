@@ -4,7 +4,7 @@ let addBloodSamples = require("../models/addBloodSamples"); //import add blood s
 
 //Add Blood Samples (http://localhost:8080/addbloodsamples/add)
 
-router.route("/add").post((req,res) => {  //get data from frontend via request
+router.route("/user/add").post((req,res) => {  //get data from frontend via request
 
     // get request body data and assining them to variables
     const firstName = req.body.firstName;
