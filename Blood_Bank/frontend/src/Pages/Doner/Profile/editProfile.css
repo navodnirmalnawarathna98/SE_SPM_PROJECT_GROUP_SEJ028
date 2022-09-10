@@ -149,13 +149,30 @@
     
     color:rgba(240, 231, 231, 0.872);
     cursor: pointer;
-    background-color: red;
+    background-color: rgb(17, 14, 14);
 }
 
 
 .btn34:hover{
     background: rgb(186, 35, 35);
     color:#fff;
+}
+.btn36{
+  margin-top: 1rem;
+  display: inline-block;
+  padding:.8rem 3rem;
+  font-size: 0.7rem;
+  
+  
+  color:rgba(240, 231, 231, 0.872);
+  cursor: pointer;
+  background-color: red;
+}
+
+
+.btn36:hover{
+  background: rgb(186, 35, 35);
+  color:#fff;
 }
 
 .toprow{

@@ -76,7 +76,7 @@ const Register = () => {
                 
                 <div className="inputfield">
                     <label>Email</label>
-                    <input id='email' type="email" name="emaildonor" requried placeholder='Enter Email address' className="input" ></input>
+                    <input id='email' type="email" name="emaildonor" requried placeholder='Enter Email address' title="Please enter on @ to email address"className="input" ></input>
                 </div>
             
                 <div className="inputfield">

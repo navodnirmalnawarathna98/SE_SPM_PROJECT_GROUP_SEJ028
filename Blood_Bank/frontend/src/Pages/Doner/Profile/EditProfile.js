@@ -123,7 +123,7 @@ const register = () => {
 
                 </div>
                 mohan weerasinghe
-                <a href="/donorEditProfile" className="btn34">Delete Profile</a>
+                <a href="/donorEditProfile" className="btn36">Delete Profile</a>
                 
 
               </div>
