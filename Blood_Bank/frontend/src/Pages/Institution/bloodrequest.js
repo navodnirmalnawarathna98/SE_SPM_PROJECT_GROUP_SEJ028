@@ -59,21 +59,28 @@ const Bloodrequest = () => {
             <div class="form22">
                 <div class="inputfield">
                     <label>Institution Name</label>
-                    <input type="text" name="name" class="input" placeholder='enter institution name' onChange={(e)=>{setName(e.target.value);}} 
+                    <input type="text" name="name" class="input" 
+                     title="Please enter on alphabets only"
+                     placeholder='enter institution name' onChange={(e)=>{setName(e.target.value);}} 
+                     required
                     />
-                    {/* {error && !name && <span class="invalid-input">Enter valid name</span>} */}
+                   
                     
                 </div>
                 <div class="inputfield">
                     <label>Email</label>
-                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" class="input" placeholder='enter institution email' onChange={(e)=>{setEmail(e.target.value);}} 
-                
+                    <input type="email"
+                     title="characters@characters.domain eg:- bloodbank@gmail.com"
+                    name="email" class="input" placeholder='enter institution email' onChange={(e)=>{setEmail(e.target.value);}} 
+                    required
                     />
                 </div>
                 <div class="inputfield">
                     <label>Contact No</label>
-                    <input type="number" name="contact_no" pattern = "[0-9]" class="input" placeholder='enter institution contact number' onChange={(e)=>{setContact_no(e.target.value);}} 
-                
+                    <input type="number" name="contact_no" pattern="[0-9]{11}" 
+                    title="the contact number must be 10 numbers"
+                    class="input" placeholder='enter institution contact number' onChange={(e)=>{setContact_no(e.target.value);}} 
+                    required
                     />
                 </div>
                 <div class="inputfield">
@@ -81,21 +88,27 @@ const Bloodrequest = () => {
                 <div class="custom_select">
                     <select onChange={(e)=>{setBloodgroup(e.target.value);}} >
                         <option value="">Select</option>
-                        <option value="A+">A+</option>
-                        <option value="B+">B+</option>
+                        <option value="A+">Blood Group A</option>
+                        <option value="B+">Blood Group B</option>
+                        <option value="B+">Blood Group O</option>
+                        <option value="B+">Blood Group AB</option>
                     </select>
                 </div>
                 </div> 
                 <div class="inputfield">
                     <label>Blood Amount</label>
-                    <input type="number" name="blood_amount" pattern = "[2000-6000]" class="input" placeholder='enter blood amount (ml)'
+                    <input type="number" name="blood_amount"
+                     title="You can only request between 1000 - 3000ml blood amounts"
+                    min={1000} max={3000} class="input" placeholder='enter blood amount (ml)'
                     onChange={(e)=>{setBloodamount(e.target.value);}} 
+                    required
                     />
                 </div>
                 <div class="inputfield">
                     <label>Due Date</label>
                     <input type="date" name="due_date" class="input" 
                    onChange={(e)=>{setDuedate(e.target.value);}} 
+                   required
                     />
                 </div>
 
