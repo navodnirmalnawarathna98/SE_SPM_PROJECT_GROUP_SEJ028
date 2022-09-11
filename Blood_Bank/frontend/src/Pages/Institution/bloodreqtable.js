@@ -51,7 +51,7 @@ const onDelete =(id)=>{
         <ul>
             <li> <span>Dashboard</span> </li>
             <li><span>Blood Request</span> </li>
-            <li><a ></a><span>Blood Request</span> </li>
+            <li><a ></a><span>Reject Blood Request</span> </li>
             <li><a href='/' ><span>Sign Out</span> </a></li>
             
         </ul>
