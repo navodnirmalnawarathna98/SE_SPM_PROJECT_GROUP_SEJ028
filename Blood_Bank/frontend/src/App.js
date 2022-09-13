@@ -17,7 +17,11 @@ import Institution from "./Pages/Institution/InsRegForm";
 import Seeker from "./Pages/Seeker/Seeker";
 import BloodRequest from "./Pages/Institution/bloodrequest";
 import BloodRequestTable from "./Pages/Institution/bloodreqtable";
+
 import SeekerRegister from "./Pages/Seeker/SeekerRegister";
+import SeekerProfile from "./Pages/Seeker/SeekerProfile";
+import TemporyLogin from "./Pages/Seeker/temporyLogin";
+import Header from "./Pages/Home-Page/Header";
 
 function App() {
   return (
@@ -43,6 +47,9 @@ function App() {
         <Route path="/reqtable" element={<BloodRequestTable />} />
 
         <Route path="/seekerRegister" element={<SeekerRegister />} />
+        <Route path="/seekerProfile" element={<SeekerProfile />} />
+        <Route path="/tempLogin" element={<TemporyLogin />} />
+        <Route path="/header" element={<Header />} />
       </Routes>
     </Router>
   );

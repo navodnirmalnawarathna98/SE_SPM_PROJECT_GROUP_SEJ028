@@ -45,4 +45,21 @@ router.route("/add").post((req, res) => {
     });
 });
 
+//Add Blood Samples (http://localhost:8070/seeker/get/:id)
+
+router.route("/get/:id").get(async (req, res) => {
+  // get data from frontend via request. async function is used to increase the performance
+  let sampleId = req.params.id; //fetch the id parameter in url
+
+  const pack = await addSeekerModel
+    .findById(sampleId) //pass two parameters(userid,object that store seller data) and find user by id and update relevent data
+    .then((seekerRecord) => {
+      res.status(200).send({ status: "Record fetched", seekerRecord }); //if find success, display success message
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send({ status: "Error with find data" }); //if not display error message
+    });
+});
+
 module.exports = router;
