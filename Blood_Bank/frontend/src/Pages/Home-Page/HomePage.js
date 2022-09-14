@@ -49,16 +49,11 @@ const HomePage = () => {
       {/* <!-- home section starts  --> */}
       <section class="home" id="home">
         <class class="content">
-          <h3>
-            fresh and <span>organic</span> products for your
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            libero nostrum veniam facere tempore nisi.
-          </p>
-          <a href="#" class="btn">
-            shop now
-          </a>
+
+          <h3><span></span> </h3>
+          <p></p>
+          <a href="#" class="btn">Main Info</a>
+
         </class>
       </section>
       {/* <!-- home section ends --> */}
@@ -123,42 +118,30 @@ const HomePage = () => {
         <div class="box-container">
           <div class="box">
             <h3>Donor</h3>
-            <img src={img4} alt="" />
-            <p>upto 45% off</p>
-            <a href="/doner" class="btn">
-              Doner (Mohan)
-            </a>{" "}
-            <br />
+
+            <img src={img4} alt=""/>
+            <p></p>
+            <a href="/doner" class="btn">Doner</a> <br />
           </div>
           <div class="box">
             <h3>Seeker</h3>
-            <img src={img5} alt="" />
-            <p>upto 45% off</p>
-            <a href="/templogin" class="btn">
-              Seeker (Tharindu)
-            </a>{" "}
-            <br />
+            <img src={img5} alt=""/>
+            <p></p>
+            <a href="/seeker" class="btn">Seeker</a> <br />
           </div>
           <div class="box">
             <h3>Blood Bank</h3>
-            <img src={img6} alt="" />
-            <p>upto 45% off</p>
-            <a href="/admindashboard" class="btn">
-              Admin Dashboard (Dil)
-            </a>{" "}
-            <br />
+            <img src={img6} alt=""/>
+            <p></p>
+            <a href="/admindashboard" class="btn">Admin Dashboard</a> <br />
           </div>
           <div class="box">
             <h3>Institutions</h3>
-            <img src={img7} alt="" />
-            <p>upto 45% off</p>
-            <a href="/reqtable" class="btn">
-              Institution (Nova)
-            </a>{" "}
-            <br />
-            <a href="/institution" class="btn">
-              Register{" "}
-            </a>
+            <img src={img7} alt=""/>
+            <p></p>
+            <a href="/reqtable"  class="btn">Institution</a> <br />
+            <a href="/institution" class="btn">Register </a>
+
           </div>
         </div>
       </section>
@@ -232,20 +215,15 @@ const HomePage = () => {
 
             <div class="contacts contact-wrapper">
               <ul>
-                <li>
-                  We've driven online revenues of over{" "}
-                  <span class="highlight-text-grey">$2 billion</span> for our
-                  clients. Ready to know how we can help you?
-                </li>
+
+                <li>Blood Bank <span class="highlight-text-grey">
+                  (2017-2022).
+                  </span>  Ready to know
+                  how we can help you?</li>
                 <span class="hightlight-contact-info">
-                  <li class="email-info">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>{" "}
-                    info@demo.com
-                  </li>
-                  <li>
-                    <i class="fa fa-phone" aria-hidden="true"></i>{" "}
-                    <span class="highlight-text">+91 11 1111 2900</span>
-                  </li>
+                  <li class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> bloodbank@gmail.com</li>
+                  <li><i class="fa fa-phone" aria-hidden="true"></i> <span class="highlight-text">041 2234321</span></li>
+
                 </span>
               </ul>
             </div>
