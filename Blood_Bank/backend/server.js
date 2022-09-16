@@ -56,6 +56,15 @@
 // app.use(DonorUserRoutes);
 
 
+// Institution 
+const institutionRouter = require(`./routes/institutionRouter`);
+app.use("/addRequest",institutionRouter);
+
+
+
+
+
+
 
 // app.listen(PORT,()=>{
 //     console.log(`Server is running on port number : ${PORT}`); // Dipaly in console if server is running
@@ -95,4 +104,9 @@ app.listen(PORT ,() =>{
     console.log(`App is running on ${PORT}`);
 
 });
+
+app.listen(PORT,()=>{
+    console.log(`Server is running on port number : ${PORT}`); // Dipaly in console if server is running
+})
+
 
