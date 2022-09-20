@@ -45,6 +45,61 @@ router.route("/").get((req,res)=>{
     })
 })
 
+//Update Blood Request
+//async is promis ekak iwra unama thwa ekak 
+//params is parameeter
+router.route("/updateBloodReq/:id").put(async(req,res)=>{
+    let BloodreqId = req.params.id;
+
+    // Destructure
+    const {
+
+        name,
+        email,
+        contact_no,
+        blood_group,
+        blood_amount,
+        due_date,
+        description
+    
+    } = req.body;
+
+    const updateReq = {
+        name,
+        email,
+        contact_no,
+        blood_group,
+        blood_amount,
+        due_date,
+        description
+        
+    }
+
+    //first para user id
+    //secn para update kranna ona object ekaa
+    //async 
+    const update = await insbloodreq.findByIdAndUpdate(BloodreqId,updateReq)
+    .then(()=>{
+        res.status(200).send({Status:"Blood Req Update"})
+    }).catch((err)=>{
+        console.log(err);
+        res.status(500).send({status:"Error with update data", error: err.message});
+    })
+
+})
+
+
+
+//get one employee data
+router.route("/getBloodReq/:id").get(async(req,res)=>{ let bloodreqId = req.params.id; 
+    const reqblood =  await insbloodreq.findById(bloodreqId)
+  .then((insbloodreq)=>{
+        res.status(200).send({status:"user selected",insbloodreq})
+    }).catch((err)=>{
+        res.status(500).send({status:"Error with user selected", error:err.message});
+    })
+})
+
 
 //delete blood request
 router.route("/deleteReq/:id").delete(async(req,res)=>{
@@ -55,6 +110,9 @@ router.route("/deleteReq/:id").delete(async(req,res)=>{
         res.status(500).send({status:"Error with delete Request",error:err.message});
     })
  })
+
+
+
 
 
 
