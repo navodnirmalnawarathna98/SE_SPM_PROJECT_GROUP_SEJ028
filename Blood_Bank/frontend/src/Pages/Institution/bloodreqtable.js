@@ -99,8 +99,13 @@ const onDelete =(id)=>{
                             <td>{BloodReqs.blood_amount}</td>
                             <td>{BloodReqs.due_date}</td>
                             <td>{BloodReqs.description}</td>
-                            <td><a href="#" class="btn22">Edit</a></td>
+                            <td>
+                              <a href={`/editbloodreq/${BloodReqs._id}`} class="btn22">Edit</a>
+                              {/* /${BloodReqs._id} */}
+                            </td>
+                           
                             <td><a href="#" onClick={()=>{onDelete(BloodReqs._id)}} class="btn44">Delete</a></td>
+                            
                             <td><a href="#" class="btn66">Report</a></td>
                         </tr>
                         ))
