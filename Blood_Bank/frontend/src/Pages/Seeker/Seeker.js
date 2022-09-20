@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import SeekerRegister from "./SeekerRegister";
 
 const Seeker = () => {
   return (
-    <div>Seeker</div>
-  )
-}
+    <div>
+      {" "}
+      <SeekerRegister />{" "}
+    </div>
+  );
+};
 
-export default Seeker
+export default Seeker;
