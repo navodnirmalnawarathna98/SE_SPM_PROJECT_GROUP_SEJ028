@@ -9,6 +9,7 @@ import AddBloodSamples from "./Pages/Admin/AddBloodSamples";
 import DonorAppointments from "./Pages/Admin/DonorAppointments";
 import SeekerRequests from "./Pages/Admin/SeekerRequests";
 import RegisteredInstitutions from "./Pages/Admin/RegisteredInstitutions";
+import BloodSamples from "./Pages/Admin/BloodSamples";
 import DonorList from "./Pages/Admin/DonorList";
 import SeekerList from "./Pages/Admin/SeekerList";
 
@@ -41,6 +42,12 @@ function App() {
         {/* ADMIN */}
         <Route path='/admindashboard' element={<AdminDashboard/>}/>
         <Route path='/addbloodsamples' element={<AddBloodSamples/>}/>
+        <Route path='/bloodsamples' element={<BloodSamples/>}/>
+        <Route path='/donorappointments' element={<DonorAppointments/>}/>
+        <Route path='/seekerrequests' element={<SeekerRequests/>}/>
+        <Route path='/registeredinstitutions' element={<RegisteredInstitutions/>}/>
+        <Route path='/donorlist' element={<DonorList/>}/>
+        <Route path='/seekerlist' element={<SeekerList/>}/>
 
         {/* Doner */}
         <Route path='/doner' element={<Doner/>}/>
@@ -53,21 +60,6 @@ function App() {
         <Route path='/reqtable' element={<BloodRequestTable/>}/>
         <Route path='/bloodreq' element={<BloodRequest/>}/>
         <Route path='/editbloodreq/:id' element={<EditBloodRequest/>}/>
-
-
-
-        <Route path="/" element={<HomePage />} />
-        <Route path="/admindashboard" element={<AdminDashboard />} />
-        <Route path="/addbloodsamples" element={<AddBloodSamples />} />
-
-        <Route path="/donorappointments" element={<DonorAppointments />} />
-        <Route path="/seekerrequests" element={<SeekerRequests />} />
-        <Route
-          path="/registeredinstitutions"
-          element={<RegisteredInstitutions />}
-        />
-        <Route path="/donorlist" element={<DonorList />} />
-        <Route path="/seekerlist" element={<SeekerList />} />
 
         <Route path="/doner" element={<Doner />} />
         <Route path="/seeker" element={<Seeker />} />
