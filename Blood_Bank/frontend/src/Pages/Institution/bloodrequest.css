@@ -59,7 +59,6 @@
 .wrapper22 .form22 .inputfield .textarea{
   width: 100%;
   outline: none;
-  text-transform: lowercase;
   border: 1px solid #d5dbd9;
   font-size: 15px;
   padding: 8px 10px;
@@ -145,4 +144,12 @@
 .btn33:hover{
     background: rgb(186, 35, 35);
     color:#fff;
+}
+
+.invalid-input{
+  display: block;
+  color: red;
+  margin-top: 2px;
+  margin-left: 1px;
+  font-size: 10px;
 }
