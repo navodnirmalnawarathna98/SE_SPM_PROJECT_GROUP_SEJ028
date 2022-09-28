@@ -24,9 +24,11 @@ import BloodRequest from "./Pages/Institution/bloodrequest";
 import BloodRequestTable from "./Pages/Institution/bloodreqtable";
 import EditBloodRequest from "./Pages/Institution/editbloodrequest";
 
+//seeeker related imported files
 import SeekerRegister from "./Pages/Seeker/SeekerRegister";
 import SeekerProfile from "./Pages/Seeker/SeekerProfile";
 import TemporyLogin from "./Pages/Seeker/temporyLogin";
+import SeekerProfileUpdate from "./Pages/Seeker/SeekerProfileUpdate";
 import Header from "./Pages/Home-Page/Header";
 
 function App() {
@@ -75,9 +77,11 @@ function App() {
         <Route path="/bloodreq" element={<BloodRequest />} />
         <Route path="/reqtable" element={<BloodRequestTable />} />
 
+        {/* Setting paths for seeker components*/}
         <Route path="/seekerRegister" element={<SeekerRegister />} />
         <Route path="/seekerProfile" element={<SeekerProfile />} />
         <Route path="/tempLogin" element={<TemporyLogin />} />
+        <Route path="/seekerProfileUpdate" element={<SeekerProfileUpdate />} />
         <Route path="/header" element={<Header />} />
 
       </Routes>
