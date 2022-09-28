@@ -1,47 +1,25 @@
 import React from "react";
 
-const SeekerProfileUpdate = () => {
+const SeekerCreateBloodRequest = () => {
   return (
     <>
       <div>
-        <h1 class="text-center fw-bolder">
-          Enter Details to Update Your Profile
-        </h1>
+        <h1 class="text-center fw-bolder">CREATE REQUEST</h1>
       </div>
       <div class="d-flex justify-content-center">
         <form>
           <div class="wrapper1">
             <div class="form3">
               <div class="inputfield">
-                <label>First Name</label>
+                <label>Name</label>
                 <input
                   type="text"
                   name="firstName"
                   class="input"
                   pattern="[A-Za-z]{2,10}"
+                  required
                   title="first name should only contain letters and number of letters should be between 2 to 10  . e.g. john"
                 />
-              </div>
-
-              <div class="inputfield">
-                <label>Last Name</label>
-                <input type="text" name="lastName" class="input" />
-              </div>
-
-              <div class="inputfield">
-                <label>NIC Number</label>
-                <input
-                  type="text"
-                  name="nicNumber"
-                  class="input"
-                  pattern="[Vv0-9]{10}"
-                  title="NIC number should contain numbers and V-v letters and number of characters should be 10 only . e.g. 123456789V"
-                />
-              </div>
-
-              <div class="inputfield">
-                <label>Date of Birth</label>
-                <input type="date" name="dateOfBirth" class="input" />
               </div>
 
               <div class="inputfield">
@@ -127,17 +105,6 @@ const SeekerProfileUpdate = () => {
               <h4>Contact Information</h4>
 
               <div class="inputfield">
-                <label>Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  class="input"
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                  title="email should contain special charachters like @ and any other required characters. e.g. 1234567890"
-                />
-              </div>
-
-              <div class="inputfield">
                 <label>Contact Number</label>
                 <input
                   type="text"
@@ -148,27 +115,37 @@ const SeekerProfileUpdate = () => {
                 />
               </div>
 
+              <div class="inputfield">
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="input"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  title="email should contain special charachters like @ and any other required characters. e.g. 1234567890"
+                />
+              </div>
+
               <hr />
 
               <div class="inputfield">
-                <label>Gender</label>
-                <div class="custom_select">
-                  <select>
-                    <option value="">Select</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Custom">Custom</option>
-                  </select>
-                </div>
+                <label>Description</label>
+                <textarea
+                  type="text"
+                  name="firstName"
+                  class="input"
+                  pattern="[A-Za-z]{2,10}"
+                  required
+                  title="first name should only contain letters and number of letters should be between 2 to 10  . e.g. john"
+                />
               </div>
+
+              <hr />
 
               <div class="modal-footer">
                 <button type="submit" className="btn-danger float-right">
                   Submit
                 </button>
-                <a href="/" class="btn4">
-                  Cancel
-                </a>
               </div>
             </div>
           </div>
@@ -178,4 +155,4 @@ const SeekerProfileUpdate = () => {
   );
 };
 
-export default SeekerProfileUpdate;
+export default SeekerCreateBloodRequest;
