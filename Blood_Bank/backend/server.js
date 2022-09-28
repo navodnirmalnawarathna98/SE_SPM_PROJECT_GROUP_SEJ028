@@ -52,10 +52,6 @@ connection.once ("open", ()=>{
 const addBloodSamplesRouter = require('./routes/addBloodSamplesRouter');
 app.use('/addbloodsamples', addBloodSamplesRouter);
 
-// display blood volumes route
-const bloodVolumesRouter = require('./routes/bloodVolumesRouter');
-app.use('/bloodvolumes', bloodVolumesRouter);
-
 
 
 app.listen(PORT,()=>{
