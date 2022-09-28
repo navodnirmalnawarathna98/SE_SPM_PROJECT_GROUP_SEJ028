@@ -128,20 +128,20 @@
     }
   }
 
-  .btn33{
+  .btn34{
     margin-top: 1rem;
     display: inline-block;
     padding: 0.8rem 3rem;
     font-size: 11px;
     border-radius: 0.5rem;
-    margin-right: 117px;
+    margin-right: 115px;
     border: 0.2rem solid black;
     color: black;
     cursor: pointer;
     background: none;
 }
 
-.btn33:hover{
+.btn34:hover{
     background: rgb(186, 35, 35);
     color:#fff;
 }

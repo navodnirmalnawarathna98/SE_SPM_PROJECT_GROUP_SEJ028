@@ -11,7 +11,7 @@ const InsRegForm = () => {
            </div>
            <div class="form3">
              <div class="inputfield">
-                 <label>Full Name</label>
+                 <label>Institution Name</label>
                  <input type="text" name="editempname" class="input"/>
               </div>
          
