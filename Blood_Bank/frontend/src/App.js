@@ -29,6 +29,7 @@ import SeekerRegister from "./Pages/Seeker/SeekerRegister";
 import SeekerProfile from "./Pages/Seeker/SeekerProfile";
 import TemporyLogin from "./Pages/Seeker/temporyLogin";
 import SeekerProfileUpdate from "./Pages/Seeker/SeekerProfileUpdate";
+import SeekerCreateBloodRequest from "./Pages/Seeker/SeekerCreateBloodRequest";
 import Header from "./Pages/Home-Page/Header";
 
 function App() {
@@ -82,6 +83,10 @@ function App() {
         <Route path="/seekerProfile" element={<SeekerProfile />} />
         <Route path="/tempLogin" element={<TemporyLogin />} />
         <Route path="/seekerProfileUpdate" element={<SeekerProfileUpdate />} />
+        <Route
+          path="/seekerCreateBloodRequest"
+          element={<SeekerCreateBloodRequest />}
+        />
         <Route path="/header" element={<Header />} />
 
       </Routes>
