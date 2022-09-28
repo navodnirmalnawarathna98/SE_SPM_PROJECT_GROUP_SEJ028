@@ -2,7 +2,7 @@ const router = require("express").Router(); //import router function in express 
 let addBloodSamples = require("../models/addBloodSamples"); //import add blood samples model
 
 
-//Add Blood Samples (http://localhost:8070/addbloodsamples/add)
+//Add Blood Samples (http://localhost:8080/addbloodsamples/add)
 
 router.route("/add").post((req,res) => {  //get data from frontend via request
 
@@ -12,12 +12,11 @@ router.route("/add").post((req,res) => {  //get data from frontend via request
     const contactNumber = Number(req.body.contactNumber);
     const address = req.body.address;
     const email = req.body.email;
-    const dateOfBirth = req.body.dateOfBirth;
+    const dateOfBirth = Date(req.body.dateOfBirth);
     const nic = req.body.nic;
     const weight = Number(req.body.weight);
     const bloodType = req.body.bloodType;
     const bloodAmount = Number(req.body.bloodAmount);
-    const gender = req.body.gender;
     
 
     const newAddBloodSamples = new addBloodSamples({
@@ -31,7 +30,6 @@ router.route("/add").post((req,res) => {  //get data from frontend via request
         weight,
         bloodType,
         bloodAmount,
-        gender
     })
 
     //pass the variables to database
@@ -97,7 +95,6 @@ router.route("/update/:id").put(async(req,res) => { // get data from frontend vi
         weight,
         bloodType,
         bloodAmount,
-        gender
     }
 
     const update = await addBloodSamples.findByIdAndUpdate(sampleId, updateSample) //pass two parameters(userid,object that store seller data) and find user by id and update relevent data

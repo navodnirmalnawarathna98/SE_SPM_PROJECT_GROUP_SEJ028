@@ -5,7 +5,6 @@ import AddBloodSamples from "./Pages/Admin/AddBloodSamples";
 import DonorAppointments from "./Pages/Admin/DonorAppointments";
 import SeekerRequests from "./Pages/Admin/SeekerRequests";
 import RegisteredInstitutions from "./Pages/Admin/RegisteredInstitutions";
-import BloodSamples from "./Pages/Admin/BloodSamples";
 import DonorList from "./Pages/Admin/DonorList";
 import SeekerList from "./Pages/Admin/SeekerList";
 
@@ -26,7 +25,6 @@ function App() {
         <Route path='/' element={<HomePage/>}/>
         <Route path='/admindashboard' element={<AdminDashboard/>}/>
         <Route path='/addbloodsamples' element={<AddBloodSamples/>}/>
-        <Route path='/bloodsamples' element={<BloodSamples/>}/>
 
         <Route path='/donorappointments' element={<DonorAppointments/>}/>
         <Route path='/seekerrequests' element={<SeekerRequests/>}/>
