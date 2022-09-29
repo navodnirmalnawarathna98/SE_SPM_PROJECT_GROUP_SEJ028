@@ -48,7 +48,7 @@ const AdminDashboard = () => {
 
                 <tbody>
                   <tr>
-                    <th scope="row">Nawaloka</th>
+                    <td>Nawaloka</td>
                     <td>nava@gmail.com</td>
                     <td>0751125986</td>
                     <td>A+</td>
@@ -59,37 +59,49 @@ const AdminDashboard = () => {
                   </tr>
 
                   <tr>
-                    <th scope="row">Nawaloka</th>
-                    <td>nava@gmail.com</td>
+                    <td>Asiri</td>
+                    <td>asiri@gmail.com</td>
                     <td>0751125986</td>
-                    <td>A+</td>
-                    <td>59</td>
-                    <td>2022-06-12</td>
+                    <td>O-</td>
+                    <td>109</td>
+                    <td>2022-06-24</td>
                     <td><span class="data-list"><button className='button-accept'>Accept</button></span></td>
                     <td><span class="data-list"><button className='button-reject'>Reject</button></span></td>
                   </tr>
 
                   <tr>
-                    <th scope="row">Nawaloka</th>
-                    <td>nava@gmail.com</td>
+                    <td>Apallo</td>
+                    <td>apallo@gmail.com</td>
                     <td>0751125986</td>
-                    <td>A+</td>
-                    <td>59</td>
-                    <td>2022-06-12</td>
+                    <td>AB+</td>
+                    <td>69</td>
+                    <td>2022-06-02</td>
                     <td><span class="data-list"><button className='button-accept'>Accept</button></span></td>
                     <td><span class="data-list"><button className='button-reject'>Reject</button></span></td>
                   </tr>
 
                   <tr>
-                    <th scope="row">Nawaloka</th>
-                    <td>nava@gmail.com</td>
+                    <td>Golden Key</td>
+                    <td>gk@gmail.com</td>
                     <td>0751125986</td>
-                    <td>A+</td>
-                    <td>59</td>
-                    <td>2022-06-12</td>
+                    <td>A-</td>
+                    <td>85</td>
+                    <td>2022-06-10</td>
                     <td><span class="data-list"><button className='button-accept'>Accept</button></span></td>
                     <td><span class="data-list"><button className='button-reject'>Reject</button></span></td>
                   </tr>
+
+                  <tr>
+                    <td>Ninewells</td>
+                    <td>nine@gmail.com</td>
+                    <td>0751125986</td>
+                    <td>B+</td>
+                    <td>125</td>
+                    <td>2022-06-30</td>
+                    <td><span class="data-list"><button className='button-accept'>Accept</button></span></td>
+                    <td><span class="data-list"><button className='button-reject'>Reject</button></span></td>
+                  </tr>
+
                 </tbody>
 
               </table>
