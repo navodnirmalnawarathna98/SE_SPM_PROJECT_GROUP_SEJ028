@@ -54,9 +54,13 @@ app.use("/addbloodsamples", addBloodSamplesRouter);
 const institutionRouter = require(`./routes/institutionRouter`);
 app.use("/addRequest", institutionRouter);
 
-//seeker
+//seeker routes
 const addSeekerRoute = require("./routes/seekerRoutes");
 app.use("/Seeker", addSeekerRoute);
+
+//seeker Blood Request routes
+const bloodRequestRoutes = require("./routes/seekerBloodRequestRoutes");
+app.use("/SeekerBloodRequest", bloodRequestRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port number : ${PORT}`); // Dipaly in console if server is running
