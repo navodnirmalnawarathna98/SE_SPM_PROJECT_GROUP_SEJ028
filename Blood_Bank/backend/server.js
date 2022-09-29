@@ -5,9 +5,6 @@ const cors = require("cors"); // Cross Origin Resource Sharing
 const dotenv = require("dotenv"); // Loads environment variables from a .env file into process.env
 const app = express(); // Initialize the Express application
 
-
-
-
 require("dotenv").config(); // Loads environment variables from a .env file into process.env
 
 const PORT = process.env.PORT || 8070;
@@ -27,15 +24,13 @@ connection.once("open", () => {
   console.log("MongoDB Database Connection Successfull"); // Display in console if connection is successful
 });
 
-
-
 // add blood sample route
-const addBloodSamplesRouter = require('./routes/addBloodSamplesRouter');
-app.use('/addbloodsamples', addBloodSamplesRouter);
+const addBloodSamplesRouter = require("./routes/addBloodSamplesRouter");
+app.use("/addbloodsamples", addBloodSamplesRouter);
 
 // display blood volumes route
-const bloodVolumesRouter = require('./routes/bloodVolumesRouter');
-app.use('/bloodvolumes', bloodVolumesRouter);
+const bloodVolumesRouter = require("./routes/bloodVolumesRouter");
+app.use("/bloodvolumes", bloodVolumesRouter);
 
 // Institution
 const institutionRouter = require(`./routes/institutionRouter`);
@@ -45,16 +40,18 @@ app.use("/addRequest", institutionRouter);
 const addSeekerRoute = require("./routes/seekerRoutes");
 app.use("/Seeker", addSeekerRoute);
 
-//Donor 
+//seeker Blood Request routes
+const bloodRequestRoutes = require("./routes/seekerBloodRequestRoutes");
+app.use("/SeekerBloodRequest", bloodRequestRoutes);
 
-const usersRoutes = require('./routes/donorUser');
+//Donor
+
+const usersRoutes = require("./routes/donorUser");
 app.use(bodyParser.json());
 app.use(cors());
 
 // route middleware
-app.use('/donorUser',usersRoutes);
-
-
+app.use("/donorUser", usersRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port number : ${PORT}`); // Dipaly in console if server is running
