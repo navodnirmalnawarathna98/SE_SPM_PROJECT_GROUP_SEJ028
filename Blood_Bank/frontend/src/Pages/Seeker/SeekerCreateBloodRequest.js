@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const SeekerCreateBloodRequest = () => {
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [nicNumber, setNicNumber] = useState("");
+  const [gender, setGender] = useState("");
+  const [dateOfBirth, setDateOfBirth] = useState("");
+  const [bloodType, setBloodType] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [district, setDistrict] = useState("");
+  const [province, setProvince] = useState("");
+
+  function sendData(e){
+
+    e.preventDefault();
+
+    alert("testing purpose senData function is  called");
+
+  }
+
   return (
     <>
       <div>
