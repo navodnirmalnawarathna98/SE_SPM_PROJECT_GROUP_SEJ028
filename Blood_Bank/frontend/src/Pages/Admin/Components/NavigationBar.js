@@ -23,6 +23,10 @@ const NavigationBar = () => {
                         <i class="uil uil-medical-drip"></i>
                         <span class="ad-link-name">Add Blood Samples</span>
                     </a></li>
+                    <li><a href="/bloodsamples">
+                        <i class="uil uil-medical-drip"></i>
+                        <span class="ad-link-name">Blood Samples</span>
+                    </a></li>
                     <li><a href="/donorappointments">
                         <i class="uil uil-chart"></i>
                         <span class="ad-link-name">Donor Appointments</span>
