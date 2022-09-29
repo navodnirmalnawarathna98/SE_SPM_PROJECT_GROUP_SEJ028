@@ -47,8 +47,12 @@ connection.once("open", () => {
 // app.use("/employee",employeeRouter);
 
 // add blood sample route
-const addBloodSamplesRouter = require("./routes/addBloodSamplesRouter");
-app.use("/addbloodsamples", addBloodSamplesRouter);
+const addBloodSamplesRouter = require('./routes/addBloodSamplesRouter');
+app.use('/addbloodsamples', addBloodSamplesRouter);
+
+// display blood volumes route
+const bloodVolumesRouter = require('./routes/bloodVolumesRouter');
+app.use('/bloodvolumes', bloodVolumesRouter);
 
 // Institution
 const institutionRouter = require(`./routes/institutionRouter`);
