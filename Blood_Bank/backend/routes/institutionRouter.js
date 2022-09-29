@@ -37,9 +37,21 @@ router.route("/addbloodreq").post((req,res)=>{//get data from frontend via reque
 })
 
 //view blood request
-router.route("/").get((req,res)=>{
+router.route("/viewBlood").get((req,res)=>{
+
+    const{q} = req.query;
+
+    const keys = ["name"];
+    
+    const search = (bloodreq) =>{
+        return bloodreq.filter((item) =>
+            keys.some((key) => item[key].toLowerCase().includes(q))
+        );
+    };
+
+
     insbloodreq.find().then((bloodreq)=>{
-        res.json(bloodreq)
+        res.json(search(bloodreq))
     }).catch((err)=>{
         console.log(err)
     })
