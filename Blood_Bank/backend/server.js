@@ -32,11 +32,15 @@ app.use("/addbloodsamples", addBloodSamplesRouter);
 const bloodVolumesRouter = require("./routes/bloodVolumesRouter");
 app.use("/bloodvolumes", bloodVolumesRouter);
 
+// display blood volumes route
+const bloodVolumesRouter = require("./routes/bloodVolumesRouter");
+app.use("/bloodvolumes", bloodVolumesRouter);
+
 // Institution
 const institutionRouter = require(`./routes/institutionRouter`);
 app.use("/addRequest", institutionRouter);
 
-//seeker routes
+//seeker
 const addSeekerRoute = require("./routes/seekerRoutes");
 app.use("/Seeker", addSeekerRoute);
 
@@ -47,10 +51,12 @@ app.use("/SeekerBloodRequest", bloodRequestRoutes);
 //Donor
 
 const usersRoutes = require("./routes/donorUser");
+
 app.use(bodyParser.json());
 app.use(cors());
 
 // route middleware
+
 app.use("/donorUser", usersRoutes);
 
 app.listen(PORT, () => {
