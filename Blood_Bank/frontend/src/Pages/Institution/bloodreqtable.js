@@ -9,20 +9,20 @@ const Bloodreqtable = () => {
  //Data retriving function
  const[BloodReqs, setBloodReqs] = useState([]);
 
-//  //GET  Details FROM DB
-//  const [query,setQuery] = useState("");   
+//GET  Details FROM DB
+const [query,setQuery] = useState("");  
 
 useEffect(()=>{
     function getBloodReq(){
-        axios.get(`http://localhost:8070/addRequest/`).then((res) =>{
+        axios.get(`http://localhost:8070/addRequest/viewBlood/?q=${query}`).then((res) =>{
             console.log(res.data);
             setBloodReqs(res.data)
         }).catch((err)=>{
             alert(err.message);
         })
     }
-   getBloodReq();
-}, [])
+    if(query.length === 0 || query.length > 1) getBloodReq();
+}, [query])
 
 
 // DELETE FUNCTION
@@ -60,8 +60,8 @@ const onDelete =(id)=>{
         <div class="header">
             <div class="nav">
                 <div class="search">
-                    <input type="text" placeholder="Search.."/>
-                    <button type="submit"><img src={img22} alt=""/></button>
+                    <input type="text" name='search' placeholder="Search.."  onChange={(e)=> setQuery(e.target.value)}/>
+                    <button type="submit"><img src={img22} /></button>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@ const onDelete =(id)=>{
                            
                             <td><a href="#" onClick={()=>{onDelete(BloodReqs._id)}} class="btn44">Delete</a></td>
                             
-                            <td><a href="#" class="btn66">Report</a></td>
+                            <td><a href="/bloodreport" class="btn66">Report</a></td>
                         </tr>
                         ))
                            ):(
