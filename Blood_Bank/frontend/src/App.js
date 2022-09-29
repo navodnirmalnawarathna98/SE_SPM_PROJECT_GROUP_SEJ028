@@ -24,6 +24,7 @@ import Institution from "./Pages/Institution/InsRegForm";
 import BloodRequest from "./Pages/Institution/bloodrequest";
 import BloodRequestTable from "./Pages/Institution/bloodreqtable";
 import EditBloodRequest from "./Pages/Institution/editbloodrequest";
+import BloodReport from "./Pages/Institution/bloodreport";
 
 //seeeker related imported files
 import SeekerRegister from "./Pages/Seeker/SeekerRegister";
@@ -63,6 +64,21 @@ function App() {
         <Route path='/reqtable' element={<BloodRequestTable/>}/>
         <Route path='/bloodreq' element={<BloodRequest/>}/>
         <Route path='/editbloodreq/:id' element={<EditBloodRequest/>}/>
+        <Route path='/bloodreport' element={<BloodReport/>}/>
+
+
+
+
+        <Route path="/" element={<HomePage />} />
+        <Route path="/admindashboard" element={<AdminDashboard />} />
+        <Route path="/addbloodsamples" element={<AddBloodSamples />} />
+
+        <Route path="/donorappointments" element={<DonorAppointments />} />
+        <Route path="/seekerrequests" element={<SeekerRequests />} />
+        <Route path="/registeredinstitutions" element={<RegisteredInstitutions />}/>
+        <Route path="/donorlist" element={<DonorList />} />
+        <Route path="/seekerlist" element={<SeekerList />} />
+
 
         <Route path="/doner" element={<Doner />} />
         <Route path="/seeker" element={<Seeker />} />
