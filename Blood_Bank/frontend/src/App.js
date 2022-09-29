@@ -15,6 +15,9 @@ import SeekerList from "./Pages/Admin/SeekerList";
 
 // Doner
 import Doner from "./Pages/Doner/Doner";
+import DonerRegister from "./Pages/Doner/LoginRegister/Register";
+import DonorProfile from "./Pages/Doner/Profile/Profile";
+import DonorEditProfile from "./Pages/Doner/Profile/EditProfile";
 
 // Seeker
 import Seeker from "./Pages/Seeker/Seeker";
@@ -81,6 +84,9 @@ function App() {
 
 
         <Route path="/doner" element={<Doner />} />
+        <Route path='/donorregister' element={<DonerRegister/>}/>
+        <Route path='/donorprofile' element={<DonorProfile/>}/>
+        <Route path='/donoreditprofile' element={<DonorEditProfile/>}/>
         <Route path="/seeker" element={<Seeker />} />
         <Route path="/institution" element={<Institution />} />
         <Route path="/bloodreq" element={<BloodRequest />} />
