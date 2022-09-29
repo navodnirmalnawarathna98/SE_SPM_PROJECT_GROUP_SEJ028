@@ -23,6 +23,7 @@ import Institution from "./Pages/Institution/InsRegForm";
 import BloodRequest from "./Pages/Institution/bloodrequest";
 import BloodRequestTable from "./Pages/Institution/bloodreqtable";
 import EditBloodRequest from "./Pages/Institution/editbloodrequest";
+import BloodReport from "./Pages/Institution/bloodreport";
 
 import SeekerRegister from "./Pages/Seeker/SeekerRegister";
 import SeekerProfile from "./Pages/Seeker/SeekerProfile";
@@ -53,6 +54,7 @@ function App() {
         <Route path='/reqtable' element={<BloodRequestTable/>}/>
         <Route path='/bloodreq' element={<BloodRequest/>}/>
         <Route path='/editbloodreq/:id' element={<EditBloodRequest/>}/>
+        <Route path='/bloodreport' element={<BloodReport/>}/>
 
 
 
@@ -62,10 +64,7 @@ function App() {
 
         <Route path="/donorappointments" element={<DonorAppointments />} />
         <Route path="/seekerrequests" element={<SeekerRequests />} />
-        <Route
-          path="/registeredinstitutions"
-          element={<RegisteredInstitutions />}
-        />
+        <Route path="/registeredinstitutions" element={<RegisteredInstitutions />}/>
         <Route path="/donorlist" element={<DonorList />} />
         <Route path="/seekerlist" element={<SeekerList />} />
 
