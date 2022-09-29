@@ -25,7 +25,7 @@ const addBloodSamplesSchema = new Schema({  //assign values to schema
         required: true,
     },
     dateOfBirth: {
-        type: Date,
+        type: String,
         required: true,
     },
     nic: {
@@ -44,6 +44,10 @@ const addBloodSamplesSchema = new Schema({  //assign values to schema
         type: Number,
         required: true,
     },
+    gender: {
+        type: String,
+        required: true,
+    }
 
 })
 
