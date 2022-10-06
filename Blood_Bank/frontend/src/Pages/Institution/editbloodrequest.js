@@ -145,7 +145,7 @@ const EditBloodRequest= ()=>{
 
                     <div class="modal-footer">
                     <button  type='submit' class="btn34"   onClick= {sendUpData}>Update</button>
-                    <a class="btn34"  onClick = {closeReq}>Cancel</a>
+                    <button class="btn35"  onClick = {closeReq}>Cancel</button>
                    
                     </div>
                 </div>

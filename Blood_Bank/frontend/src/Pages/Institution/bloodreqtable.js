@@ -72,7 +72,7 @@ const onDelete =(id)=>{
             <div class="content-2">
                 <div class="recent-payments">
                     <div class="title">
-                        <a href="/bloodreq" class="btn11">Create Blood Request</a>
+                        <a href="/bloodreq" title='click this button to create a blood request....!' class="btn111">Create Blood Request</a>
                     </div>
                     <table>
                     <thead>
@@ -100,13 +100,13 @@ const onDelete =(id)=>{
                             <td>{BloodReqs.due_date}</td>
                             <td>{BloodReqs.description}</td>
                             <td>
-                              <a href={`/editbloodreq/${BloodReqs._id}`} class="btn22">Edit</a>
+                              <a title='click this button to edit blood request...!' href={`/editbloodreq/${BloodReqs._id}`} class="btn22">Edit</a>
                               {/* /${BloodReqs._id} */}
                             </td>
                            
-                            <td><a href="#" onClick={()=>{onDelete(BloodReqs._id)}} class="btn44">Delete</a></td>
+                            <td><a href="#" title='click this button to delete blood request...!'  onClick={()=>{onDelete(BloodReqs._id)}} class="btn44">Delete</a></td>
                             
-                            <td><a href="/bloodreport" class="btn66">Report</a></td>
+                            <td><a title='click this button to get report...!' href="/bloodreport" class="btn66">Report</a></td>
                         </tr>
                         ))
                            ):(

@@ -64,8 +64,6 @@ const Bloodrequest = () => {
                      placeholder='enter institution name' onChange={(e)=>{setName(e.target.value);}} 
                      required
                     />
-                   
-                    
                 </div>
                 <div class="inputfield">
                     <label>Email</label>

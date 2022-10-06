@@ -14,7 +14,7 @@ const Bloodreport = ()=>{
 
     return(
         <div>
-            <a  class="btn btnA btnE"  onClick={handlePrint} type="submit">Get PDF</a>
+            <button title="you can get pdf"  class="btn233"  onClick={handlePrint} type="submit">Get PDF</button>
             <div ref={componentRef}>
                 <div class="nova">
                 <div class="container22 ">
