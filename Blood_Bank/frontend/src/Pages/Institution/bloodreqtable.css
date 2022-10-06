@@ -269,10 +269,10 @@ td {
     }
 }
 
-.btn11{
+.btn111{
     margin-top: 1rem;
     display: inline-block;
-    margin-right: 87rem;
+    margin-right: 80rem;
     padding:.8rem 3rem;
     font-size: 12px;
     border-radius: .5rem;
@@ -282,7 +282,7 @@ td {
     background: none;
 }
 
-.btn11:hover{
+.btn111:hover{
     background: rgb(186, 35, 35);
     color:#fff;
 }

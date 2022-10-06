@@ -4,31 +4,31 @@ const Schema = mongoose.Schema; // create schema
 
 const InsBloodReqSchema = new Schema({
 
-    name : {
+    name: {
         type: String,
         required: true,
     },
-    email : {
+    email: {
         type: String,
         required: true,
     },
-    contact_no : {
+    contact_no: {
         type: Number,
         required: true,
     },
-    blood_group : {
+    blood_group: {
         type: String,
         required: true,
     },
-    blood_amount : {
+    blood_amount: {
         type: Number,
         required: true,
     },
-    due_date : {
+    due_date: {
         type: Date,
         required: true,
     },
-    description:{
+    description: {
         type: String,
         required: true,
     }
