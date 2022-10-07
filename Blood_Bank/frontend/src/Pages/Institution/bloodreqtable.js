@@ -101,12 +101,13 @@ const Bloodreqtable = () => {
                                             <td>{BloodReqs.description}</td>
                                             <td>
                                                 <a title='click this button to edit blood request...!' href={`/editbloodreq/${BloodReqs._id}`} class="btn22">Edit</a>
-                                                {/* /${BloodReqs._id} */}
                                             </td>
-
-                                            <td><a href="#" title='click this button to delete blood request...!' onClick={() => { onDelete(BloodReqs._id) }} class="btn44">Delete</a></td>
-
-                                            <td><a title='click this button to get report...!' href="/bloodreport" class="btn66">Report</a></td>
+                                            <td>
+                                                <a  title='click this button to delete blood request...!' onClick={() => { onDelete(BloodReqs._id) }} class="btn44">Delete</a>
+                                            </td>
+                                            <td>
+                                                <a title='click this button to get report...!'  href={`/bloodreport/${BloodReqs._id}`}  class="btn66">Report</a>
+                                            </td>
                                         </tr>
                                     ))
                                     ) : (
