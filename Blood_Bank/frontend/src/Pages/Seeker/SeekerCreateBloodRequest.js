@@ -1,13 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const SeekerCreateBloodRequest = () => {
+  const [name, setName] = useState("");
+  const [bloodType, setBloodType] = useState("");
+  const [district, setDistrict] = useState("");
+  const [province, setProvince] = useState("");
+
+  const [contactNumber, setContactNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
+
+  function sendData(e) {
+    e.preventDefault();
+
+    alert("testing purpose senData function is  called");
+
+    const newSeekerBloodRequest = {
+      name,
+      bloodType,
+      province,
+      district,
+      contactNumber,
+      email,
+      description,
+    };
+    axios
+      .post(
+        "http://localhost:8070/SeekerBloodRequest/add",
+        newSeekerBloodRequest
+      )
+      .then(() => {
+        alert("New blood request added ");
+
+        setName("");
+        setBloodType("");
+        setProvince("");
+        setDistrict("");
+        setContactNumber("");
+        setEmail("");
+        setDescription("");
+      })
+      .catch((err) => {
+        alert(err);
+      });
+
+    console.log({ newSeekerBloodRequest });
+  }
+
   return (
     <>
       <div>
         <h1 class="text-center fw-bolder">CREATE REQUEST</h1>
       </div>
       <div class="d-flex justify-content-center">
-        <form>
+        <form onSubmit={sendData}>
           <div class="wrapper1">
             <div class="form3">
               <div class="inputfield">
@@ -16,16 +63,21 @@ const SeekerCreateBloodRequest = () => {
                   type="text"
                   name="firstName"
                   class="input"
-                  pattern="[A-Za-z]{2,10}"
                   required
-                  title="first name should only contain letters and number of letters should be between 2 to 10  . e.g. john"
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
                 />
               </div>
 
               <div class="inputfield">
                 <label>Blood Type</label>
                 <div class="custom_select">
-                  <select>
+                  <select
+                    onChange={(e) => {
+                      setBloodType(e.target.value);
+                    }}
+                  >
                     <option value="">Select</option>
                     <option value="A+">A+</option>
                     <option value="A-">A</option>
@@ -46,7 +98,11 @@ const SeekerCreateBloodRequest = () => {
               <div class="inputfield">
                 <label>Province</label>
                 <div class="custom_select">
-                  <select>
+                  <select
+                    onChange={(e) => {
+                      setProvince(e.target.value);
+                    }}
+                  >
                     <option value="">Select</option>
                     <option value="Central Sri Lanka">Central Sri Lanka</option>
                     <option value="East Sri Lanka">East Sri Lanka</option>
@@ -71,7 +127,11 @@ const SeekerCreateBloodRequest = () => {
               <div class="inputfield">
                 <label>District</label>
                 <div class="custom_select">
-                  <select>
+                  <select
+                    onChange={(e) => {
+                      setDistrict(e.target.value);
+                    }}
+                  >
                     <option value="">Select</option>
                     <option value="Colombo">Colombo</option>
                     <option value="Gampaha">Gampaha</option>
@@ -112,6 +172,9 @@ const SeekerCreateBloodRequest = () => {
                   class="input"
                   pattern="[0-9]{11}"
                   title="contact number should only contain numbers only . e.g. 1234567890"
+                  onChange={(e) => {
+                    setContactNumber(e.target.value);
+                  }}
                 />
               </div>
 
@@ -123,6 +186,9 @@ const SeekerCreateBloodRequest = () => {
                   class="input"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                   title="email should contain special charachters like @ and any other required characters. e.g. 1234567890"
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
                 />
               </div>
 
@@ -134,9 +200,9 @@ const SeekerCreateBloodRequest = () => {
                   type="text"
                   name="firstName"
                   class="input"
-                  pattern="[A-Za-z]{2,10}"
-                  required
-                  title="first name should only contain letters and number of letters should be between 2 to 10  . e.g. john"
+                  onChange={(e) => {
+                    setDescription(e.target.value);
+                  }}
                 />
               </div>
 

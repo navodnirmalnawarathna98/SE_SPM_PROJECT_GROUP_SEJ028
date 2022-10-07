@@ -2,7 +2,7 @@ const router = require("express").Router(); //import router function in express 
 
 let addSeekerModel = require("../models/SeekerModel");
 
-//Add Blood Samples (http://localhost:8070/seeker/add)
+//Add seeker (http://localhost:8070/seeker/add)
 
 router.route("/add").post((req, res) => {
   //get data from frontend via request

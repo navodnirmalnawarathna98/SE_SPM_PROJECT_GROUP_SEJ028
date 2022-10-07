@@ -32,10 +32,6 @@ app.use("/addbloodsamples", addBloodSamplesRouter);
 const bloodVolumesRouter = require("./routes/bloodVolumesRouter");
 app.use("/bloodvolumes", bloodVolumesRouter);
 
-// display blood volumes route
-const bloodVolumesRouter = require("./routes/bloodVolumesRouter");
-app.use("/bloodvolumes", bloodVolumesRouter);
-
 // Institution
 const institutionRouter = require(`./routes/institutionRouter`);
 app.use("/addRequest", institutionRouter);
