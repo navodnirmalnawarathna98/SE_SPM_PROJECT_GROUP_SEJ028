@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 
 const EditBloodRequest = () => {
 
-    console.log("-----------------------", useParams());
 
     const { id } = useParams();
     const [name, setName] = useState("");
@@ -18,6 +17,17 @@ const EditBloodRequest = () => {
     const [due_date, setDuedate] = useState("");
     const [description, setDescription] = useState("");
 
+    useEffect(() => {
+        axios.get(`http://localhost:8070/addRequest/getBloodReq/${id}`).then(res => {
+            setName(res.data.insbloodreq.name);
+            setEmail(res.data.insbloodreq.email);
+            setContact_no(res.data.insbloodreq.contact_no);
+            setBloodgroup(res.data.insbloodreq.blood_group);
+            setBloodamount(res.data.insbloodreq.blood_amount);
+            setDuedate(res.data.insbloodreq.due_date);
+            setDescription(res.data.insbloodreq.description);
+        })
+    }, [])
 
 
     function sendUpData(e) {
@@ -45,22 +55,6 @@ const EditBloodRequest = () => {
         window.location.href = "";
     }
 
-    useEffect(() => {
-        axios.get(`http://localhost:8070/addRequest/getBloodReq/${id}`).then(res => {
-
-            console.log("navodddddddddddddd", res.data);
-
-            setName(res.data.insbloodreq.name);
-            setEmail(res.data.insbloodreq.email);
-            setContact_no(res.data.insbloodreq.contact_no);
-            setBloodgroup(res.data.insbloodreq.blood_group);
-            setBloodamount(res.data.insbloodreq.blood_amount);
-            setDuedate(res.data.insbloodreq.due_date);
-            setDescription(res.data.insbloodreq.description);
-
-
-        })
-    }, [])
 
     function closeReq() {
         window.location.href = "/reqtable";
