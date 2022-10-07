@@ -67,7 +67,7 @@ function App() {
         <Route path='/reqtable' element={<BloodRequestTable/>}/>
         <Route path='/bloodreq' element={<BloodRequest/>}/>
         <Route path='/editbloodreq/:id' element={<EditBloodRequest/>}/>
-        <Route path='/bloodreport' element={<BloodReport/>}/>
+        <Route path='/bloodreport/:id' element={<BloodReport/>}/>
 
 
 
