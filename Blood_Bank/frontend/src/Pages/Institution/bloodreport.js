@@ -1,16 +1,55 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useReactToPrint } from "react-to-print";
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 import "./bloodreport.css"
 
 
 const Bloodreport = () => {
 
+    const { id } = useParams();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [contact_no, setContact_no] = useState("");
+    const [blood_group, setBloodgroup] = useState("");
+    const [blood_amount, setBloodamount] = useState("");
+    const [due_date, setDuedate] = useState("");
+    const [description, setDescription] = useState("");
+    const [currentDate, setCurrentDate] = useState('');
+
+    useEffect(() => {
+        axios.get(`http://localhost:8070/addRequest/getBloodReq/${id}`).then(res => {
+            setName(res.data.insbloodreq.name);
+            setEmail(res.data.insbloodreq.email);
+            setContact_no(res.data.insbloodreq.contact_no);
+            setBloodgroup(res.data.insbloodreq.blood_group);
+            setBloodamount(res.data.insbloodreq.blood_amount);
+            setDuedate(res.data.insbloodreq.due_date);
+            setDescription(res.data.insbloodreq.description);
+        })
+    }, [])
+
+    useEffect(() => {
+        var date = new Date().getDate(); //Current Date
+        var month = new Date().getMonth() + 1; //Current Month
+        var year = new Date().getFullYear(); //Current Year
+        var hours = new Date().getHours(); //Current Hours
+        var min = new Date().getMinutes(); //Current Minutes
+        var sec = new Date().getSeconds(); //Current Seconds
+        setCurrentDate('DATE:-' + date + '/' + month + '/' + year + '  ' + 'TIME :-' + hours + ':' + min + ':' + sec);
+    }, []);
+
+
+
+
+    //report generate
     //npm i react-to-print
     const componentRef = useRef();
-
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
     });
+
+
 
     return (
         <div>
@@ -21,101 +60,27 @@ const Bloodreport = () => {
                         <div class="row22">
                             <div class="col-md-12">
                                 <div class="text-center lh-1 mb-2">
-                                    <h6 class="fw-bold">Payslip</h6> <span class="fw-normal">Payment slip for the month of June 2021</span>
+                                    <br />
+                                    <h1 class="fw-bold">Blood Request Details</h1>
+                                    <span class="fw-normal">
+                                        <h4>
+                                            {currentDate}
+                                        </h4>
+                                    </span>
                                 </div>
-                                <div class="d-flex justify-content-end"> <span>Working Branch:ROHINI</span> </div>
+                                <br />
+                                <br />
                                 <div class="row">
                                     <div class="col-md-10">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <div> <span class="fw-bolder">EMP Code</span> <small class="ms-3">39124</small> </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div> <span class="fw-bolder">EMP Name</span> <small class="ms-3">Ashok</small> </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div> <span class="fw-bolder">PF No.</span> <small class="ms-3">101523065714</small> </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div> <span class="fw-bolder">NOD</span> <small class="ms-3">28</small> </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div> <span class="fw-bolder">ESI No.</span> <small class="ms-3"></small> </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div> <span class="fw-bolder">Mode of Pay</span> <small class="ms-3">SBI</small> </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div> <span class="fw-bolder">Designation</span> <small class="ms-3">Marketing Staff (MK)</small> </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div> <span class="fw-bolder">Ac No.</span> <small class="ms-3">*******0701</small> </div>
+                                                <div> <span class="fw-bolder"><h4>Institution Name</h4></span> <small class="ms-3"><h3>{name}</h3></small></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <table class="mt-4 table table-bordered">
-                                        <thead class="bg-dark text-white">
-                                            <tr>
-                                                <th scope="col">Earnings</th>
-                                                <th scope="col">Amount</th>
-                                                <th scope="col">Deductions</th>
-                                                <th scope="col">Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            <tr>
-                                                <th scope="row">WA</th>
-                                                <td>120.00 </td>
-                                                <td>LOP</td>
-                                                <td>0.00</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">CA</th>
-                                                <td>0.00 </td>
-                                                <td>PT</td>
-                                                <td>0.00</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">CCA</th>
-                                                <td>0.00 </td>
-                                                <td>SPL. Deduction</td>
-                                                <td>500.00</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">MA</th>
-                                                <td>3000.00</td>
-                                                <td>EWF</td>
-                                                <td>0.00</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Sales Incentive</th>
-                                                <td>0.00</td>
-                                                <td>CD</td>
-                                                <td>0.00</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Leave Encashment</th>
-                                                <td>0.00</td>
-                                                <td colspan="2"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4"> <br /> <span class="fw-bold">Net Pay : 24528.00</span> </div>
-                                    <div class="border col-md-8">
-                                        <div class="d-flex flex-column"> <span>In Words</span> <span>Twenty Five thousand nine hundred seventy only</span> </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <div class="d-flex flex-column mt-2"> <span class="fw-bolder">For Kalyan Jewellers</span> <span class="mt-4">Authorised Signatory</span> </div>
+                                    <div class="col-md-4"> <br/> <span class="fw-bold"><h4>Blood Amount</h4> :- {blood_amount}</span> </div>    
                                 </div>
                             </div>
                         </div>
