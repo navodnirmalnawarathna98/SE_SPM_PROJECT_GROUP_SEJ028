@@ -60,128 +60,130 @@ const SeekerProfile = () => {
 
   return (
     <>
-      <div>
-        {/* header section starts */}
-        <header class="header">
-          <a href="#" class="logo">
-            <i class="fa-solid fa-droplet"></i> Blood Bank{" "}
-          </a>
-          <nav1 class="navbar">
-            <a href="#home">home</a>
-            <a href="#aboutus">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#contactus">Contact Us</a>
-            <a href="#main">Main Information</a>
-          </nav1>
-          <div class="icons">
-            <div class="fas fa-bars" id="menu-btn"></div>
-            <div class="fas fa-search" id="search-btn"></div>
-          </div>
+      <div onLoad={getSeekerData}>
+        <div>
+          {/* header section starts */}
+          <header class="header">
+            <a href="#" class="logo">
+              <i class="fa-solid fa-droplet"></i> Blood Bank{" "}
+            </a>
+            <nav1 class="navbar">
+              <a href="#home">home</a>
+              <a href="#aboutus">About Us</a>
+              <a href="#services">Services</a>
+              <a href="#contactus">Contact Us</a>
+              <a href="#main">Main Information</a>
+            </nav1>
+            <div class="icons">
+              <div class="fas fa-bars" id="menu-btn"></div>
+              <div class="fas fa-search" id="search-btn"></div>
+            </div>
 
-          <form action="" class="search-form">
-            <input
-              type="search"
-              id="search-box"
-              placeholder="search here..."
-            ></input>
-            <label for="search-box" class="fas fa-search"></label>
-          </form>
-        </header>
-        {/* header section starts */}
-      </div>
+            <form action="" class="search-form">
+              <input
+                type="search"
+                id="search-box"
+                placeholder="search here..."
+              ></input>
+              <label for="search-box" class="fas fa-search"></label>
+            </form>
+          </header>
+          {/* header section starts */}
+        </div>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-      <div>
-        <h1 class="text-center fw-bolder">Seeker Profile</h1>
-      </div>
-      <div class="position-relative">
-        <div class="position-absolute top-0 end-0">
-          <div className="float-right">
-            <img
-              src={img1}
-              class="rounded-circle w-25 p-3 float-right"
-              alt=""
-            />
-          </div>
-          <br />
-
-          <div className="float-right">
-            <button type="button" class="btn btn-danger  ">
-              Delete profile
-            </button>
-          </div>
-          <div>
+        <div>
+          <h1 class="text-center fw-bolder">Seeker Profile</h1>
+        </div>
+        <div class="position-relative">
+          <div class="position-absolute top-0 end-0">
+            <div className="float-right">
+              <img
+                src={img1}
+                class="rounded-circle w-25 p-3 float-right"
+                alt=""
+              />
+            </div>
             <br />
-          </div>
-          <br />
-          <div className="float-right">
-            <button type="button" class="btn " onClick={getSeekerData}>
-              Sign Out
-            </button>
+
+            <div className="float-right">
+              <button type="button" class="btn btn-danger  ">
+                Delete profile
+              </button>
+            </div>
+            <div>
+              <br />
+            </div>
+            <br />
+            <div className="float-right">
+              <button type="button" class="btn ">
+                Sign Out
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <div class="wrapper1">
-          <br />
-          <h2>Name</h2>
-          <p class="fs-4">
-            {firstName} {lastName}
-          </p>
-          <br />
-          <h2>NIC</h2>
-          <p class="fs-4">{nicNumber}</p>
-          <br />
-          <h2>Date Of Birth</h2>
-          <p class="fs-4">1998/06/02</p>
-          <br />
-          <h2>Blood Type</h2>
-          <p class="fs-4">{bloodType}</p>
-          <br />
-          <h2>Residential Details</h2>
-          <p class="fs-4">
-            {province} , {district}
-          </p>
-          <br />
-          <h2>Email</h2>
-          <p class="fs-4">tharindumalinga.sk@gmail.com</p>
-          <br />
-          <h2>Contact Number</h2>
-          <p class="fs-4">{contactNumber}</p>
-          <br />
-          <h2>Gender</h2>
-          <p class="fs-4">{gender}</p>
-          <br />
-          <br />
-          <br />
-          <br />
-          <button type="button" class="btn btn-danger ">
-            Search Donors
-          </button>
-
-          <button type="button" class="btn btn-danger float-right">
-            Blood Request
-          </button>
-
-          <br />
-          <br />
-
-          <div class="d-flex justify-content-center">
-            <button
-              type="button"
-              class="btn btn-danger d-flex justify-content-center"
-            >
-              Edit Profile
+        <div class="d-flex justify-content-center">
+          <div class="wrapper1">
+            <br />
+            <h2>Name</h2>
+            <p class="fs-4">
+              {firstName} {lastName}
+            </p>
+            <br />
+            <h2>NIC</h2>
+            <p class="fs-4">{nicNumber}</p>
+            <br />
+            <h2>Date Of Birth</h2>
+            <p class="fs-4">1998/06/02</p>
+            <br />
+            <h2>Blood Type</h2>
+            <p class="fs-4">{bloodType}</p>
+            <br />
+            <h2>Residential Details</h2>
+            <p class="fs-4">
+              {province} , {district}
+            </p>
+            <br />
+            <h2>Email</h2>
+            <p class="fs-4">tharindumalinga.sk@gmail.com</p>
+            <br />
+            <h2>Contact Number</h2>
+            <p class="fs-4">{contactNumber}</p>
+            <br />
+            <h2>Gender</h2>
+            <p class="fs-4">{gender}</p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <button type="button" class="btn btn-danger ">
+              Search Donors
             </button>
+
+            <button type="button" class="btn btn-danger float-right">
+              Blood Request
+            </button>
+
+            <br />
+            <br />
+
+            <div class="d-flex justify-content-center">
+              <button
+                type="button"
+                class="btn btn-danger d-flex justify-content-center"
+              >
+                Edit Profile
+              </button>
+            </div>
           </div>
         </div>
       </div>
