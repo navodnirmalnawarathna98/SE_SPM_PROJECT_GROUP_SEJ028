@@ -100,8 +100,6 @@ router.route("/updateBloodReq/:id").put(async (req, res) => {
 
 })
 
-
-
 //get one employee data
 router.route("/getBloodReq/:id").get(async (req, res) => {
     let bloodreqId = req.params.id;
@@ -113,7 +111,6 @@ router.route("/getBloodReq/:id").get(async (req, res) => {
         })
 })
 
-
 //delete blood request
 router.route("/deleteReq/:id").delete(async (req, res) => {
     let reqId = req.params.id;
@@ -123,11 +120,6 @@ router.route("/deleteReq/:id").delete(async (req, res) => {
         res.status(500).send({ status: "Error with delete Request", error: err.message });
     })
 })
-
-
-
-
-
 
 
 module.exports = router;
