@@ -187,8 +187,9 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[issues]: [https://img.shields.io/github/issues/navodnirmalnawarathna98/SE_SPM_PROJECT_GROUP_SEJ028?style=flat-square](https://img.shields.io/github/issues/navodnirmalnawarathna98/SE_SPM_PROJECT_GROUP_SEJ028?style=flat-square)
+[issues]: https://img.shields.io/github/issues/navodnirmalnawarathna98/SE_SPM_PROJECT_GROUP_SEJ028?style=flat-square
 [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+
 
 [forks-shield]: https://img.shields.io/github/forks/navodnirmalnawarathna98/SE_SPM_PROJECT_GROUP_SEJ028?style=flat-square
 [forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
