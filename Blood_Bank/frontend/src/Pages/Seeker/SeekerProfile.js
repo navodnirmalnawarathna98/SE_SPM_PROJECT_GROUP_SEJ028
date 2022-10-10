@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import img1 from "../../images/seeker/seekerProfile.png";
 import img2 from "../../images/seeker/profileBackground.jpg";
+//importing use location to catch the ID
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+//importing useNavigate to link and navigate with ID
+import { Link, useNavigate } from "react-router-dom";
 
 const SeekerProfile = () => {
+  //getting ID from login interface
   const location = useLocation();
   let id = location.state._id;
 
@@ -56,6 +60,13 @@ const SeekerProfile = () => {
         setDistrict(district);
       })
       .catch((error) => console.log(error));
+  };
+
+  //sending ID to Profile update form
+  const navigate = useNavigate();
+
+  const toComponentC = () => {
+    navigate("/seekerprofileupdate", { state: { id } });
   };
 
   return (
@@ -180,6 +191,9 @@ const SeekerProfile = () => {
               <button
                 type="button"
                 class="btn btn-danger d-flex justify-content-center"
+                onClick={() => {
+                  toComponentC();
+                }}
               >
                 Edit Profile
               </button>
