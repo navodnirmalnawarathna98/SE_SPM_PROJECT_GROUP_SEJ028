@@ -60,10 +60,6 @@ const SeekerProfileUpdate = () => {
       .catch((error) => console.log(error));
   };
 
-  function helper() {
-    alert("test from helper");
-  }
-
   return (
     <>
       <body onLoad={getData()}>
