@@ -35,42 +35,41 @@ import SeekerProfile from "./Pages/Seeker/SeekerProfile";
 import TemporyLogin from "./Pages/Seeker/temporyLogin";
 import SeekerProfileUpdate from "./Pages/Seeker/SeekerProfileUpdate";
 import SeekerCreateBloodRequest from "./Pages/Seeker/SeekerCreateBloodRequest";
+import SeekerSearchForDonor from "./Pages/Seeker/SeekerSearchForDonor";
 import Header from "./Pages/Home-Page/Header";
 
 function App() {
   return (
     <Router>
       <Routes>
-
-
         {/* HomePage */}
-        <Route path='/' element={<HomePage/>}/>
+        <Route path="/" element={<HomePage />} />
 
         {/* ADMIN */}
-        <Route path='/admindashboard' element={<AdminDashboard/>}/>
-        <Route path='/addbloodsamples' element={<AddBloodSamples/>}/>
-        <Route path='/bloodsamples' element={<BloodSamples/>}/>
-        <Route path='/donorappointments' element={<DonorAppointments/>}/>
-        <Route path='/seekerrequests' element={<SeekerRequests/>}/>
-        <Route path='/registeredinstitutions' element={<RegisteredInstitutions/>}/>
-        <Route path='/donorlist' element={<DonorList/>}/>
-        <Route path='/seekerlist' element={<SeekerList/>}/>
+        <Route path="/admindashboard" element={<AdminDashboard />} />
+        <Route path="/addbloodsamples" element={<AddBloodSamples />} />
+        <Route path="/bloodsamples" element={<BloodSamples />} />
+        <Route path="/donorappointments" element={<DonorAppointments />} />
+        <Route path="/seekerrequests" element={<SeekerRequests />} />
+        <Route
+          path="/registeredinstitutions"
+          element={<RegisteredInstitutions />}
+        />
+        <Route path="/donorlist" element={<DonorList />} />
+        <Route path="/seekerlist" element={<SeekerList />} />
 
         {/* Doner */}
-        <Route path='/doner' element={<Doner/>}/>
+        <Route path="/doner" element={<Doner />} />
 
         {/* Seeker */}
-        <Route path='/seeker' element={<Seeker/>}/>
+        <Route path="/seeker" element={<Seeker />} />
 
         {/* Institution */}
-        <Route path='/institution' element={<Institution/>}/>
-        <Route path='/reqtable' element={<BloodRequestTable/>}/>
-        <Route path='/bloodreq' element={<BloodRequest/>}/>
-        <Route path='/editbloodreq/:id' element={<EditBloodRequest/>}/>
-        <Route path='/bloodreport' element={<BloodReport/>}/>
-
-
-
+        <Route path="/institution" element={<Institution />} />
+        <Route path="/reqtable" element={<BloodRequestTable />} />
+        <Route path="/bloodreq" element={<BloodRequest />} />
+        <Route path="/editbloodreq/:id" element={<EditBloodRequest />} />
+        <Route path="/bloodreport" element={<BloodReport />} />
 
         <Route path="/" element={<HomePage />} />
         <Route path="/admindashboard" element={<AdminDashboard />} />
@@ -78,15 +77,17 @@ function App() {
 
         <Route path="/donorappointments" element={<DonorAppointments />} />
         <Route path="/seekerrequests" element={<SeekerRequests />} />
-        <Route path="/registeredinstitutions" element={<RegisteredInstitutions />}/>
+        <Route
+          path="/registeredinstitutions"
+          element={<RegisteredInstitutions />}
+        />
         <Route path="/donorlist" element={<DonorList />} />
         <Route path="/seekerlist" element={<SeekerList />} />
 
-
         <Route path="/doner" element={<Doner />} />
-        <Route path='/donorregister' element={<DonerRegister/>}/>
-        <Route path='/donorprofile' element={<DonorProfile/>}/>
-        <Route path='/donoreditprofile' element={<DonorEditProfile/>}/>
+        <Route path="/donorregister" element={<DonerRegister />} />
+        <Route path="/donorprofile" element={<DonorProfile />} />
+        <Route path="/donoreditprofile" element={<DonorEditProfile />} />
         <Route path="/seeker" element={<Seeker />} />
         <Route path="/institution" element={<Institution />} />
         <Route path="/bloodreq" element={<BloodRequest />} />
@@ -101,8 +102,11 @@ function App() {
           path="/seekerCreateBloodRequest"
           element={<SeekerCreateBloodRequest />}
         />
+        <Route
+          path="/seekersearchfordonor"
+          element={<SeekerSearchForDonor />}
+        />
         <Route path="/header" element={<Header />} />
-
       </Routes>
     </Router>
   );
