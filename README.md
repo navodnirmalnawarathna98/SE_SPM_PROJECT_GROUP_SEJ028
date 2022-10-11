@@ -55,7 +55,7 @@
 <br/>
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+# About The Project #
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -65,8 +65,7 @@ All interfaces are developed in user-friendly and easily understandable manner. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Technology
-
+# Technology #
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 - [![vscode][vscode]][vscode-url]
