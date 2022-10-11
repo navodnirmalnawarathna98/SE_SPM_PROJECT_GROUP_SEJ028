@@ -65,11 +65,16 @@ function App() {
         <Route path="/seeker" element={<Seeker />} />
 
         {/* Institution */}
-        <Route path="/institution" element={<Institution />} />
-        <Route path="/reqtable" element={<BloodRequestTable />} />
-        <Route path="/bloodreq" element={<BloodRequest />} />
-        <Route path="/editbloodreq/:id" element={<EditBloodRequest />} />
-        <Route path="/bloodreport" element={<BloodReport />} />
+
+        <Route path='/institution' element={<Institution/>}/>
+        <Route path='/reqtable' element={<BloodRequestTable/>}/>
+        <Route path='/bloodreq' element={<BloodRequest/>}/>
+        <Route path='/editbloodreq/:id' element={<EditBloodRequest/>}/>
+        <Route path='/bloodreport/:id' element={<BloodReport/>}/>
+
+
+
+
 
         <Route path="/" element={<HomePage />} />
         <Route path="/admindashboard" element={<AdminDashboard />} />

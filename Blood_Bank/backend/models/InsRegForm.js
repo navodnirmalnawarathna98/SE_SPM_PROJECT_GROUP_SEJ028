@@ -2,39 +2,43 @@ const mongoose = require('mongoose'); // import mongoose package
 
 const Schema = mongoose.Schema; // create schema
 
-const InsBloodReqSchema = new Schema({
+const InsRegFormSchema = new Schema({
 
     name: {
         type: String,
         required: true,
     },
-    email: {
+    address: {
         type: String,
+        required: true,
+    },
+    email: {
+        type: Number,
         required: true,
     },
     contact_no: {
-        type: Number,
-        required: true,
-    },
-    blood_group: {
         type: String,
         required: true,
     },
-    blood_amount: {
+    institution_type: {
         type: Number,
         required: true,
     },
-    due_date: {
+    reg_date: {
         type: Date,
         required: true,
     },
-    description: {
+    province: {
+        type: String,
+        required: true,
+    },
+    distric: {
         type: String,
         required: true,
     }
 
 })
 
-const insreq = mongoose.model("InsRequest", InsBloodReqSchema); // passing two parameters, tablename(document) & schemaname
+const insreg = mongoose.model("InsRegForm", InsRegFormSchema); // passing two parameters, tablename(document) & schemaname
 
-module.exports = insreq;
+module.exports = insreg;

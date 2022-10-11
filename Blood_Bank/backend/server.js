@@ -36,6 +36,10 @@ app.use("/bloodvolumes", bloodVolumesRouter);
 const institutionRouter = require(`./routes/institutionRouter`);
 app.use("/addRequest", institutionRouter);
 
+// Institution Regitration
+const institutionRegRouter = require(`./routes/institutionRegRouter`);
+app.use("/instreg", institutionRegRouter);
+
 //seeker
 const addSeekerRoute = require("./routes/seekerRoutes");
 app.use("/Seeker", addSeekerRoute);
@@ -45,7 +49,6 @@ const bloodRequestRoutes = require("./routes/seekerBloodRequestRoutes");
 app.use("/SeekerBloodRequest", bloodRequestRoutes);
 
 //Donor
-
 const usersRoutes = require("./routes/donorUser");
 
 app.use(bodyParser.json());

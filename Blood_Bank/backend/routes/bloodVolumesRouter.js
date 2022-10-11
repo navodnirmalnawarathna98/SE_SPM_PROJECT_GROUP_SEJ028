@@ -4,7 +4,7 @@ let bloodVolumes = require("../models/bloodVolumes"); //import add blood samples
 
 //Add Blood Samples (http://localhost:8070/bloodvolumes/add)
 
-router.route("/add").post((req,res) => {  //get data from frontend via request
+router.route("/add").post((req, res) => {  //get data from frontend via request
 
     // get request body data and assining them to variables
     const Ap = req.body.Ap;
@@ -15,7 +15,7 @@ router.route("/add").post((req,res) => {  //get data from frontend via request
     const ABm = req.body.ABm;
     const Op = req.body.Op;
     const Om = req.body.Om;
-    
+
 
     const newBloodVolumes = new bloodVolumes({
         Ap,
@@ -31,7 +31,7 @@ router.route("/add").post((req,res) => {  //get data from frontend via request
     //pass the variables to database
     newBloodVolumes.save().then(() => {
         res.json("blood volume added succecfull")
-    }) .catch((err) => {
+    }).catch((err) => {
         console.log(err); //catch errors
     })
 })
@@ -57,16 +57,16 @@ router.route("/add").post((req,res) => {  //get data from frontend via request
 
 //GET ONE BLOOD SAMPLE By ID (http://localhost:8080/bloodvolumes/get/<userID>)
 
-router.route("/get/:id").get(async(req,res) => { // get data from frontend via request. async function is used to increase the performance 
+router.route("/get/:id").get(async (req, res) => { // get data from frontend via request. async function is used to increase the performance 
     let volumeId = req.params.id; //fetch the id parameter in url
 
     const pack = await bloodVolumes.findById(volumeId) //pass two parameters(userid,object that store seller data) and find user by id and update relevent data
-    .then((bloodVolumes) => {
-        res.status(200).send({status : "sample fetched", bloodVolumes}) //if find success, display success message
-    }).catch((err) => {
-        console.log(err);
-        res.status(500).send({status: "Error with find data"}); //if not display error message
-    })
+        .then((bloodVolumes) => {
+            res.status(200).send({ status: "sample fetched", bloodVolumes }) //if find success, display success message
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).send({ status: "Error with find data" }); //if not display error message
+        })
 
 })
 
@@ -76,9 +76,9 @@ router.route("/get/:id").get(async(req,res) => { // get data from frontend via r
 
 //UPDATE ONE BLOOD SAMPLE (http://localhost:8080/bloodvolumes/update/<userID>)
 
-router.route("/update/:id").put(async(req,res) => { // get data from frontend via request. async function is used to increase the performance 
+router.route("/update/:id").put(async (req, res) => { // get data from frontend via request. async function is used to increase the performance 
     let volumeId = req.params.id; //fetch the id parameter in url
-    const {Ap, Am, Bp, Bm, ABp, ABm, Op, Om } = req.body; //fetch data from frontend
+    const { Ap, Am, Bp, Bm, ABp, ABm, Op, Om } = req.body; //fetch data from frontend
 
     const updateSample = { //create update object and pass values getting from frontend
         Ap,
@@ -92,12 +92,12 @@ router.route("/update/:id").put(async(req,res) => { // get data from frontend vi
     }
 
     const update = await bloodVolumes.findByIdAndUpdate(volumeId, updateSample) //pass two parameters(userid,object that store seller data) and find user by id and update relevent data
-    .then(() => {
-        res.status(200).send({status : "sample updated"}) //if update success, display success message
-    }).catch((err) => {
-        console.log(err);
-        res.status(500).send({status: "Error with updating data"}); //if not display error message
-    })
+        .then(() => {
+            res.status(200).send({ status: "sample updated" }) //if update success, display success message
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).send({ status: "Error with updating data" }); //if not display error message
+        })
 
 })
 
@@ -107,16 +107,16 @@ router.route("/update/:id").put(async(req,res) => { // get data from frontend vi
 
 //DELETE SAMPLE (http://localhost:8080/bloodvolumes/delete/<userID>)
 
-router.route("/delete/:id").delete(async(req,res) => { //get userid from frontend
+router.route("/delete/:id").delete(async (req, res) => { //get userid from frontend
     let volumeId = req.params.id; // assign userid to variable
 
     await bloodVolumes.findByIdAndDelete(volumeId) //delete data that related to packId
-    .then(() => {
-        res.status(200).send({status: "sample deleted"}); //display user deleted successfull
-    }).catch((err) => {
-        console.log(err.message)
-        res.status(500).send({status: "Error with delete user", error:err.message}); //display error message
-    })
+        .then(() => {
+            res.status(200).send({ status: "sample deleted" }); //display user deleted successfull
+        }).catch((err) => {
+            console.log(err.message)
+            res.status(500).send({ status: "Error with delete user", error: err.message }); //display error message
+        })
 })
 
 
