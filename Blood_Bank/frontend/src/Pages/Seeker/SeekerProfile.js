@@ -83,6 +83,15 @@ const SeekerProfile = () => {
     navigate("/seekerprofileupdate", { state: { id } });
   };
 
+  //signout setter
+
+  const signout = () => {
+    id = "0a";
+    alert("signed out");
+    console.log("signed out");
+    navigate("/templogin");
+  };
+
   return (
     <>
       <div onLoad={getSeekerData}>
@@ -154,7 +163,7 @@ const SeekerProfile = () => {
             </div>
             <br />
             <div className="float-right">
-              <button type="button" class="btn ">
+              <button type="button" class="btn " onClick={signout}>
                 Sign Out
               </button>
             </div>
