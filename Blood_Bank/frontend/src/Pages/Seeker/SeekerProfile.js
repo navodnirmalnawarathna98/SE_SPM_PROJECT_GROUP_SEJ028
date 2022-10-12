@@ -25,6 +25,8 @@ const SeekerProfile = () => {
 
   const [seeker, setSeeker] = useState([]);
 
+  //function that get user profile data
+
   const getSeekerData = (e) => {
     e.preventDefault();
 
@@ -60,6 +62,18 @@ const SeekerProfile = () => {
         setDistrict(district);
       })
       .catch((error) => console.log(error));
+  };
+
+  //function that delete user profile
+
+  const userDelete = () => {
+    console.log(id);
+    axios
+      .delete(`http://localhost:8070/seeker/delete/${id}`)
+      .then((res) => console.log("Deleted!!!!", res))
+      .catch((err) => console.log(err));
+
+    navigate("/templogin");
   };
 
   //sending ID to Profile update form
@@ -127,7 +141,11 @@ const SeekerProfile = () => {
             <br />
 
             <div className="float-right">
-              <button type="button" class="btn btn-danger  ">
+              <button
+                type="button"
+                class="btn btn-danger  "
+                onClick={userDelete}
+              >
                 Delete profile
               </button>
             </div>
