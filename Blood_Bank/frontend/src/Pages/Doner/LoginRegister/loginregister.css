@@ -11,13 +11,14 @@
   body{
     /*background: #fec107;*/
     padding: 0 10px;
+
   }
 
   .errorcolor{
     color: red;
   }
 
-  .wrapper1{
+  .wrapper22{
     max-width: 500px;
     width: 100%;
     background: #F5D9DD;
@@ -27,7 +28,7 @@
     padding: 30px;
   }
 
-  .wrapper1 .title2{
+  .wrapper22 .title22{
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
@@ -36,27 +37,27 @@
     text-align: center;
   }
 
-  .wrapper1 .form3{
+  .wrapper22 .form22{
     width: 100%;
   }
 
   
-.wrapper1 .form3 .inputfield{
+.wrapper22 .form22 .inputfield{
     margin-bottom: 15px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
   }
   
-  .wrapper1 .form3 .inputfield label{
+  .wrapper22 .form22 .inputfield label{
      width: 200px;
      color: #757575;
      margin-right: 10px;
     font-size: 14px;
   }
 
-  .wrapper1 .form3 .inputfield .input,
-.wrapper1 .form3 .inputfield .textarea{
+  .wrapper22 .form22 .inputfield .input,
+.wrapper22 .form22 .inputfield .textarea{
   width: 100%;
   outline: none;
   border: 1px solid #d5dbd9;
@@ -66,19 +67,19 @@
   transition: all 0.3s ease;
 }
 
-.wrapper1 .form3 .inputfield .textarea{
+.wrapper22 .form22 .inputfield .textarea{
     width: 100%;
     height: 125px;
     resize: none;
   }
 
-  .wrapper1 .form3 .inputfield .custom_select{
+  .wrapper22 .form22 .inputfield .custom_select{
     position: relative;
     width: 100%;
     height: 37px;
   }
 
-  .wrapper1 .form3 .inputfield .custom_select:before{
+  .wrapper22 .form22 .inputfield .custom_select:before{
     content: "";
     position: absolute;
     top: 12px;
@@ -88,7 +89,7 @@
     pointer-events: none;
   }
 
-  .wrapper1 .form3 .inputfield .custom_select select{
+  .wrapper22 .form22 .inputfield .custom_select select{
     -webkit-appearance: none;
     -moz-appearance:   none;
     appearance:        none;
@@ -103,37 +104,48 @@
   }
 
   
-.wrapper1 .form3 .inputfield .input:focus,
-.wrapper1 .form3 .inputfield .textarea:focus,
-.wrapper1 .form3 .inputfield .custom_select select:focus{
+.wrapper22 .form22 .inputfield .input:focus,
+.wrapper22 .form22 .inputfield .textarea:focus,
+.wrapper22 .form22 .inputfield .custom_select select:focus{
   border: 1px solid #000000;
 }
 
-.wrapper1 .form3 .inputfield p{
+.wrapper22 .form22 .inputfield p{
     font-size: 14px;
     color: #757575;
  }
 
 
  @media (max-width:420px) {
-    .wrapper1 .form3 .inputfield{
+    .wrapper22 .form22 .inputfield{
       flex-direction: column;
       align-items: flex-start;
     }
-    .wrapper1 .form3 .inputfield label{
+    .wrapper22 .form22 .inputfield label{
       margin-bottom: 5px;
     }
-    .wrapper1 .form3 .inputfield.terms{
+    .wrapper22 .form22 .inputfield.terms{
       flex-direction: row;
     }
   }
 
-
-  .btn4{
+  .btn33{
+    margin-top: 1rem;
+    margin-left: -100rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 0.7rem;
+    border-radius: 12rem;
+    border:.2rem solid black;
+    color:rgb(208, 19, 154);
+    cursor: pointer;
+    background: none;
+}
+.btn34{
     margin-top: 1rem;
     display: inline-block;
     padding:.8rem 3rem;
-    font-size: 13px;
+    font-size: 0.7rem;
     border-radius: .5rem;
     border:.2rem solid black;
     color:black;
@@ -141,70 +153,11 @@
     background: none;
 }
 
-.btn4:hover{
+.btn33:hover{
     background: rgb(186, 35, 35);
     color:#fff;
 }
-
-
-/** Gender **/
-
-/* .gender {
-	width: calc(100% / 3);
-	height: 60px;
-	position: relative;
-	text-align: center;
-    padding: 69px;
-} */
-
-/* .radio1{
-    height: 20px;
-    width: 20px;
+.btn34:hover{
+    background: rgb(186, 35, 35);
+    color:#fff;
 }
-
-.Gov{
-    float: left;
-    clear: none;
-    display: block;
-    padding: 0px 1em 0px 8px;
-} */
-
-/* input[type=radio],
-input.radio {
-  float: left;
-  clear: none;
-  margin: 2px 0 0 2px;
-}
-
-label {
-    float: left;
-    clear: none;
-    display: block;
-    padding: 0px 1em 0px 8px;
-  } */
-
-  fieldset {
-    overflow: hidden;
-  }
-  
-  .some-class {
-    float: left;
-    clear: none;
-  }
-  
-  label {
-    float: left;
-    clear: none;
-    display: block;
-    padding: 0px 1em 0px 8px;
-  }
-  
-  input[type=radio],
-  input.radio {
-    float: left;
-    clear: none;
-    margin: 2px 0 0 2px;
-    width: 27px;
-    height: 20px;
-}
-  

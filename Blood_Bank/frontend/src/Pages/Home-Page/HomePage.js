@@ -121,7 +121,7 @@ const HomePage = () => {
 
             <img src={img4} alt=""/>
             <p></p>
-            <a href="/doner" class="btn">Doner</a> <br />
+            <a href="/donorregister" class="btn">Doner</a> <br />
           </div>
           <div class="box">
             <h3>Seeker</h3>

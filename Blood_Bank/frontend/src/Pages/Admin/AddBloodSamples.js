@@ -15,14 +15,14 @@ const AddBloodSamples = () => {
   const [formData, setFormData] = useState({
 
     firstName: "",
-		lastName: "",
-		contactNumber: "",
-		address: "",
-		email: "",
+    lastName: "",
+    contactNumber: "",
+    address: "",
+    email: "",
     dateOfBirth: "",
-		nic: "",
-		weight: "",
-		bloodType: "",
+    nic: "",
+    weight: "",
+    bloodType: "",
     bloodAmount: "",
     gender: ""
 
@@ -62,14 +62,14 @@ const AddBloodSamples = () => {
       await axios.post("http://localhost:8070/addbloodsamples/add", body, config);
       setFormData({
         firstName: "",
-		    lastName: "",
-		    contactNumber: "",
-		    address: "",
-		    email: "",
+        lastName: "",
+        contactNumber: "",
+        address: "",
+        email: "",
         dateOfBirth: "",
-		    nic: "",
-		    weight: "",
-		    bloodType: "",
+        nic: "",
+        weight: "",
+        bloodType: "",
         bloodAmount: "",
         gender: ""
       });
@@ -86,16 +86,16 @@ const AddBloodSamples = () => {
 
   return (
     <div className='admindashboard'>
-        
-      <NavigationBar/>
+
+      <NavigationBar />
 
       <section className="ad-dashboard">
 
-        <Search/>
+        <Search />
 
         <div className="ad-dash-content">
 
-          <BloodVolumes/>
+          <BloodVolumes />
 
           {/* blood request table */}
 
@@ -124,11 +124,11 @@ const AddBloodSamples = () => {
                           <form action="#">
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-id-card-o"></i></span>
-                            <input type="text" name="nic" placeholder="NIC Number" required />
+                              <input type="text" name="nic" placeholder="NIC Number" required />
                             </div>
 
                             <label for="cb1">Donor details are auto-filled according to donor NIC number if the donor is already registered in our system.</label>
-                            
+
                             <button className="button" type="submit">Auto Filled</button>
 
                           </form>
@@ -174,30 +174,30 @@ const AddBloodSamples = () => {
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-phone"></i></span>
-                            <input type="text" name="contactNumber" value={contactNumber} placeholder="Contact Number" pattern="[0-9]{10}" title="Enter valid contact number (ex - 94757713501)" onChange={(e) => onChange(e)} required />
+                              <input type="text" name="contactNumber" value={contactNumber} placeholder="Contact Number" pattern="[0-9]{10}" title="Enter valid contact number (ex - 94757713501)" onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-home"></i></span>
-                            <input type="text" name="address" value={address} placeholder="Address" pattern="[A-Za-z0-9'\.\-\s\,]" title="Enter valid Address" onChange={(e) => onChange(e)} required />
+                              <input type="text" name="address" value={address} placeholder="Address" pattern="[A-Za-z0-9'\.\-\s\,]" title="Enter valid Address" onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-envelope"></i></span>
-                            <input type="email" name="email" value={email} placeholder="Email" onChange={(e) => onChange(e)} required />
+                              <input type="email" name="email" value={email} placeholder="Email" onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-calendar"></i></span>
-                            <input type="date" name="dateOfBirth" value={dateOfBirth} placeholder="Date Of Birth" onChange={(e) => onChange(e)} required />
+                              <input type="date" name="dateOfBirth" value={dateOfBirth} placeholder="Date Of Birth" onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-id-card-o"></i></span>
-                            <input type="text" name="nic" value={nic} placeholder="NIC Number" pattern="[Vv0-9]{10}" title="Enter valid NIC number (ex - 982742978V)" onChange={(e) => onChange(e)} required />
+                              <input type="text" name="nic" value={nic} placeholder="NIC Number" pattern="[Vv0-9]{10}" title="Enter valid NIC number (ex - 982742978V)" onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="row clearfix">
 
                               <div className="col_half">
                                 <div className="input_field"> <span><i aria-hidden="true" className="fa fa-male"></i></span>
-                                <input type="number" name="weight" value={weight} placeholder="Weight" onChange={(e) => onChange(e)} required />
+                                  <input type="number" name="weight" value={weight} placeholder="Weight" onChange={(e) => onChange(e)} required />
                                 </div>
                               </div>
 
@@ -218,12 +218,12 @@ const AddBloodSamples = () => {
                                 </div>
                               </div>
 
-                              
+
 
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-medkit"></i></span>
-                            <input type="number" name="bloodAmount" value={bloodAmount} placeholder="Blood Amount" onChange={(e) => onChange(e)} required />
+                              <input type="number" name="bloodAmount" value={bloodAmount} placeholder="Blood Amount" onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field radio_option">
@@ -234,7 +234,7 @@ const AddBloodSamples = () => {
                             </div>
 
                             <div className="input_field checkbox_option">
-                              <input type="checkbox" id="cb1"/>
+                              <input type="checkbox" id="cb1" />
                               <label for="cb1">I agree with terms and conditions</label>
                             </div>
 
@@ -251,22 +251,15 @@ const AddBloodSamples = () => {
                 </div>
                 {/* end add blood sample form 02 */}
               </div>
-              
+
             </div>
-
-                
-
-
-                
-            
-
           </div>
 
           {/* close blood request table */}
 
         </div>
 
-      </section> 
+      </section>
 
     </div>
   )
