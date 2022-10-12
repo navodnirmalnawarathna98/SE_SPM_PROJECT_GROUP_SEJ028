@@ -107,4 +107,24 @@ router.route("/update/:id").put(async (req, res) => {
     });
 });
 
+//delete api and route
+//delete seeker profile (http://localhost:8070/seeker/delete/:id)
+
+router.route("/delete/:id").delete(async (req, res) => {
+  //get userid from frontend
+  let sampleId = req.params.id; // assign userid to variable
+
+  await addSeekerModel
+    .findByIdAndDelete(sampleId) //delete data that related to packId
+    .then(() => {
+      res.status(200).send({ status: "user deleted" }); //display user deleted successfull
+    })
+    .catch((err) => {
+      console.log(err.message);
+      res
+        .status(500)
+        .send({ status: "Error with delete user", error: err.message }); //display error message
+    });
+});
+
 module.exports = router;
