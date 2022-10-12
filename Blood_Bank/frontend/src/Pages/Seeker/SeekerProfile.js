@@ -83,6 +83,12 @@ const SeekerProfile = () => {
     navigate("/seekerprofileupdate", { state: { id } });
   };
 
+  //Navigator function to naviagete into seeker Search for donor page
+
+  const toComponentD = () => {
+    navigate("/seekersearchfordonor");
+  };
+
   //signout setter
 
   const signout = () => {
@@ -203,7 +209,11 @@ const SeekerProfile = () => {
             <br />
             <br />
             <br />
-            <button type="button" class="btn btn-danger ">
+            <button
+              type="button"
+              class="btn btn-danger "
+              onClick={toComponentD}
+            >
               Search Donors
             </button>
 
