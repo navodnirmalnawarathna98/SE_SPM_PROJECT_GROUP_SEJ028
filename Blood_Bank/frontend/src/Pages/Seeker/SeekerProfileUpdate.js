@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 //importing use location to catch the ID
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
 const SeekerProfileUpdate = () => {
   //catching ID comming with the Link
@@ -136,6 +137,16 @@ const SeekerProfileUpdate = () => {
   useEffect(() => {
     getSeekerData(); // this will fire only on first render
   }, []);
+
+  //Cancel button functionality
+
+  //sending ID to Profile update form
+  const navigate = useNavigate();
+
+  const toComponentB = () => {
+    let _id = userId;
+    navigate("/SeekerProfile", { state: { _id } });
+  };
 
   return (
     <>
@@ -354,7 +365,7 @@ const SeekerProfileUpdate = () => {
                     <button type="submit" className="btn-danger float-right">
                       Submit
                     </button>
-                    <a href="/" class="btn4">
+                    <a class="btn4" onClick={toComponentB}>
                       Cancel
                     </a>
                   </div>
