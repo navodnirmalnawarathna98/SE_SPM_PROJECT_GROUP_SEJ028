@@ -54,7 +54,7 @@ const SeekerProfile = () => {
         setLastName(lastName);
         setNicNumber(nicNumber);
         setGender(gender);
-        setDateOfBirth(dateOfBirth);
+        setDateOfBirth(dateOfBirth.substring(0, 10));
         setBloodType(bloodType);
         setContactNumber(contactNumber);
         setEmail(email);
@@ -172,7 +172,7 @@ const SeekerProfile = () => {
             <p class="fs-4">{nicNumber}</p>
             <br />
             <h2>Date Of Birth</h2>
-            <p class="fs-4">1998/06/02</p>
+            <p class="fs-4">{dateOfBirth}</p>
             <br />
             <h2>Blood Type</h2>
             <p class="fs-4">{bloodType}</p>
@@ -183,7 +183,7 @@ const SeekerProfile = () => {
             </p>
             <br />
             <h2>Email</h2>
-            <p class="fs-4">tharindumalinga.sk@gmail.com</p>
+            <p class="fs-4">{email}</p>
             <br />
             <h2>Contact Number</h2>
             <p class="fs-4">{contactNumber}</p>
