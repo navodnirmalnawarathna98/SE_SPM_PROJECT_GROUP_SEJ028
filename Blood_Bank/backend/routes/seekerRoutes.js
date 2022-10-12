@@ -108,7 +108,7 @@ router.route("/update/:id").put(async (req, res) => {
 });
 
 //delete api and route
-//UPDATE ONE seeker details (http://localhost:8070/seeker/delete/:id)
+//delete seeker profile (http://localhost:8070/seeker/delete/:id)
 
 router.route("/delete/:id").delete(async (req, res) => {
   //get userid from frontend
