@@ -89,6 +89,11 @@ const SeekerProfile = () => {
     navigate("/seekersearchfordonor");
   };
 
+  ////Navigator function to naviagete into seeker blood request page
+
+  const toComponentE = () => {
+    navigate("/seekerCreateBloodRequest");
+  };
   //signout setter
 
   const signout = () => {
@@ -105,10 +110,10 @@ const SeekerProfile = () => {
           {/* header section starts */}
           <header class="header">
             <a href="#" class="logo">
-              <i class="fa-solid fa-droplet"></i> Blood Bank{" "}
+              <i class="fa-solid fa-droplet" href="/"></i> Blood Bank{" "}
             </a>
             <nav1 class="navbar">
-              <a href="#home">home</a>
+              <a href="/">home</a>
               <a href="#aboutus">About Us</a>
               <a href="#services">Services</a>
               <a href="#contactus">Contact Us</a>
@@ -217,7 +222,11 @@ const SeekerProfile = () => {
               Search Donors
             </button>
 
-            <button type="button" class="btn btn-danger float-right">
+            <button
+              type="button"
+              class="btn btn-danger float-right"
+              onClick={toComponentE}
+            >
               Blood Request
             </button>
 
