@@ -1,7 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SeekerSearchForDonor.css";
+import axios from "axios";
 
 const SeekerSearchForDonor = () => {
+  const [users, setUsers] = useState([]);
+  const [query, setQuery] = useState("");
+
+  //first try to fetch filtered data from database
+
+  /*const fetchDonors = (query) => {
+    fetch(`http://localhost:8070/donorUser/searchdonor`, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query,
+      }),
+    })
+      .then((res) => res.json())
+      .then((results) => {
+        console.log(results);
+      });
+  };*/
+
+  function getdonors() {
+    axios
+      .get(`http://localhost:8070/donorUser/searchFordonor/?q=${query}`)
+      .then((res) => {
+        console.log(res.data);
+        setUsers(res.data);
+        console.log(users);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  }
+
   return (
     <>
       <head>
@@ -9,10 +44,10 @@ const SeekerSearchForDonor = () => {
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
           integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
         <script
-          crossorigin
+          crossOrigin
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css"
         ></script>
         <script
@@ -20,11 +55,11 @@ const SeekerSearchForDonor = () => {
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"
         ></script>
         <script
-          crossorigin
+          crossOrigin
           src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
         ></script>
         <script
-          crossorigin
+          crossOrigin
           src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         ></script>
       </head>
@@ -128,6 +163,48 @@ const SeekerSearchForDonor = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="justify-content-center">
+          <br />
+          <br />
+          <figure className="text-center">
+            <blockquote className=" blockquote bg-secondary text-white">
+              <p className="text-white display-4">Donor List</p>
+            </blockquote>
+            <figcaption className="blockquote-footer">
+              <cite title="Source Title"></cite>
+            </figcaption>
+          </figure>
+
+          <table
+            className="table table-success table-striped table-hover"
+            id="table"
+          >
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NIC</th>
+                <th scope="col">Date</th>
+                <th scope="col">Payment Method</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Payment Purpose</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+          <div className="download-data-div">
+            <button
+              className="btn btn-secondary"
+              onClick={() => {
+                setQuery("mo");
+                getdonors();
+              }}
+            >
+              Download Payment Data as PDF
+            </button>
           </div>
         </div>
       </body>
