@@ -2,18 +2,102 @@
 margin-right: 10px;
 }
 
-.container22 {
-    position: absolute;
-    right: 159px;
-    width: 75vw;
-    height: 66vh;
-    background: #f1f1f1;
-}
+#invoice-POS {
+    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+    padding: 2mm;
+    margin: 133px auto;
+    width: 110mm;
+    background: #fff;
+  }
+  ::selection {
+    background: #f31544;
+    color: #fff;
+  }
+  ::moz-selection {
+    background: #f31544;
+    color: #fff;
+  }
 
-.row22{
-    margin-right: 11px;
-    margin-left: 23px;
-}
+  .nn1 {
+    font-size: x-small;
+  }
+
+  .nn2 {
+    font-size: 7px;
+    color: #666;
+    line-height: 1.2em;
+  }
+  
+  #top,
+  #mid,
+  #bot {
+    /* Targets all id with 'col-' */
+    border-bottom: 1px solid #eee;
+  }
+  
+  #top {
+    min-height: 100px;
+    margin-left: 170px;
+  }
+  #mid {
+    min-height: 45px;
+  }
+  #bot {
+    min-height: 50px;
+  }
+  
+  #top .logo {
+    /* //float: left; */
+    height: 60px;
+    width: 60px;
+    background: url(https://www.freepnglogos.com/uploads/blood/blood-donation-drop-32.png)
+      no-repeat;
+    background-size: 60px 60px;
+  }
+  .clientlogo {
+    float: left;
+    height: 60px;
+    width: 60px;
+    background: url(http://michaeltruong.ca/images/client.jpg) no-repeat;
+    background-size: 60px 60px;
+    border-radius: 50px;
+  }
+  .info {
+    display: block;
+    /* //float:left; */
+    margin-left: 0;
+  }
+  .title {
+    float: right;
+  }
+  .title p {
+    text-align: right;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  
+  .tabletitle {
+    /* //padding: 5px; */
+    font-size: 0.5em;
+    background: #eee;
+  }
+  .service {
+    border-bottom: 1px solid #eee;
+  }
+  .item {
+    width: 24mm;
+  }
+  .itemtext {
+    font-size: 8px;
+  }
+  
+  #legalcopy {
+    margin-top: 5mm;
+  }
+  
 
 .btn233{
     margin-top: 46px;
