@@ -5,8 +5,7 @@ import "./bloodrequest.css";
 
 const Bloodrequest = () => {
 
-    // //error
-    // const[error,setError] = useState(false);
+ 
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -18,13 +17,6 @@ const Bloodrequest = () => {
 
 
     function sendData(e) {
-
-        //error validation
-        // if(!name || !email || !contact_no || !blood_group || !blood_amount || !due_date || !description){
-
-        //     setError(true);
-        //     return false;
-        // }
 
         //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
         e.preventDefault();
@@ -84,7 +76,7 @@ const Bloodrequest = () => {
                         <div class="inputfield">
                             <label>Blood Group</label>
                             <div class="custom_select">
-                                <select onChange={(e) => { setBloodgroup(e.target.value); }} >
+                                <select onChange={(e) => {setBloodgroup(e.target.value); }} >
                                     <option value="">Select</option>
                                     <option value="A+">Blood Group A</option>
                                     <option value="B+">Blood Group B</option>
