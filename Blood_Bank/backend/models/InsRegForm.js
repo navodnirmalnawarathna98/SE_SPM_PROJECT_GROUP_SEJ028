@@ -13,7 +13,7 @@ const InsRegFormSchema = new Schema({
         required: true,
     },
     email: {
-        type: Number,
+        type: String,
         required: true,
     },
     contact_no: {
@@ -21,7 +21,7 @@ const InsRegFormSchema = new Schema({
         required: true,
     },
     institution_type: {
-        type: Number,
+        type: String,
         required: true,
     },
     reg_date: {

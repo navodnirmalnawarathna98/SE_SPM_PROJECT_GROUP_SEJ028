@@ -17,6 +17,8 @@ const Bloodreport = () => {
     const [description, setDescription] = useState("");
     const [currentDate, setCurrentDate] = useState('');
 
+    let value = blood_amount * 20;
+
     useEffect(() => {
         axios.get(`http://localhost:8070/addRequest/getBloodReq/${id}`).then(res => {
             setName(res.data.insbloodreq.name);
@@ -30,16 +32,19 @@ const Bloodreport = () => {
     }, [])
 
     useEffect(() => {
-        var date = new Date().getDate(); //Current Date
-        var month = new Date().getMonth() + 1; //Current Month
-        var year = new Date().getFullYear(); //Current Year
-        var hours = new Date().getHours(); //Current Hours
-        var min = new Date().getMinutes(); //Current Minutes
-        var sec = new Date().getSeconds(); //Current Seconds
+        let date = new Date().getDate(); //Current Date
+        let month = new Date().getMonth() + 1; //Current Month
+        let year = new Date().getFullYear(); //Current Year
+        let hours = new Date().getHours(); //Current Hours
+        let min = new Date().getMinutes(); //Current Minutes
+        let sec = new Date().getSeconds(); //Current Seconds
         setCurrentDate('DATE:-' + date + '/' + month + '/' + year + '  ' + 'TIME :-' + hours + ':' + min + ':' + sec);
     }, []);
 
 
+    function closeReq() {
+        window.location.href = "/reqtable";
+    }
 
 
     //report generate
@@ -51,42 +56,60 @@ const Bloodreport = () => {
 
 
 
+
+
     return (
         <div>
             <button title="you can get pdf" class="btn233" onClick={handlePrint} type="submit">Get PDF</button>
+            <br/>
+            <button title="you can navigate to the previous page" onClick={closeReq} class="btn233">Back</button>
             <div ref={componentRef}>
-                <div class="nova">
-                    <div class="container22 ">
-                        <div class="row22">
-                            <div class="col-md-12">
-                                <div class="text-center lh-1 mb-2">
-                                    <br />
-                                    <h1 class="fw-bold">Blood Request Details</h1>
-                                    <span class="fw-normal">
-                                        <h4>
-                                            {currentDate}
-                                        </h4>
-                                    </span>
-                                </div>
-                                <br />
-                                <br />
-                                <div class="row">
-                                    <div class="col-md-10">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div> <span class="fw-bolder"><h4>Institution Name</h4></span> <small class="ms-3"><h3>{name}</h3></small></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4"> <br/> <span class="fw-bold"><h4>Blood Amount</h4> :- {blood_amount}</span> </div>    
-                                </div>
-                            </div>
+                <div id="invoice-POS">
+                    <div id="top">
+                        <div class="logo"></div>
+                        <div class="info">
+                            <h2 class="nn1">Blood Bank</h2>
+                        </div>
+                    </div>
+                        <h2 class="nn1">Institution Name : {name}</h2>
+                        <h2 class="nn1">{currentDate}</h2>
+                    <div id="mid">
+                        <div class="info">
+                            <h2 class="nn1">Contact Info</h2>
+                            <p class="nn2">
+                                Email   : {email} <br></br>
+                                Mobile Number : {contact_no}
+                            </p>
+                        </div>
+                    </div>
+                    <div id="bot">
+                        <div id="table">
+                            <table>
+                                <tr class="tabletitle">
+                                    <td class="item"><h2 class="nn1">Blood Group</h2></td>
+                                    <td class="Hours"><h2 class="nn1">Qty</h2></td>
+                                    <td class="Rate"><h2 class="nn1">Sub Total</h2></td>
+                                </tr>
+                                <tr class="service">
+                                    <td class="tableitem"><p class="itemtext">{blood_group}</p></td>
+                                    <td class="tableitem"><p class="itemtext">{blood_amount}</p></td>
+                                    <td class="tableitem"><p class="itemtext">{value}</p></td>
+                                </tr>
+                                <tr class="service">
+                                    <td class="tableitem"><p class="itemtext"></p></td>
+                                    <td class="tableitem"><p class="itemtext">Total</p></td>
+                                    <td class="tableitem"><p class="itemtext">{value}</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="legalcopy">
+                            <p class="legal"><strong>Thank you for your request!</strong>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }

@@ -52,7 +52,7 @@ const EditBloodRequest = () => {
                 alert(err)
                 console.log(err);
             })
-        window.location.href = "";
+        window.location.href = "/reqtable";
     }
 
 

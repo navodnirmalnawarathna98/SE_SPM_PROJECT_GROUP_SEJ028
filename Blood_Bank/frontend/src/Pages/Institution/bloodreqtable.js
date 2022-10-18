@@ -15,7 +15,6 @@ const Bloodreqtable = () => {
     useEffect(() => {
         function getBloodReq() {
             axios.get(`http://localhost:8070/addRequest/viewBlood/?q=${query}`).then((res) => {
-                console.log(res.data);
                 setBloodReqs(res.data)
             }).catch((err) => {
                 alert(err.message);
@@ -31,7 +30,6 @@ const Bloodreqtable = () => {
             //getWManagers();
             axios.get("http://localhost:8070/addRequest/").then((res) => {
                 alert("Delete Successfully");
-                console.log(res.data);
                 setBloodReqs(res.data);
             }).catch((err) => {
                 alert(err.message);
