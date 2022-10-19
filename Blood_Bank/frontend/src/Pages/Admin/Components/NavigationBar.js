@@ -7,7 +7,7 @@ const NavigationBar = () => {
         <nav>
             <div class="ad-logo-name">
                 <div class="ad-logo-image">
-                    <img src={logo} alt="logo"/>
+                    <a href="/"><img src={logo} alt="logo"/></a>
                 </div>
 
                 <span class="ad-logo_name">Admin Panel</span>

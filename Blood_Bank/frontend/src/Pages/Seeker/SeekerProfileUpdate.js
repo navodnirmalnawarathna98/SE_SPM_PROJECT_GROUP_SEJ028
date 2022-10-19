@@ -153,8 +153,10 @@ const SeekerProfileUpdate = () => {
       <body>
         <div>
           <div>
-            <h1 class="text-center fw-bolder">
-              Enter Details to Update Your Profile
+            <h1 class="heading">
+              <span className="heading">
+                . Enter Details to Update Your Profile .
+              </span>
             </h1>
           </div>
           <div class="d-flex justify-content-center">

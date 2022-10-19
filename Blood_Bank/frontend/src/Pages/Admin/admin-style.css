@@ -462,6 +462,10 @@ nav.close ~ .ad-dashboard .ad-top{
     -webkit-user-select: none;
     touch-action: manipulation;
   }
+
+  .button-accept-a{
+    text-decoration: none;
+  }
   
   .activity-data .button-accept:hover {
     background-position: right center;

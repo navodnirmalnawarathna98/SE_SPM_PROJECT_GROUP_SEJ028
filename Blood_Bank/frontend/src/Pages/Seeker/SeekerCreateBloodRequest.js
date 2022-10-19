@@ -51,8 +51,11 @@ const SeekerCreateBloodRequest = () => {
   return (
     <>
       <div>
-        <h1 class="text-center fw-bolder">CREATE REQUEST</h1>
+        <h1 class="heading">
+          <span className="heading">CREATE REQUEST</span>
+        </h1>
       </div>
+
       <div class="d-flex justify-content-center">
         <form onSubmit={sendData}>
           <div class="wrapper1">
