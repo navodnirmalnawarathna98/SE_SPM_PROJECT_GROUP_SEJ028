@@ -84,7 +84,7 @@ router.route("/get/:id").get(async (req, res) => { // get data from frontend via
 
 router.route("/update/:id").put(async (req, res) => { // get data from frontend via request. async function is used to increase the performance 
     let sampleId = req.params.id; //fetch the id parameter in url
-    const { firstName, lastName, contactNumber, address, email, dateOfBirth, nic, weight, bloodType, bloodAmount } = req.body; //fetch data from frontend
+    const { firstName, lastName, contactNumber, address, email, dateOfBirth, nic, weight, bloodType, bloodAmount, gender } = req.body; //fetch data from frontend
 
     const updateSample = { //create update object and pass values getting from frontend
         firstName,
