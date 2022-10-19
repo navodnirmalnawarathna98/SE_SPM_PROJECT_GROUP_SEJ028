@@ -6,7 +6,44 @@ import axios from "axios";
 const TemporyLogin = () => {
   const navigate = useNavigate();
 
+  const [users, setUsers] = useState([]);
+  const [query, setQuery] = useState("");
+
   const [_id, set_id] = useState("");
+  const [nic, setNic] = useState("");
+  const [inputNic, setinputNic] = useState("");
+
+  function getseeker() {
+    axios
+      .get(`http://localhost:8070/seeker/getseeker/?q=${query}`)
+      .then((res) => {
+        console.log(res.data);
+        setUsers(res.data);
+        console.log(users);
+
+        users.find(setValues);
+
+        console.log(_id);
+        console.log(nic);
+        console.log(inputNic);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  }
+
+  function helper() {
+    if (nic == inputNic) {
+      toComponentB();
+    } else {
+      alert("The email or password is wrong please enter again !");
+    }
+  }
+
+  function setValues(user) {
+    set_id(user._id);
+    setNic(user.nicNumber);
+  }
 
   const toComponentB = () => {
     navigate("/SeekerProfile", { state: { _id } });
@@ -34,11 +71,27 @@ const TemporyLogin = () => {
               id="form2Example1"
               class="form-control"
               onChange={(e) => {
-                set_id(e.target.value);
+                setQuery(e.target.value);
+                getseeker();
               }}
             />
             <label class="form-label" for="form2Example1">
-              Enter temporary ID For Login
+              Enter Email Here
+            </label>
+          </div>
+
+          <div class="form-outline mb-4 ">
+            <input
+              type="text"
+              id="form2Example2"
+              class="form-control"
+              onChange={(e) => {
+                setinputNic(e.target.value);
+                getseeker();
+              }}
+            />
+            <label class="form-label" for="form2Example1">
+              Enter your ID number Here
             </label>
           </div>
 
@@ -72,7 +125,10 @@ const TemporyLogin = () => {
               type="button"
               class="btn btn-primary btn-block mb-4"
               onClick={() => {
-                toComponentB();
+                // helper();
+
+                getseeker();
+                helper();
               }}
             >
               <div class="fs-4">Sign in</div>
