@@ -147,7 +147,9 @@ const SeekerProfile = () => {
         <br />
 
         <div>
-          <h1 class="text-center fw-bolder">Seeker Profile</h1>
+          <h1 class="heading">
+            <span className="heading">Seeker Profile</span>
+          </h1>
         </div>
         <div class="position-relative">
           <div class="position-absolute top-0 end-0">
