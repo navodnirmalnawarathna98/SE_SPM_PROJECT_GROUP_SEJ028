@@ -13,6 +13,8 @@ const TemporyLogin = () => {
   const [nic, setNic] = useState("");
   const [inputNic, setinputNic] = useState("");
 
+  //function to get seekerdetails by dending email
+
   function getseeker() {
     axios
       .get(`http://localhost:8070/seeker/getseeker/?q=${query}`)
@@ -32,6 +34,8 @@ const TemporyLogin = () => {
       });
   }
 
+  //helper to check the NIC number matching
+
   function helper() {
     if (nic == inputNic) {
       toComponentB();
@@ -40,11 +44,13 @@ const TemporyLogin = () => {
     }
   }
 
+  //function to get and set important values for validations
   function setValues(user) {
     set_id(user._id);
     setNic(user.nicNumber);
   }
 
+  //function to navigate into profile page
   const toComponentB = () => {
     navigate("/SeekerProfile", { state: { _id } });
   };
@@ -82,7 +88,7 @@ const TemporyLogin = () => {
 
           <div class="form-outline mb-4 ">
             <input
-              type="text"
+              type="password"
               id="form2Example2"
               class="form-control"
               onChange={(e) => {
