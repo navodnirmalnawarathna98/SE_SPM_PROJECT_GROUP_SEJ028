@@ -127,4 +127,28 @@ router.route("/delete/:id").delete(async (req, res) => {
     });
 });
 
+//seeker login API
+
+router.route("/getSeeker").get((req, res) => {
+  const { q } = req.query;
+
+  const keys = ["email"];
+
+  const search = (userSeeker) => {
+    return userSeeker.filter((email) =>
+      keys.some((key) => email[key].toLowerCase().includes(q))
+    );
+  };
+
+  addSeekerModel
+    .find()
+    .then((userSeeker) => {
+      res.json(search(userSeeker));
+      //res.status(200).send(search(userSeeker));
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 module.exports = router;
