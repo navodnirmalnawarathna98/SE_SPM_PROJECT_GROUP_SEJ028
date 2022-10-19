@@ -63,6 +63,8 @@ This is a **Web-based project** which will play an important role in saving the 
 
 All interfaces are developed in user-friendly and easily understandable manner. The administrator will be able to control and operate all the system functions in the web application using the admin panel and also show a meaningful and clear reaction to every user's activity whenever possible. The users will be able to view information about the blood bank along with the blood available in their repository, the information of the registered users who need blood in case of emergency and the blood donors who wish to donate blood when required. All the personal information about blood donors, Seekers and medical institutions will be kept in the backend database.
 
+#hactoberfest  #hactoberfest2022
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Technology #
