@@ -10,6 +10,7 @@ import DonorAppointments from "./Pages/Admin/DonorAppointments";
 import SeekerRequests from "./Pages/Admin/SeekerRequests";
 import RegisteredInstitutions from "./Pages/Admin/RegisteredInstitutions";
 import BloodSamples from "./Pages/Admin/BloodSamples";
+import BloodSamplesEdit from "./Pages/Admin/BloodSamplesEdit";
 import DonorList from "./Pages/Admin/DonorList";
 import SeekerList from "./Pages/Admin/SeekerList";
 
@@ -57,6 +58,7 @@ function App() {
         />
         <Route path="/donorlist" element={<DonorList />} />
         <Route path="/seekerlist" element={<SeekerList />} />
+        <Route path="/bloodsamplesedit/:id" element={<BloodSamplesEdit />} />
 
         {/* Doner */}
         <Route path="/doner" element={<Doner />} />
