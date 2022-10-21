@@ -51,7 +51,7 @@ section{
     clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
 }
 
-.btn{
+.btn333{
     margin-top: 1rem;
     display: inline-block;
     padding:.8rem 3rem;
@@ -61,9 +61,10 @@ section{
     color:var(--black);
     cursor: pointer;
     background: none;
+    text-decoration: none;
 }
 
-.btn:hover{
+.btn333:hover{
     background: var(--orange);
     color:#fff;
 }
@@ -84,6 +85,7 @@ section{
     font-size: 2.5rem;
     font-weight: bolder;
     color:var(--black);
+    text-decoration: none;
 }
 
 .header .logo i{
@@ -94,6 +96,7 @@ section{
     font-size: 1.7rem;
     margin:0 1rem;
     color:var(--black);
+    text-decoration: none;
 }
 
 .header .navbar a:hover{
@@ -546,6 +549,7 @@ section{
 
 .footer{
     background: #f37f85;
+    text-decoration: none;
 }
 
 .footer .box-container{
@@ -598,6 +602,7 @@ section{
     margin-right: .2rem;
     background: #eee;
     text-align: center;
+    text-decoration: none;
 }
 
 .footer .box-container .box .share a:hover{
