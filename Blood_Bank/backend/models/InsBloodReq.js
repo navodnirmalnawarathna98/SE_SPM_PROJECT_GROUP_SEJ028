@@ -25,7 +25,7 @@ const InsBloodReqSchema = new Schema({
         required: true,
     },
     due_date: {
-        type: Date,
+        type: String,
         required: true,
     },
     description: {
