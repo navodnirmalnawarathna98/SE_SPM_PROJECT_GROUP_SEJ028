@@ -116,7 +116,7 @@ const deleteSample =(id)=>{
                             <td>{bloodSamples.bloodType}</td>
                             <td>{bloodSamples.bloodAmount}</td>
                             <td>{bloodSamples.gender}</td>
-                            <td><span class="data-list"><button className='button-accept'>Edit</button></span></td>
+                            <td><span class="data-list"><button className='button-accept'><a className='button-accept-a' title='' href={`/bloodsamplesedit/${bloodSamples._id}`}>Edit</a></button></span></td>
                             <td><span class="data-list"><button className='button-reject' onClick={()=>{deleteSample(bloodSamples._id)}}>Delete</button></span></td>
                         </tr>
                     ))
