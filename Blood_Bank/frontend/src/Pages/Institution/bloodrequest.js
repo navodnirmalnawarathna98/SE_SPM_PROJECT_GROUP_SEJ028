@@ -78,10 +78,14 @@ const Bloodrequest = () => {
                             <div class="custom_select">
                                 <select onChange={(e) => {setBloodgroup(e.target.value); }} >
                                     <option value="">Select</option>
-                                    <option value="A+">Blood Group A</option>
-                                    <option value="B+">Blood Group B</option>
-                                    <option value="B+">Blood Group O</option>
-                                    <option value="B+">Blood Group AB</option>
+                                    <option value="A+">Blood Group A+</option>
+                                    <option value="B+">Blood Group B+</option>
+                                    <option value="AB+">Blood Group AB+</option>
+                                    <option value="O+">Blood Group O+</option>
+                                    <option value="A-">Blood Group A-</option>
+                                    <option value="B-">Blood Group B-</option>
+                                    <option value="AB-">Blood Group AB-</option>
+                                    <option value="O-">Blood Group O-</option>
                                 </select>
                             </div>
                         </div>
@@ -106,6 +110,7 @@ const Bloodrequest = () => {
                             <label>Description</label>
                             <textarea type="text" name="description" class="input"
                                 onChange={(e) => { setDescription(e.target.value); }}
+                                required
                             ></textarea>
                         </div>
 
