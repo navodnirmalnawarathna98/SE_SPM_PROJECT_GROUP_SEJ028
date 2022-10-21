@@ -37,10 +37,14 @@ const TemporyLogin = () => {
   //helper to check the NIC number matching
 
   function helper() {
-    if (nic == inputNic) {
-      toComponentB();
+    if (inputNic) {
+      if (nic == inputNic) {
+        toComponentB();
+      } else {
+        alert("The email or password is wrong please enter again !");
+      }
     } else {
-      alert("The email or password is wrong please enter again !");
+      alert("input NIC");
     }
   }
 

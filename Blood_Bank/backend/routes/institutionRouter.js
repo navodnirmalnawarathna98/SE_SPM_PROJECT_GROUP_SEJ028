@@ -12,7 +12,7 @@ router.route("/addbloodreq").post((req, res) => {//get data from frontend via re
     const contact_no = Number(req.body.contact_no);
     const blood_group = req.body.blood_group;
     const blood_amount = Number(req.body.blood_amount);
-    const due_date = Date(req.body.due_date);
+    const due_date = req.body.due_date;
     const description = req.body.description;
 
     const Newinsbloodreq = new insbloodreq({

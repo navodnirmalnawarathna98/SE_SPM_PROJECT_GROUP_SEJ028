@@ -121,7 +121,7 @@ const EditBloodRequest = () => {
                         </div>
                         <div class="inputfield">
                             <label>Due Date</label>
-                            <input type="text" name="due_date" class="input" readonly="readonly"
+                            <input type="date" name="due_date" class="input" 
                                 title="You can only read this page"
                                 value={due_date}
                                 onChange={(e) => { setBloodamount(e.target.value); }}

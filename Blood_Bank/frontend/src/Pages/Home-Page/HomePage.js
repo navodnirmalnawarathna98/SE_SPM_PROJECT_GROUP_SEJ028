@@ -52,7 +52,7 @@ const HomePage = () => {
 
           <h3><span></span> </h3>
           <p></p>
-          <a href="#" class="btn">Main Info</a>
+          <a href="#" class="btn333">Main Info</a>
 
         </class>
       </section>
@@ -74,7 +74,7 @@ const HomePage = () => {
               formed. In 1996 the National Blood Service was formed to collect
               and provide blood supplies for all the hospitals.
             </p>
-            <a href="#" class="btn">
+            <a href="#" class="btn333" >
               read more
             </a>
           </div>
@@ -88,7 +88,7 @@ const HomePage = () => {
               plasma. These can all be put to different uses.
             </p>
             <br />
-            <a href="#" class="btn">
+            <a href="#" class="btn333">
               read more
             </a>
           </div>
@@ -102,7 +102,7 @@ const HomePage = () => {
               amazing capacity to replace all the cells and fluids that have
               been lost.
             </p>
-            <a href="#" class="btn">
+            <a href="#" class="btn333">
               read more
             </a>
           </div>
@@ -121,26 +121,26 @@ const HomePage = () => {
 
             <img src={img4} alt=""/>
             <p></p>
-            <a href="/donorregister" class="btn">Doner</a> <br />
+            <a href="/donorregister" class="btn333">Doner</a> <br />
           </div>
           <div class="box">
             <h3>Seeker</h3>
             <img src={img5} alt=""/>
             <p></p>
-            <a href="/seeker" class="btn">Seeker</a> <br />
+            <a href="/seeker" class="btn333">Seeker</a> <br />
           </div>
           <div class="box">
             <h3>Blood Bank</h3>
             <img src={img6} alt=""/>
             <p></p>
-            <a href="/admindashboard" class="btn">Admin Dashboard</a> <br />
+            <a href="/admindashboard" class="btn333">Admin Dashboard</a> <br />
           </div>
           <div class="box">
             <h3>Institutions</h3>
             <img src={img7} alt=""/>
             <p></p>
-            <a href="/reqtable"  class="btn">Institution</a> <br />
-            <a href="/institution" class="btn">Register </a>
+            <a href="/reqtable"  class="btn333">Institution</a> <br />
+            <a href="/institution" class="btn333">Register </a>
 
           </div>
         </div>
