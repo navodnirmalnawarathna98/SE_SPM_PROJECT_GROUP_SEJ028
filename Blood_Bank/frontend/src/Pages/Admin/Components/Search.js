@@ -9,7 +9,7 @@ const Search = () => {
 
             <div class="ad-search-box">
                 <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search here..."/>
+                <input type="text" name='search' placeholder="Search here..."/>
             </div>
 
             <button type="button" class="ad-search-box-button">Search</button>

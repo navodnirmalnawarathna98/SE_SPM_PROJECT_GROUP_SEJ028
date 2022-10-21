@@ -37,7 +37,6 @@ const AddBloodSamples = () => {
   console.log(firstName, lastName, contactNumber, address, email, dateOfBirth, nic, weight, bloodType, bloodAmount, gender);
 
   const onSubmit = async (e) => {
-    console.log("xxxx");
     e.preventDefault();
     const newAddBloodSamples = {
       firstName: firstName,
@@ -75,11 +74,20 @@ const AddBloodSamples = () => {
       });
       //  window.location.reload();
       alert("Sample Added Successfully");
+      updateVolumes(bloodAmount);
     } catch (err) {
       console.error("error", err.response.data);
       alert("Sample Not Added");
     }
   };
+
+
+
+
+    function updateVolumes(bloodAmount) {
+        console.log("SLIIT");
+        console.log(bloodAmount);
+    }
 
 
 
