@@ -190,7 +190,7 @@ const BloodSamplesEdit = () => {
                                   name="contactNumber" 
                                   value={currentSample.contactNumber} 
                                   placeholder="Contact Number" 
-                                  pattern="[0-9]{10}" 
+                                  pattern="[0-9]{11}" 
                                   title="Enter valid contact number (ex - 94757713501)" 
                                   onChange={handleInputChange}
                                   required />

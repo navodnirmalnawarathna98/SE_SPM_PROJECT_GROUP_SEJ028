@@ -1,0 +1,241 @@
+
+:root {
+  --primary: red;
+  --secondary: #3d3d3d; 
+  --white: #fff;
+}
+
+.R-Report_Invoice {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+
+.R-Report_Invoice {
+	background: var(--secondary);
+	padding: 50px;
+	color: var(--secondary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+}
+
+.R-Report_Invoice .R-wrapper .R-bold {
+	font-weight: 900;
+}
+
+.R-Report_Invoice .R-light .R-wrapper{
+	font-weight: 100;
+}
+
+.R-Report_Invoice .R-wrapper{
+	background: var(--white);
+	padding: 30px;
+}
+
+.R-Report_Invoice .R-invoice_wrapper{
+	border: 3px solid var(--primary);
+	width: 700px;
+	max-width: 100%;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-logo_invoice_wrap,
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-bill_total_wrap{
+	display: flex;
+	justify-content: space-between;
+	padding: 30px;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-logo_sec{
+	display: flex;
+	align-items: center;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-logo_sec .R-title_wrap{
+	margin-left: 5px;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-logo_sec .R-title_wrap .R-title{
+	text-transform: uppercase;
+	font-size: 18px;
+	color: var(--primary);
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-logo_sec .R-title_wrap .R-sub_title{
+	font-size: 12px;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-invoice_sec,
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-bill_total_wrap .R-total_wrap{
+	text-align: right;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-invoice_sec .R-invoice{
+	font-size: 28px;
+	color: var(--primary);
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-invoice_sec .R-invoice_no,
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-invoice_sec .R-date{
+	display: flex;
+	width: 100%;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-invoice_sec .R-invoice_no span:first-child,
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-invoice_sec .R-date span:first-child{
+	width: 70px;
+	text-align: left;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-invoice_sec .R-invoice_no span:last-child,
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-invoice_sec .R-date span:last-child{
+	width: calc(100% - 70px);
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-bill_total_wrap .R-total_wrap .R-price,
+.R-Report_Invoice .R-invoice_wrapper .R-header .R-bill_total_wrap .R-bill_sec .R-name{
+	color: var(--primary);
+	font-size: 20px;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-main_table .R-table_header{
+	background: var(--primary);
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-main_table .R-table_header .R-th{
+	color: var(--white);
+	font-size: 15px;
+	border-bottom: 0px;	
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-main_table .R-row{
+	display: flex;
+	border-bottom: 1px solid var(--secondary);
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-main_table .R-row .R-col{
+	padding: 10px;
+}
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-main_table .R-row .R-col_no{width: 5%;}
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-main_table .R-row .R-col_des{width: 45%;}
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-main_table .R-row .R-col_price{width: 20%; text-align: center;}
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-main_table .R-row .R-col_qty{width: 10%; text-align: center;}
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-main_table .R-row .R-col_total{width: 20%; text-align: right;}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-paymethod_grandtotal_wrap{
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 0 30px;
+	align-items: flex-end;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-paymethod_grandtotal_wrap .R-paymethod_sec{
+	padding-left: 30px;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-paymethod_grandtotal_wrap .R-grandtotal_sec{
+	width: 30%;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-paymethod_grandtotal_wrap .R-grandtotal_sec p{
+	display: flex;
+	width: 100%;
+	padding-bottom: 5px;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-paymethod_grandtotal_wrap .R-grandtotal_sec p span{
+	padding: 0 10px;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-paymethod_grandtotal_wrap .R-grandtotal_sec p span:first-child{
+	width: 60%;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-paymethod_grandtotal_wrap .R-grandtotal_sec p span:last-child{
+	width: 40%;
+	text-align: right;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-body .R-paymethod_grandtotal_wrap .R-grandtotal_sec p:last-child span{
+	background: var(--primary);
+	padding: 10px;
+	color: #fff;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-footer{
+	padding: 30px;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-footer > p{
+	color: var(--primary);
+	text-decoration: underline;
+	font-size: 18px;
+	padding-bottom: 5px;
+}
+
+.R-Report_Invoice .R-invoice_wrapper .R-footer .R-terms .R-tc{
+	font-size: 16px;
+}
+
+
+
+/* Table CSS Style */
+
+.R-activity-data {
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.R-activity-data thead {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+
+.R-activity-data tbody {
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 20px;
+    white-space: nowrap;
+    color: var(--text-color);
+}
+
+.R-activity-data tbody tr .simple {
+  text-transform: lowercase;
+}
+
+
+.report-logo {
+	width:60px;
+	height:100px;
+}
+
+.signature {
+	width:120px;
+	height:80;
+}
+
+.print-button {
+	background-color: orange;
+	border-radius: 5px;
+	margin-left: 45%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.print-cancel {
+	margin-left: 10px;
+	background-color: yellow;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.zme {
+	background-color: #3d3d3d;
+}
