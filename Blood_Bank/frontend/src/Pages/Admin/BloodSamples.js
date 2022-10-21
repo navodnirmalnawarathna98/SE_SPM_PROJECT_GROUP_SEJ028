@@ -4,6 +4,7 @@ import axios from 'axios'
 import { toast } from "react-toastify"
 
 import "./admin-style.css"
+import admin_profile from "../../images/admin_profile.jpg"
 
 import NavigationBar from './Components/NavigationBar'
 import Search from './Components/Search'
@@ -15,29 +16,42 @@ const BloodSamples = () => {
   // get all samples  
   const [bloodSamples, setBloodSamples] = useState({});
 
-  const getAllBloodSamples = async () => {
-		const config = {
-			headers: { "Content-Type": "application/json", },
-		};
-		try {
-			const res = await axios.get(`http://localhost:8070/addbloodsamples/`, config);
-            setBloodSamples(res.data);
-            console.log(res.data);       
-		} catch (err) {
-			console.error("error", err);
-            console.log("Traking ID Wrong");
-		}
-	};
+  const [query, setQuery] = useState("");
+
+
+  // const getAllBloodSamples = async () => {
+	// 	const config = {
+	// 		headers: { "Content-Type": "application/json", },
+	// 	};
+	// 	try {
+	// 		const res = await axios.get(`http://localhost:8070/addbloodsamples/?q=${query}`, config);
+  //           setBloodSamples(res.data);
+  //           console.log(res.data);       
+	// 	} catch (err) {
+	// 		console.error("error", err);
+  //           console.log("Traking ID Wrong");
+	// 	}
+	// };
 
     useEffect(() => {
 		
-        try {
-            getAllBloodSamples();
-          }catch (err) {
-            console.error("error", err);
-          }
+        // try {
+        //     getAllBloodSamples();
+        // }catch (err) {
+        //   console.error("error", err);
+        // }
 
-	}, []);
+        function getAllBloodSamples() {
+          axios.get(`http://localhost:8070/addbloodsamples/search/?q=${query}`).then((res) => {
+            setBloodSamples(res.data)
+          }).catch((err) => {
+              alert(err.message);
+          })
+        }
+
+        if (query.length === 0 || query.length > 1) getAllBloodSamples();
+
+	}, [query]);
 
 
 
@@ -65,7 +79,20 @@ const deleteSample =(id)=>{
 
       <section class="ad-dashboard">
 
-        <Search/>
+          <div>
+              <div class="ad-top">
+                  <i class="uil uil-bars sidebar-toggle"></i>
+
+                  <div class="ad-search-box">
+                      <i class="uil uil-search"></i>
+                      <input type="text" name='search' placeholder="Search here..." onChange={(e) => setQuery(e.target.value)} />
+                  </div>
+
+                  <button type="submit" class="ad-search-box-button">Search</button>
+
+                  <img src={admin_profile} alt="admin profile"/>
+              </div>
+          </div>
 
         <div class="ad-dash-content">
 
@@ -78,6 +105,11 @@ const deleteSample =(id)=>{
             <div className="ad-title">
               <i class="uil uil-clock-three"></i>
               <span class="text">Blood Samples</span>
+              <span class="data-list">
+                <button className='ad-print-box-button'>
+                  <a className='button-print-a' title='' href={`/bloodsamplesreport`}>Print</a>
+                </button>
+              </span>
             </div>
 
             <div className="activity-data">

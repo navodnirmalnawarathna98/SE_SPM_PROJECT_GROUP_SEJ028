@@ -288,6 +288,42 @@ nav.close ~ .ad-dashboard .ad-top{
   touch-action: manipulation;
 }
 
+
+.ad-print-box-button {
+  background-image: linear-gradient(-180deg, #f5ba1a 0%, #f5ba1a 100%);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  text-decoration: none;
+  width: 100px;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 870px;
+}
+
+.ad-print-box-button:hover {
+  background-image: linear-gradient(-180deg, #f5ba1a 0%, rgba(255, 169, 0, 0.5) 100%);
+}
+
+
+.button-print-a{
+  text-decoration: none;
+  color: white;
+}
+
+.button-print-a:hover{
+  text-decoration: none;
+  color: white;
+  /* background-image: linear-gradient(-180deg, #f5ba1a 0%, rgba(255, 169, 0, 0.5) 100%); */
+}
+
 .ad-search-box-button:hover {
   background-image: linear-gradient(-180deg, #f5ba1a 0%, rgba(255, 169, 0, 0.5) 100%);
 }
