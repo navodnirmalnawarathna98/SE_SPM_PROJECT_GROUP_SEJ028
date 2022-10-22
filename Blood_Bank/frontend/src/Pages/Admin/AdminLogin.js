@@ -1,15 +1,8 @@
 import React, { useState } from 'react'
+import "../Institution/login.css";
 
-import "./login.css";
+const AdminLogin = () => {
 
-
-
-
-
-const Logintitutte = () => {
-
-
-    
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -19,9 +12,9 @@ const Logintitutte = () => {
         console.log(username);
         console.log(password);
 
-        if(username==="navod" && password==="123"){
+        if(username==="admin" && password==="123"){
 
-            window.location.href = "/reqtable";
+            window.location.href = "/admindashboard";
         }else{
             alert("error");
             window.location.reload();
@@ -29,6 +22,9 @@ const Logintitutte = () => {
 
     }
 
+    // function closeReq() {
+    //     window.location.href = "/reqtable";
+    // }
     return (
 
         <div className="wrapper32 fadeInDown">
@@ -52,9 +48,7 @@ const Logintitutte = () => {
 
             </div>
         </div>
-
-
     )
-
 }
-export default Logintitutte
+
+export default AdminLogin
