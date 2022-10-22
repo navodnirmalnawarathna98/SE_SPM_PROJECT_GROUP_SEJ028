@@ -58,6 +58,28 @@ router.route("/").get((req, res) => {
 })
 
 
+//GET SEARCH BLOOD SAMPLES DETAILS (http://localhost:8080/addbloodsamples/search)
+router.route("/search").get((req, res) => {
+
+    const { q } = req.query;
+
+    const keys = ["firstName"];
+
+    const search = (bloodSamples) => {
+        return bloodSamples.filter((item) =>
+            keys.some((key) => item[key].toLowerCase().includes(q))
+        );
+    };
+
+
+    addBloodSamples.find().then((bloodSamples) => {
+        res.json(search(bloodSamples))
+    }).catch((err) => {
+        console.log(err)
+    })
+})
+
+
 
 
 
