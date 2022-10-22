@@ -52,7 +52,7 @@ const Bloodrequest = () => {
                         <div class="inputfield">
                             <label>Institution Name</label>
                             <input type="text" name="name" class="input"
-                                title="Please enter on alphabets only"
+                                pattern="[A-Za-z\s]{2,20}" title="The  name must contain letters only"
                                 placeholder='enter institution name' onChange={(e) => { setName(e.target.value); }}
                                 required
                             />
@@ -67,8 +67,8 @@ const Bloodrequest = () => {
                         </div>
                         <div class="inputfield">
                             <label>Contact No</label>
-                            <input type="number" name="contact_no" pattern="[0-9]{11}"
-                                title="the contact number must be 10 numbers"
+                            <input type="text" name="contact_no" 
+                                pattern="[0-9]{11}" title="Enter valid contact number (ex - 94757713501)"
                                 class="input" placeholder='enter institution contact number' onChange={(e) => { setContact_no(e.target.value); }}
                                 required
                             />

@@ -29,10 +29,10 @@ const Bloodreqtable = () => {
         axios.delete(`http://localhost:8070/addRequest/deleteReq/${id}`).then((res) => {
             //getWManagers();
             axios.get("http://localhost:8070/addRequest/").then((res) => {
-                alert("Delete Successfully");
+                
                 setBloodReqs(res.data);
             }).catch((err) => {
-                alert(err.message);
+                alert("Delete Successfully");
             })
             window.location.href = "/reqtable";
         })

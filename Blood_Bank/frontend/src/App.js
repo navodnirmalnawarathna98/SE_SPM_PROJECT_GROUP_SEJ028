@@ -14,6 +14,7 @@ import BloodSamplesEdit from "./Pages/Admin/BloodSamplesEdit";
 import DonorList from "./Pages/Admin/DonorList";
 import SeekerList from "./Pages/Admin/SeekerList";
 import BloodSamplesReport from "./Pages/Admin/BloodSamplesReport";
+import AdminLogin from "./Pages/Admin/AdminLogin";
 
 // Doner
 import Doner from "./Pages/Doner/Doner";
@@ -30,6 +31,7 @@ import BloodRequest from "./Pages/Institution/bloodrequest";
 import BloodRequestTable from "./Pages/Institution/bloodreqtable";
 import EditBloodRequest from "./Pages/Institution/editbloodrequest";
 import BloodReport from "./Pages/Institution/bloodreport";
+import Logintitutte from "./Pages/Institution/login";
 
 //seeeker related imported files
 import SeekerRegister from "./Pages/Seeker/SeekerRegister";
@@ -70,6 +72,7 @@ function App() {
         <Route path='/bloodreq' element={<BloodRequest />} />
         <Route path='/editbloodreq/:id' element={<EditBloodRequest />} />
         <Route path='/bloodreport/:id' element={<BloodReport />} />
+        <Route path='/institutelog' element={<Logintitutte />} />
 
         <Route path="/" element={<HomePage />} />
 
@@ -87,6 +90,7 @@ function App() {
         <Route path="/seekerlist" element={<SeekerList />} />
         <Route path="/bloodsamplesedit/:id" element={<BloodSamplesEdit />} />
         <Route path="/bloodsamplesreport" element={<BloodSamplesReport />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
 
         {/* Doner */}
         <Route path="/doner" element={<Doner />} />

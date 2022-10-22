@@ -61,18 +61,18 @@ const Bloodreport = () => {
     return (
         <div>
             <button title="you can get pdf" class="btn233" onClick={handlePrint} type="submit">Get PDF</button>
-            <br/>
+            <br />
             <button title="you can navigate to the previous page" onClick={closeReq} class="btn233">Back</button>
-            <div ref={componentRef}>
+            <div class="nova-border" ref={componentRef}>
                 <div id="invoice-POS">
                     <div id="top">
                         <div class="logo"></div>
                         <div class="info">
-                            <h2 class="nn1">Blood Bank</h2>
+                            <h2 class="nn4"><strong>Blood Request Report</strong></h2>
                         </div>
                     </div>
-                        <h2 class="nn1">Institution Name : {name}</h2>
-                        <h2 class="nn1">{currentDate}</h2>
+                    <h2 class="nn1">Institution Name :<strong> {name}</strong></h2>
+                    <h2 class="nn1">{currentDate}</h2>
                     <div id="mid">
                         <div class="info">
                             <h2 class="nn1">Contact Info</h2>
@@ -103,7 +103,11 @@ const Bloodreport = () => {
                             </table>
                         </div>
                         <div id="legalcopy">
-                            <p class="legal"><strong>Thank you for your request!</strong>
+                            <p class="legal"><strong>Terms & Coditions</strong>
+                            </p>
+                            <p>By using our website, you accept these terms and conditions in full. accordingly,
+                                if you disagree with these terms and conditions
+                                or any part of these terms and conditions, you must not use our website
                             </p>
                         </div>
                     </div>

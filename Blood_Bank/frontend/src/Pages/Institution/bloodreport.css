@@ -2,12 +2,21 @@
 margin-right: 10px;
 }
 
+.nova-border{
+    background: #d0f0ff;
+    padding: 13px;
+    margin: 13px;
+    margin-left: 538px;
+    margin-right: 587px;
+}
+
 #invoice-POS {
-    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-    padding: 2mm;
-    margin: 133px auto;
-    width: 110mm;
-    background: #fff;
+  box-shadow: 0 0 1in -0.25in rgb(0 0 0 / 50%);
+  padding: 2mm;
+  margin: 1px auto;
+  width: 114mm;
+  background: #fff;
+  border: 3px solid red;
   }
   ::selection {
     background: #f31544;
@@ -26,6 +35,11 @@ margin-right: 10px;
     font-size: 7px;
     color: #666;
     line-height: 1.2em;
+  }
+
+  .nn4{
+    margin-left: -82px;
+    color: red;
   }
   
   #top,
