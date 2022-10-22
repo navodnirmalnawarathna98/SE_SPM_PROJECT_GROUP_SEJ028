@@ -95,8 +95,6 @@ const SeekerProfileUpdate = () => {
   function updateData(e) {
     e.preventDefault();
 
-    alert("testing purpose senData function is  called");
-
     const updatedSeeker = {
       firstName,
       lastName,
@@ -112,7 +110,7 @@ const SeekerProfileUpdate = () => {
     axios
       .put(`http://localhost:8070/seeker/update/${userId}`, updatedSeeker)
       .then(() => {
-        alert("Seeker profile updated registerd");
+        alert("Seeker profile updated ");
 
         setFirstName("");
         setLastName("");
@@ -337,7 +335,7 @@ const SeekerProfileUpdate = () => {
                       defaultValue={contactNumberForm}
                       name="contactNumber"
                       class="input"
-                      pattern="[0-9]{11}"
+                      pattern="[0-9]{10}"
                       title="contact number should only contain numbers only . e.g. 1234567890"
                       onChange={(e) => {
                         setContactNumber(e.target.value);

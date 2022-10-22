@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./SeekerSearchForDonor.css";
 import axios from "axios";
+import { jsPDF } from "jspdf";
+import "jspdf-autotable";
 
 const SeekerSearchForDonor = () => {
   const [users, setUsers] = useState([]);
@@ -23,6 +25,12 @@ const SeekerSearchForDonor = () => {
         console.log(results);
       });
   };*/
+
+  const downloadData = () => {
+    const pdf = new jsPDF();
+    pdf.autoTable({ html: "#table" });
+    pdf.save("Blood Donors list");
+  };
 
   function getdonors() {
     axios
@@ -72,91 +80,97 @@ const SeekerSearchForDonor = () => {
                 <h3 class="heading mt-5 text-center">Search For Blood Donor</h3>
 
                 <div class="row mt-4 g-1 px-4 mb-5">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Input your transaction ID here"
+                      aria-label="Recipient's username"
+                      aria-describedby="button-addon2"
+                      onChange={(e) => {
+                        setQuery(e.target.value);
+                      }}
+                    />
+
+                    <div></div>
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="submit"
+                      id="button-addon2"
+                      onClick={getdonors}
+                    >
+                      Search
+                    </button>
+                  </div>
+
                   <div class="col-md-2">
-                    <div class="SSFDcard-inner p-3 d-flex flex-column align-items-center">
+                    <div
+                      class="SSFDcard-inner p-3 d-flex flex-column align-items-center"
+                      onClick={() => {
+                        setQuery("A");
+                        getdonors();
+                      }}
+                    >
                       <img
-                        src="https://www.blood.ca/sites/default/files/icon/blood-types_a-positive_blood-drop.jpg"
+                        src="https://media.istockphoto.com/vectors/blood-type-a-vector-medical-icon-for-health-blood-donation-a-antigens-vector-id1288975859?s=612x612"
                         width="50"
                       />
                       <div class="text-center SSFDmg-text">
-                        <span class="SSFDmg-text SSFDspan">A+</span>
+                        <span class="SSFDmg-text SSFDspan">A</span>
                       </div>
                     </div>
                   </div>
+
                   <div class="col-md-2">
-                    <div class="SSFDcard-inner p-3 d-flex flex-column align-items-center">
+                    <div
+                      class="SSFDcard-inner p-3 d-flex flex-column align-items-center"
+                      onClick={() => {
+                        setQuery("B");
+                        getdonors();
+                      }}
+                    >
                       <img
-                        src="https://www.blood.ca/sites/default/files/icon/blood-types_a-negative_blood-drop.jpg"
+                        src="https://media.istockphoto.com/vectors/blood-type-b-vector-medical-icon-for-health-blood-donation-b-antigens-vector-id1289069992?s=612x612"
                         width="50"
                       />
                       <div class="text-center SSFDmg-text">
-                        <span class="SSFDmg-text SSFDspan">A-</span>
+                        <span class="SSFDmg-text SSFDspan">B</span>
                       </div>
                     </div>
                   </div>
+
                   <div class="col-md-2">
-                    <div class="SSFDcard-inner p-3 d-flex flex-column align-items-center">
+                    <div
+                      class="SSFDcard-inner p-3 d-flex flex-column align-items-center"
+                      onClick={() => {
+                        setQuery("AB");
+                        getdonors();
+                      }}
+                    >
                       <img
-                        src="https://www.blood.ca/sites/default/files/icon/blood-types_b-positive_blood-drop.jpg"
+                        src="https://media.istockphoto.com/vectors/blood-type-ab-vector-medical-icon-for-health-blood-donation-a-and-b-vector-id1289140124?s=612x612"
                         width="50"
                       />
                       <div class="text-center SSFDmg-text">
-                        <span class="SSFDmg-text SSFDspan">B+</span>
+                        <span class="SSFDmg-text SSFDspan">AB</span>
                       </div>
                     </div>
                   </div>
+
                   <div class="col-md-2">
-                    <div class="SSFDcard-inner p-3 d-flex flex-column align-items-center">
+                    <div
+                      class="SSFDcard-inner p-3 d-flex flex-column align-items-center"
+                      onClick={() => {
+                        setQuery("O");
+                        getdonors();
+                      }}
+                    >
                       <img
-                        src="https://www.blood.ca/sites/default/files/icon/blood-types_b-negative_blood-drop.jpg"
+                        src="https://media.istockphoto.com/vectors/blood-type-0-vector-medical-icon-for-health-blood-donation-no-red-vector-id1289271228?s=612x612"
                         width="50"
                       />
                       <div class="text-center SSFDmg-text">
-                        <span class="SSFDmg-text SSFDspan">B-</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="SSFDcard-inner p-3 d-flex flex-column align-items-center">
-                      <img
-                        src="https://www.blood.ca/sites/default/files/icon/blood-types_ab-positive_blood-drop.jpg"
-                        width="50"
-                      />
-                      <div class="text-center SSFDmg-text">
-                        <span class="SSFDmg-text SSFDspan">AB+</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="SSFDcard-inner p-3 d-flex flex-column align-items-center">
-                      <img
-                        src="https://www.blood.ca/sites/default/files/icon/blood-types_ab-negative_blood-drop.jpg"
-                        width="50"
-                      />
-                      <div class="text-center SSFDmg-text">
-                        <span class="SSFDmg-text SSFDspan">AB-</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="SSFDcard-inner p-3 d-flex flex-column align-items-center">
-                      <img
-                        src="https://www.blood.ca/sites/default/files/icon/blood-types_o-positive_blood-drop.jpg"
-                        width="50"
-                      />
-                      <div class="text-center SSFDmg-text">
-                        <span class="SSFDmg-text SSFDspan">O+</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="SSFDcard-inner p-3 d-flex flex-column align-items-center">
-                      <img
-                        src="https://www.blood.ca/sites/default/files/icon/blood-types_o-negative_blood-drop.jpg"
-                        width="50"
-                      />
-                      <div class="text-center SSFDmg-text">
-                        <span class="SSFDmg-text SSFDspan">O-</span>
+                        <span class="SSFDmg-text SSFDspan">O</span>
                       </div>
                     </div>
                   </div>
@@ -184,23 +198,29 @@ const SeekerSearchForDonor = () => {
           >
             <thead>
               <tr>
-                <th scope="col">ID</th>
-                <th scope="col">NIC</th>
-                <th scope="col">Date</th>
-                <th scope="col">Payment Method</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Payment Purpose</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contact number</th>
+                <th scope="col">Blood Type</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              {users.map((us) => (
+                <tr key={us._id}>
+                  <td>{us.firstName}</td>
+                  <td>{us.email}</td>
+                  <td>{us.contactnumber}</td>
+                  <td>{us.bloodtype}</td>
+                </tr>
+              ))}
+            </tbody>
           </table>
 
           <div className="download-data-div">
             <button
               className="btn btn-secondary"
               onClick={() => {
-                setQuery("mo");
-                getdonors();
+                downloadData();
               }}
             >
               Download Payment Data as PDF

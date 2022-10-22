@@ -153,6 +153,14 @@ const TemporyLogin = () => {
                 Register
               </a>
             </p>
+
+            <p>
+              Not a member?
+              <a href="/" class="fs-4">
+                <div></div>
+                To Home
+              </a>
+            </p>
             <p class="fs-4">or sign up with:</p>
             <button type="button" class="btn btn-link btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
