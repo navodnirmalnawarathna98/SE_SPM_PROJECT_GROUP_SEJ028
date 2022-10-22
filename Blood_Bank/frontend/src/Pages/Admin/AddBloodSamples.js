@@ -12,6 +12,12 @@ import BloodVolumes from './Components/BloodVolumes'
 
 const AddBloodSamples = () => {
 
+  const [currentVolumes, setCurrentVolumes] = useState({});
+
+  const [a, setA] = useState({});
+
+  var Vid = "631a09bd95344733d700e1ad";
+
   const [formData, setFormData] = useState({
 
     firstName: "",
@@ -74,7 +80,7 @@ const AddBloodSamples = () => {
       });
       //  window.location.reload();
       alert("Sample Added Successfully");
-      updateVolumes(bloodAmount);
+      getVolumesData(Vid);
     } catch (err) {
       console.error("error", err.response.data);
       alert("Sample Not Added");
@@ -84,10 +90,86 @@ const AddBloodSamples = () => {
 
 
 
-    function updateVolumes(bloodAmount) {
+    function updateVolumes(CURRENT_VOLUMES, bloodAmount) {
         console.log("SLIIT");
         console.log(bloodAmount);
+        console.log(CURRENT_VOLUMES);
+        var totalVolume = parseInt(bloodAmount) + parseInt(CURRENT_VOLUMES);
+        var TotalVolume = totalVolume.toString();
+        console.log(TotalVolume);
+        setCurrentVolumes(TotalVolume);
+        console.log(currentVolumes);
+        
+        //updateData(Vid,TotalVolume);
     }
+
+
+    /*  UPDATE DATA */
+
+    const updateData = async (Vid, TotalVolume) => {
+
+      const config = {
+          headers: {
+              "Content-Type": "application/json",
+          },
+      };
+      await axios.put(
+        `http://localhost:8070/bloodvolumes/update/${Vid}`,
+        currentVolumes,
+        config
+      );
+      setCurrentVolumes({
+        //ABp: res.data.bloodVolumes.ABp
+        // firstName: currentSample.firstName,
+        //   lastName: currentSample.lastName,
+        //   contactNumber: currentSample.contactNumber,
+        //   address: currentSample.address,
+        //   email: currentSample.email,
+        //   dateOfBirth: currentSample.dateOfBirth,
+        //   nic: currentSample.nic,
+        //   weight: currentSample.weight,
+        //   bloodType: currentSample.bloodType,
+        //   bloodAmount: currentSample.bloodAmount,
+        //   gender: currentSample.gender
+        });
+    };
+
+
+    /* Get Volumes Data */
+    const getVolumesData = async (Vid) => {
+      const config = {
+          headers: {
+              "Content-Type": "application/json",
+          },
+      };
+      try {
+          const res = await axios.get(`http://localhost:8070/bloodvolumes/get/${Vid}`, config);
+          setCurrentVolumes(res.data.bloodVolumes.ABp);
+
+          if(bloodType === "AB+"){
+            setCurrentVolumes(res.data.bloodVolumes.ABp)
+            updateVolumes(res.data.bloodVolumes.ABp, bloodAmount);
+          } else if(bloodType === "AB-"){
+            updateVolumes(res.data.bloodVolumes.ABm, bloodAmount);
+          } else if(bloodType === "A+"){
+            updateVolumes(res.data.bloodVolumes.Ap, bloodAmount);
+          } else if(bloodType === "A-"){
+            updateVolumes(res.data.bloodVolumes.Am, bloodAmount);
+          } else if(bloodType === "B+"){
+            updateVolumes(res.data.bloodVolumes.Bp, bloodAmount);
+          } else if(bloodType === "B-"){
+            updateVolumes(res.data.bloodVolumes.Bm, bloodAmount);
+          } else if(bloodType === "O+"){
+            updateVolumes(res.data.bloodVolumes.Op, bloodAmount);
+          } else {
+            updateVolumes(res.data.bloodVolumes.Om, bloodAmount);
+          }
+
+      } catch (err) {
+          console.error("error", err);
+          console.log("Traking ID Wrong");
+      }
+    };
 
 
 
@@ -182,7 +264,7 @@ const AddBloodSamples = () => {
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-phone"></i></span>
-                              <input type="text" name="contactNumber" value={contactNumber} placeholder="Contact Number" pattern="[0-9]{10}" title="Enter valid contact number (ex - 94757713501)" onChange={(e) => onChange(e)} required />
+                              <input type="text" name="contactNumber" value={contactNumber} placeholder="Contact Number" pattern="[0-9]{11}" title="Enter valid contact number (ex - 94757713501)" onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-home"></i></span>
