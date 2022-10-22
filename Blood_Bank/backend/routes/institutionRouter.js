@@ -49,7 +49,6 @@ router.route("/viewBlood").get((req, res) => {
         );
     };
 
-
     insbloodreq.find().then((bloodreq) => {
         res.json(search(bloodreq))
     }).catch((err) => {
