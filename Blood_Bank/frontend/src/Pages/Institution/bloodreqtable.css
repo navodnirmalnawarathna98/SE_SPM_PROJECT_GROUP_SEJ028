@@ -46,6 +46,7 @@ h3 {
     justify-content: space-around;
     padding: 15px 10px;
     border-bottom: 2px solid #999;
+    text-decoration: none;
 }
 
 table {
@@ -285,6 +286,7 @@ td {
 .btn111:hover{
     background: rgb(186, 35, 35);
     color:#fff;
+    text-decoration: none;
 }
 
 .btn22{
