@@ -133,13 +133,13 @@ const HomePage = () => {
             <h3>Blood Bank</h3>
             <img src={img6} alt=""/>
             <p></p>
-            <a href="/admindashboard" class="btn333">Admin Dashboard</a> <br />
+            <a href="/adminlogin" class="btn333">Admin Login</a> <br />
           </div>
           <div class="box">
             <h3>Institutions</h3>
             <img src={img7} alt=""/>
             <p></p>
-            <a href="/reqtable"  class="btn333">Institution</a> <br />
+            <a href="/institutelog"  class="btn333">Institution</a> <br />
             <a href="/institution" class="btn333">Register </a>
 
           </div>

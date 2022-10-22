@@ -14,6 +14,7 @@ import BloodSamplesEdit from "./Pages/Admin/BloodSamplesEdit";
 import DonorList from "./Pages/Admin/DonorList";
 import SeekerList from "./Pages/Admin/SeekerList";
 import BloodSamplesReport from "./Pages/Admin/BloodSamplesReport";
+import AdminLogin from "./Pages/Admin/AdminLogin";
 
 // Doner
 import Doner from "./Pages/Doner/Doner";
@@ -89,6 +90,7 @@ function App() {
         <Route path="/seekerlist" element={<SeekerList />} />
         <Route path="/bloodsamplesedit/:id" element={<BloodSamplesEdit />} />
         <Route path="/bloodsamplesreport" element={<BloodSamplesReport />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
 
         {/* Doner */}
         <Route path="/doner" element={<Doner />} />
