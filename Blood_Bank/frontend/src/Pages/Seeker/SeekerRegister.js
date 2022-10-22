@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../Home-Page/Header";
 
 const SeekerRegister = () => {
+  const navigate = useNavigate();
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [nicNumber, setNicNumber] = useState("");
@@ -16,8 +19,6 @@ const SeekerRegister = () => {
 
   function sendData(e) {
     e.preventDefault();
-
-    alert("testing purpose senData function is  called");
 
     const newSeeker = {
       firstName,
@@ -54,6 +55,9 @@ const SeekerRegister = () => {
     console.log({ newSeeker });
   }
 
+  const toComponentLogin = () => {
+    navigate("/templogin");
+  };
   return (
     <>
       <div>
@@ -98,7 +102,12 @@ const SeekerRegister = () => {
           <h1 class="text-center fw-bolder">REGISTER</h1>
         </div>
         <div class="d-flex justify-content-center">
-          <form onSubmit={sendData}>
+          <form
+            onSubmit={(e) => {
+              sendData(e);
+              toComponentLogin();
+            }}
+          >
             <div class="wrapper1">
               <div class="form3">
                 <div class="inputfield">
@@ -202,7 +211,7 @@ const SeekerRegister = () => {
                     type="text"
                     name="contactNumber"
                     class="input"
-                    pattern="[0-9]{11}"
+                    pattern="[0-9]{10}"
                     title="contact number should only contain numbers only . e.g. 1234567890"
                     onChange={(e) => {
                       setContactNumber(e.target.value);
