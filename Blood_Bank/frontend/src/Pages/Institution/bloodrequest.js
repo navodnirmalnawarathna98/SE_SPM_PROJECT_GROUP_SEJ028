@@ -52,7 +52,7 @@ const Bloodrequest = () => {
                         <div class="inputfield">
                             <label>Institution Name</label>
                             <input type="text" name="name" class="input"
-                                pattern="[A-Za-z\s]{2,20}" title="The  name must contain letters only"
+                                pattern="[A-Za-z\s]{2,30}" title="The  name must contain letters only"
                                 placeholder='enter institution name' onChange={(e) => { setName(e.target.value); }}
                                 required
                             />

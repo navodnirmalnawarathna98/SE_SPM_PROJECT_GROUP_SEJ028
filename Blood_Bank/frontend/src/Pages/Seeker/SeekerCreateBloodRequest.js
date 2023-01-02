@@ -14,8 +14,6 @@ const SeekerCreateBloodRequest = () => {
   function sendData(e) {
     e.preventDefault();
 
-    alert("testing purpose senData function is  called");
-
     const newSeekerBloodRequest = {
       name,
       bloodType,
@@ -173,7 +171,7 @@ const SeekerCreateBloodRequest = () => {
                   type="text"
                   name="contactNumber"
                   class="input"
-                  pattern="[0-9]{11}"
+                  pattern="[0-9]{10}"
                   title="contact number should only contain numbers only . e.g. 1234567890"
                   onChange={(e) => {
                     setContactNumber(e.target.value);

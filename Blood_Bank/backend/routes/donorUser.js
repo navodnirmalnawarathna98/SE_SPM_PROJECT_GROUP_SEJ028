@@ -71,4 +71,24 @@ router.route("/update/:id").post((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
+router.route("/searchFordonor").get((req, res) => {
+  const { q } = req.query;
+
+  const keys = ["bloodtype"];
+
+  const search = (userDonor) => {
+    return userDonor.filter((bloodtype) =>
+      keys.some((key) => bloodtype[key].includes(q))
+    );
+  };
+
+  User.find()
+    .then((userDonor) => {
+      res.json(search(userDonor));
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 module.exports = router;
