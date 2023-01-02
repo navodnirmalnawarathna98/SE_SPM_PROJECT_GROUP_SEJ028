@@ -80,6 +80,7 @@ const AddBloodSamples = () => {
       });
       //  window.location.reload();
       alert("Sample Added Successfully");
+      window.location.href = "/bloodsamples";
       getVolumesData(Vid);
     } catch (err) {
       console.error("error", err.response.data);
@@ -251,49 +252,61 @@ const AddBloodSamples = () => {
 
                               <div className="col_half">
                                 <div className="input_field"> <span><i aria-hidden="true" className="fa fa-user"></i></span>
-                                  <input type="text" name="firstName" value={firstName} placeholder="First Name" pattern="[A-Za-z]{2,20}" title="The first name must contain letters only" onChange={(e) => onChange(e)} required />
+                                  <input type="text" name="firstName" value={firstName} placeholder="First Name" pattern="[A-Za-z]{2,20}" title="The first name must contain letters only" 
+                                  onChange={(e) => onChange(e)} required />
                                 </div>
                               </div>
 
                               <div className="col_half">
                                 <div className="input_field"> <span><i aria-hidden="true" className="fa fa-user"></i></span>
-                                  <input type="text" name="lastName" value={lastName} placeholder="Last Name" pattern="[A-Za-z]{2,20}" title="The last name must contain letters only" onChange={(e) => onChange(e)} required />
+                                  <input type="text" name="lastName" value={lastName} placeholder="Last Name" pattern="[A-Za-z]{2,20}" title="The last name must contain letters only" 
+                                  onChange={(e) => onChange(e)} required />
                                 </div>
                               </div>
 
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-phone"></i></span>
-                              <input type="text" name="contactNumber" value={contactNumber} placeholder="Contact Number" pattern="[0-9]{11}" title="Enter valid contact number (ex - 94757713501)" onChange={(e) => onChange(e)} required />
+                              <input type="text" name="contactNumber" value={contactNumber} placeholder="Contact Number" pattern="^\+?94\d{9}$" title="Enter valid contact number (ex - 94757713501)" 
+                              onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-home"></i></span>
-                              <input type="text" name="address" value={address} placeholder="Address" pattern="[A-Za-z0-9'\.\-\s\,]" title="Enter valid Address" onChange={(e) => onChange(e)} required />
+                              <input type="text" name="address" value={address} placeholder="Address" pattern="[A-Za-z0-9'\.\-\s\,]" title="Enter valid Address"
+                               onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-envelope"></i></span>
-                              <input type="email" name="email" value={email} placeholder="Email" onChange={(e) => onChange(e)} required />
+                              <input type="email" name="email" value={email} placeholder="Email"
+                               onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-calendar"></i></span>
-                              <input type="date" name="dateOfBirth" value={dateOfBirth} placeholder="Date Of Birth" onChange={(e) => onChange(e)} required />
+                              <input type="date" name="dateOfBirth" value={dateOfBirth} placeholder="Date Of Birth"
+                               onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-id-card-o"></i></span>
-                              <input type="text" name="nic" value={nic} placeholder="NIC Number" pattern="[Vv0-9]{10}" title="Enter valid NIC number (ex - 982742978V)" onChange={(e) => onChange(e)} required />
+                              <input type="text" name="nic" value={nic} placeholder="NIC Number" 
+                              pattern="^\d{9}[V|v|X|x]$" title="Enter valid NIC number (ex - 982742978V) , (ex - 98521656X)" 
+                              onChange={(e) => onChange(e)} required />
                             </div>
+                            
 
                             <div className="row clearfix">
 
                               <div className="col_half">
                                 <div className="input_field"> <span><i aria-hidden="true" className="fa fa-male"></i></span>
-                                  <input type="number" name="weight" value={weight} placeholder="Weight" onChange={(e) => onChange(e)} required />
+                                  <input type="number" name="weight" value={weight} placeholder="Weight" 
+                                  min="1" max="999"
+                                  onChange={(e) => onChange(e)} required />
                                 </div>
                               </div>
 
                               <div className="col_half">
                                 <div className="input_field select_option">
-                                  <select id="pick" name="bloodType" onChange={(e) => onChange(e)} required>
+                                  <select id="pick" name="bloodType" 
+                                  onChange={(e) => onChange(e)} required>
                                     <option disabled selected>Blood Type</option>
                                     <option value="A+" >A+</option>
                                     <option value="A-" >A-</option>
@@ -313,13 +326,18 @@ const AddBloodSamples = () => {
                             </div>
 
                             <div className="input_field"> <span><i aria-hidden="true" className="fa fa-medkit"></i></span>
-                              <input type="number" name="bloodAmount" value={bloodAmount} placeholder="Blood Amount" onChange={(e) => onChange(e)} required />
+                              <input type="number" name="bloodAmount" value={bloodAmount} placeholder="Blood Amount" 
+                              min="1" max="999"
+                              title="Enter valid number" 
+                              onChange={(e) => onChange(e)} required />
                             </div>
 
                             <div className="input_field radio_option">
-                              <input type="radio" name="gender" checked="checked" value={"Male"} onChange={(e) => onChange(e)} id="rd1" required />
+                              <input type="radio" name="gender" checked="checked" value={"Male"} 
+                              onChange={(e) => onChange(e)} id="rd1" required />
                               <label for="rd1">Male</label>
-                              <input type="radio" name="gender" value={"Female"} onChange={(e) => onChange(e)} id="rd2" required />
+                              <input type="radio" name="gender" value={"Female"} 
+                              onChange={(e) => onChange(e)} id="rd2" required />
                               <label for="rd2">Female</label>
                             </div>
 
