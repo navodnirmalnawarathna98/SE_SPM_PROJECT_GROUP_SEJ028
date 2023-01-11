@@ -5,7 +5,7 @@ const cors = require("cors"); // Cross Origin Resource Sharing
 const dotenv = require("dotenv"); // Loads environment variables from a .env file into process.env
 const app = express(); // Initialize the Express application
 
-require("dotenv").config(); // Loads environment variables from a .env file into process.env
+require("dotenv").config(); //read variables from a .env file into process.env
 
 const PORT = process.env.PORT || 8070;
 
@@ -23,6 +23,12 @@ const connection = mongoose.connection; // MongoDB Connection
 connection.once("open", () => {
   console.log("MongoDB Database Connection Successfull"); // Display in console if connection is successful
 });
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port number : ${PORT}`); // Dipaly in console if server is running
+});
+
+
 
 // add blood sample route
 const addBloodSamplesRouter = require("./routes/addBloodSamplesRouter");
@@ -51,13 +57,6 @@ app.use("/SeekerBloodRequest", bloodRequestRoutes);
 //Donor
 const usersRoutes = require("./routes/donorUser");
 
-app.use(bodyParser.json());
-app.use(cors());
-
 // route middleware
-
 app.use("/donorUser", usersRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port number : ${PORT}`); // Dipaly in console if server is running
-});

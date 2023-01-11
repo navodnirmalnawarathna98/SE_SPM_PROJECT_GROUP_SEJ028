@@ -48,9 +48,9 @@ const addBloodSamplesSchema = new Schema({  //assign values to schema
         type: String,
         required: true,
     }
-
 })
 
-const addBloodSamples = mongoose.model("addBloodSamples", addBloodSamplesSchema); // passing two parameters, tablename(document) & schemaname
+const addBloodSamples = mongoose.model("addBloodSamples", addBloodSamplesSchema);
+ // passing two parameters, tablename(document) & schemaname
 
 module.exports = addBloodSamples; //export add blood samples

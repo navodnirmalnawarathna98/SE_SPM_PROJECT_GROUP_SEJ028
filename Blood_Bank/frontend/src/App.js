@@ -119,10 +119,7 @@ function App() {
 
         <Route path="/registeredinstitutions" element={<RegisteredInstitutions />} />
 
-        <Route
-          path="/registeredinstitutions"
-          element={<RegisteredInstitutions />}
-        />
+        <Route path="/registeredinstitutions" element={<RegisteredInstitutions />}/>
 
         <Route path="/donorlist" element={<DonorList />} />
         <Route path="/seekerlist" element={<SeekerList />} />
